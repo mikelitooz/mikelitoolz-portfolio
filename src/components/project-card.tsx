@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 interface ProjectCardProps {
   title: string
@@ -14,10 +15,11 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
   return (
     <div className="group bg-card border border-border rounded-lg overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 animate-fade-in-up">
       <div className="relative h-48 overflow-hidden bg-secondary">
-        <img
+        <Image
           src={image || "/placeholder.svg"}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="p-6">

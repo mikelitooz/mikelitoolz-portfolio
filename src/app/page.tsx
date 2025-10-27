@@ -252,7 +252,7 @@ export default function Home() {
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
               From early-stage MVPs to enterprise-grade automation systems, I deliver scalable, maintainable solutions that position
-              your product for sustainable growth. Whether you're validating a new market or optimizing existing operations, I bring
+              your product for sustainable growth. Whether you&apos;re validating a new market or optimizing existing operations, I bring
               the technical expertise to accelerate your path to success.
             </p>
           </div>
