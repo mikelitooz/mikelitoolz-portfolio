@@ -17,17 +17,20 @@ export default function Home() {
     {
       icon: "⚙️",
       title: "MVP Development",
-      description: "Full-stack web applications designed to validate your business concept and accelerate time-to-market with scalable architecture.",
+      description:
+        "Full-stack web applications designed to validate your business concept and accelerate time-to-market with scalable architecture.",
     },
     {
       icon: "⚡",
       title: "AI Automation Solutions",
-      description: "Enterprise-grade automation workflows that optimize operations, reduce overhead, and drive measurable efficiency gains.",
+      description:
+        "Enterprise-grade automation workflows that optimize operations, reduce overhead, and drive measurable efficiency gains.",
     },
     {
       icon: "🎨",
       title: "Product Design & UX",
-      description: "User-centric interfaces crafted to enhance engagement, streamline workflows, and deliver exceptional digital experiences.",
+      description:
+        "User-centric interfaces crafted to enhance engagement, streamline workflows, and deliver exceptional digital experiences.",
     },
   ];
 
@@ -122,35 +125,40 @@ export default function Home() {
     {
       number: "01",
       title: "Discovery & Strategy",
-      description: "We begin by deeply understanding your vision, business objectives, and target market. Through collaborative sessions, we identify core requirements, define success metrics, and establish a strategic roadmap that aligns technology with your business goals.",
+      description:
+        "We begin by deeply understanding your vision, business objectives, and target market. Through collaborative sessions, we identify core requirements, define success metrics, and establish a strategic roadmap that aligns technology with your business goals.",
       icon: "🔍",
       progress: "20%",
     },
     {
       number: "02",
       title: "Design & Architecture",
-      description: "Our team crafts intuitive user experiences and robust system architecture. We create wireframes, prototypes, and technical specifications that ensure your product is both beautiful and built to scale from day one.",
+      description:
+        "Our team crafts intuitive user experiences and robust system architecture. We create wireframes, prototypes, and technical specifications that ensure your product is both beautiful and built to scale from day one.",
       icon: "🎨",
       progress: "40%",
     },
     {
       number: "03",
       title: "Development & Integration",
-      description: "Using modern frameworks and best practices, we build your product with clean, maintainable code. Our agile approach includes regular updates, iterative improvements, and seamless integration with your existing systems and third-party services.",
+      description:
+        "Using modern frameworks and best practices, we build your product with clean, maintainable code. Our agile approach includes regular updates, iterative improvements, and seamless integration with your existing systems and third-party services.",
       icon: "⚙️",
       progress: "70%",
     },
     {
       number: "04",
       title: "Testing & Quality Assurance",
-      description: "Rigorous testing across devices, browsers, and use cases ensures your product performs flawlessly. We conduct comprehensive QA, security audits, and performance optimization to deliver enterprise-grade reliability.",
+      description:
+        "Rigorous testing across devices, browsers, and use cases ensures your product performs flawlessly. We conduct comprehensive QA, security audits, and performance optimization to deliver enterprise-grade reliability.",
       icon: "🔬",
       progress: "90%",
     },
     {
       number: "05",
       title: "Launch & Growth Support",
-      description: "We don&apos;t just build and leave. Our partnership continues with deployment support, performance monitoring, and strategic guidance to help you scale. We&apos;re invested in your long-term success.",
+      description:
+        "We don&apos;t just build and leave. Our partnership continues with deployment support, performance monitoring, and strategic guidance to help you scale. We&apos;re invested in your long-term success.",
       icon: "🚀",
       progress: "100%",
     },
@@ -159,23 +167,28 @@ export default function Home() {
   const faqs = [
     {
       question: "What is an MVP and why do I need one?",
-      answer: "An MVP (Minimum Viable Product) is a version of your product with just enough features to validate your business idea with real users. It allows you to test market demand, gather feedback, and iterate quickly without investing months or years in development. This approach reduces risk, saves money, and helps you build what customers actually want.",
+      answer:
+        "An MVP (Minimum Viable Product) is a version of your product with just enough features to validate your business idea with real users. It allows you to test market demand, gather feedback, and iterate quickly without investing months or years in development. This approach reduces risk, saves money, and helps you build what customers actually want.",
     },
     {
       question: "How long does it take to build an MVP?",
-      answer: "Most MVPs can be developed in 6-12 weeks, depending on complexity and scope. We follow an agile methodology with weekly sprints, so you'll see progress continuously. For more complex products requiring multiple integrations or advanced features, timelines may extend to 12-16 weeks. We'll provide a detailed timeline during the discovery phase.",
+      answer:
+        "Most MVPs can be developed in 6-12 weeks, depending on complexity and scope. We follow an agile methodology with weekly sprints, so you'll see progress continuously. For more complex products requiring multiple integrations or advanced features, timelines may extend to 12-16 weeks. We'll provide a detailed timeline during the discovery phase.",
     },
     {
       question: "What technologies do you use for development?",
-      answer: "We specialize in modern, proven technology stacks including Next.js, React, TypeScript, Node.js, PostgreSQL, and cloud platforms like AWS and Vercel. For AI automation, we leverage OpenAI, LangChain, and popular integration tools like Zapier. Technology choices are always tailored to your specific needs, scalability requirements, and long-term maintenance considerations.",
+      answer:
+        "We specialize in modern, proven technology stacks including Next.js, React, TypeScript, Node.js, PostgreSQL, and cloud platforms like AWS and Vercel. For AI automation, we leverage OpenAI, LangChain, and popular integration tools like Zapier. Technology choices are always tailored to your specific needs, scalability requirements, and long-term maintenance considerations.",
     },
     {
       question: "Do you provide support after the MVP is launched?",
-      answer: "Absolutely. We offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, and feature enhancements. Our support packages range from essential maintenance to full ongoing development partnerships. We believe in long-term relationships and are committed to your product's continued success.",
+      answer:
+        "Absolutely. We offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, and feature enhancements. Our support packages range from essential maintenance to full ongoing development partnerships. We believe in long-term relationships and are committed to your product's continued success.",
     },
     {
       question: "How much does it cost to develop an MVP?",
-      answer: "MVP development typically ranges from $10,000 to $50,000, depending on complexity, features, and integrations required. We provide transparent, fixed-price quotes after the discovery phase so there are no surprises. Investment includes full-stack development, UI/UX design, testing, deployment, and initial support. We also offer flexible payment plans for early-stage founders.",
+      answer:
+        "MVP development typically ranges from $10,000 to $50,000, depending on complexity, features, and integrations required. We provide transparent, fixed-price quotes after the discovery phase so there are no surprises. Investment includes full-stack development, UI/UX design, testing, deployment, and initial support. We also offer flexible payment plans for early-stage founders.",
     },
   ];
 
@@ -206,6 +219,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <section id="projects" className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <SectionTitle
+            title="Portfolio Highlights"
+            subtitle="Production-ready solutions delivering measurable business impact"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How We Work Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -224,22 +252,7 @@ export default function Home() {
           <ProcessTimeline steps={processSteps} />
         </div>
       </section>
-
-      {/* Featured Projects */}
-      <section id="projects" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <SectionTitle
-            title="Portfolio Highlights"
-            subtitle="Production-ready solutions delivering measurable business impact"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* About Section */}
       <section className="py-20 px-4 bg-secondary/30">
         <div className="max-w-3xl mx-auto">
@@ -251,9 +264,9 @@ export default function Home() {
               thinking to ensure every build drives meaningful business outcomes.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              From early-stage MVPs to enterprise-grade automation systems, I deliver scalable, maintainable solutions that position
-              your product for sustainable growth. Whether you&apos;re validating a new market or optimizing existing operations, I bring
-              the technical expertise to accelerate your path to success.
+              From early-stage MVPs to enterprise-grade automation systems, I deliver scalable, maintainable solutions that
+              position your product for sustainable growth. Whether you&apos;re validating a new market or optimizing existing
+              operations, I bring the technical expertise to accelerate your path to success.
             </p>
           </div>
         </div>
@@ -270,8 +283,8 @@ export default function Home() {
               WHY <span className="text-accent">US</span>
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-              Because we are not just developers, we are your partners in success.
-              We have a proven track record of delivering exceptional results for our clients.
+              Because we are not just developers, we are your partners in success. We have a proven track record of delivering
+              exceptional results for our clients.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
