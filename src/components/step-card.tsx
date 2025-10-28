@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 interface StepCardProps {
   number: number
@@ -30,7 +31,15 @@ export function StepCard({ number, title, description, icon }: StepCardProps) {
   }, [])
 
   return (
-    <div ref={ref} className="opacity-0 text-center">
+    <div ref={ref} className="relative opacity-0 text-center bg-card border border-border rounded-lg p-6">
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={80}
+        inactiveZone={0.1}
+        borderWidth={2}
+      />
       <div className="mb-4 flex justify-center">
         <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center text-3xl">{icon}</div>
       </div>

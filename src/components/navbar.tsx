@@ -16,16 +16,23 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/automation", label: "Automations" },
-    { href: "/#contact", label: "Contact" },
   ];
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -35,17 +42,35 @@ export function Navbar() {
           </span>
         </Link>
         <div className="flex gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                pathname === link.href ? "text-accent" : "text-foreground/70 hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-sm font-medium transition-colors group ${
+                  isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ${
+                    isActive
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            )
+          })}
+          <a
+            href="#contact"
+            onClick={handleContactClick}
+            className="relative text-sm font-medium transition-colors group text-foreground/70 hover:text-foreground"
+          >
+            Contact
+            <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 w-0 group-hover:w-full" />
+          </a>
         </div>
       </div>
     </nav>

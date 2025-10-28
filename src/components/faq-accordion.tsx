@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { gsap } from "@/lib/gsap";
 
 interface FAQItem {
   question: string;
@@ -13,18 +15,60 @@ interface FAQAccordionProps {
 
 export function FAQAccordion({ faqs }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const faqItems = containerRef.current?.querySelectorAll(".faq-item");
+
+      if (!faqItems || faqItems.length === 0) return;
+
+      gsap.fromTo(
+        Array.from(faqItems),
+        {
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="max-w-4xl mx-auto space-y-4">
+    <div ref={containerRef} className="max-w-4xl mx-auto space-y-4">
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors"
+          className="faq-item relative bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-colors"
+          style={{ opacity: 0 }}
         >
+          <GlowingEffect
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={80}
+            inactiveZone={0.1}
+            borderWidth={2}
+          />
           <button
             onClick={() => toggleFAQ(index)}
             className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-secondary/30 transition-colors"

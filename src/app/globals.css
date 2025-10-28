@@ -140,3 +140,21 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
+
+/* Tech Stack Carousel Styles */
+.swiper {
+  width: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  height: auto;
+  padding: 0.5rem;
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 640px) {
+  .swiper-wrapper {
+    padding-inline: 1rem;
+  }
+}
