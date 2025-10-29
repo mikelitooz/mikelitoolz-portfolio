@@ -38,7 +38,7 @@ export function TechStackSection() {
         <div className="relative w-full overflow-hidden">
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={16}
+            spaceBetween={20}
             slidesPerView={2}
             speed={500}
             loop={true}
@@ -48,19 +48,19 @@ export function TechStackSection() {
               pauseOnMouseEnter: true
             }}
             breakpoints={{
-              320: { slidesPerView: 2, spaceBetween: 12 },
-              640: { slidesPerView: 3, spaceBetween: 16 },
-              768: { slidesPerView: 4, spaceBetween: 16 },
-              1024: { slidesPerView: 5, spaceBetween: 20 },
+              320: { slidesPerView: 3, spaceBetween: 8 },
+              640: { slidesPerView: 4, spaceBetween: 12 },
+              768: { slidesPerView: 5, spaceBetween: 14 },
+              1024: { slidesPerView: 7, spaceBetween: 16 },
             }}
             className="py-4 w-full"
           >
             {fullStackTools.map((tool: ToolType) => {
               const iconNode =
                 typeof tool.icon === "function" ? (
-                  React.createElement(tool.icon, { className: "w-10 h-10" })
+                  React.createElement(tool.icon, { className: "w-8 h-8" })
                 ) : (
-                  <Image src={tool.icon} alt={tool.name} width={40} height={40} className="object-contain" />
+                  <Image src={tool.icon} alt={tool.name} width={32} height={32} className="object-contain" />
                 );
 
               return (

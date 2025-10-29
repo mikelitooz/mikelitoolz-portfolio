@@ -29,7 +29,7 @@ export function AutomationTechStack() {
         <div className="relative w-full overflow-hidden">
           <Swiper
             modules={[Autoplay]}
-            spaceBetween={16}
+            spaceBetween={20}
             slidesPerView={2}
             speed={500}
             loop={true}
@@ -39,10 +39,10 @@ export function AutomationTechStack() {
               pauseOnMouseEnter: true,
             }}
             breakpoints={{
-              320: { slidesPerView: 2, spaceBetween: 12 },
-              640: { slidesPerView: 3, spaceBetween: 16 },
-              768: { slidesPerView: 4, spaceBetween: 16 },
-              1024: { slidesPerView: 5, spaceBetween: 20 },
+              320: { slidesPerView: 3, spaceBetween: 8 },
+              640: { slidesPerView: 4, spaceBetween: 12 },
+              768: { slidesPerView: 5, spaceBetween: 14 },
+              1024: { slidesPerView: 7, spaceBetween: 16 },
             }}
             className="py-4 w-full"
           >

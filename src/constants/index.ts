@@ -60,92 +60,115 @@ export const services = [
     icon: "⚙️",
     title: "MVP Development",
     description:
-      "Full-stack web applications designed to validate your business concept and accelerate time-to-market with scalable architecture.",
+      "Turn your idea into a live product fast. I build MVPs that help you test the market, get real feedback, and launch without months of delays or technical headaches.",
   },
   {
     icon: "⚡",
-    title: "AI Automation Solutions",
+    title: "AI Automation",
     description:
-      "Enterprise-grade automation workflows that optimize operations, reduce overhead, and drive measurable efficiency gains.",
+      "Stop wasting hours on repetitive tasks. I build smart automation systems that handle the busy work, so you can focus on growing your business.",
   },
   {
     icon: "🎨",
-    title: "Product Design & UX",
+    title: "UI/UX Design",
     description:
-      "User-centric interfaces crafted to enhance engagement, streamline workflows, and deliver exceptional digital experiences.",
+      "Get interfaces that people actually enjoy using. Clean designs that make your product feel intuitive, modern, and easy to navigate.",
   },
 ];
 
 export const projects = [
   {
     title: "SaaS Analytics Platform",
-    description: "Enterprise analytics solution delivering real-time insights into user behavior and engagement metrics.",
+    description: "Built a dashboard that gives founders real-time clarity on what their users actually do. Clean data visualization that turns complex metrics into actionable insights.",
     image: "/saas-dashboard.jpg",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
     link: "#",
   },
   {
-    title: "AI Content Generation Suite",
-    description: "Intelligent content creation platform leveraging GPT-4 to streamline content workflows for marketing teams.",
+    title: "AI Content Generator",
+    description: "Created a tool that writes marketing content in minutes instead of hours. Marketing teams now produce 10x more content without hiring more writers.",
     image: "/ai-content-generator.jpg",
     tags: ["React", "Node.js", "OpenAI", "MongoDB"],
     link: "#",
   },
   {
     title: "Multi-Vendor Marketplace",
-    description: "Scalable e-commerce ecosystem with integrated payment processing and real-time transaction monitoring.",
+    description: "Built an e-commerce platform where vendors can start selling in minutes. Handles payments, inventory, and orders seamlessly across multiple sellers.",
     image: "/marketplace-platform.jpg",
     tags: ["Next.js", "Stripe", "PostgreSQL", "WebSocket"],
     link: "#",
   },
   {
-    title: "Project Management System",
-    description: "Collaborative workspace featuring AI-driven prioritization and intelligent resource allocation.",
+    title: "Project Management Tool",
+    description: "Designed a workspace that actually helps teams stay organized. AI suggests priorities, so teams know what to tackle first without constant meetings.",
     image: "/task-management-board.png",
     tags: ["React", "Firebase", "AI", "Tailwind"],
     link: "#",
   },
   {
-    title: "B2B Lead Nurturing Engine",
-    description: "Automated qualification and engagement system designed to maximize conversion rates for enterprise sales.",
+    title: "Lead Automation System",
+    description: "Automated the entire lead qualification process for a B2B sales team. Now they only talk to qualified prospects, saving 15 hours per week.",
     image: "/lead-automation.jpg",
     tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
     link: "#",
   },
   {
-    title: "Mobile API Infrastructure",
-    description: "High-performance REST API architecture supporting real-time synchronization and secure authentication.",
+    title: "Mobile Backend API",
+    description: "Built a fast, secure API that powers a mobile app with 50K+ users. Handles real-time sync and authentication without breaking a sweat.",
     image: "/mobile-backend.jpg",
     tags: ["Node.js", "Express", "PostgreSQL", "JWT"],
     link: "#",
   },
 ];
 
+export const whyWorkWithMe = [
+  {
+    icon: "⚡",
+    title: "Fast, Reliable Execution",
+    description: "From idea to launch faster than you expect. No delays, no excuses.",
+  },
+  {
+    icon: "💰",
+    title: "Built to Make You Money",
+    description: "I focus on features that get customers paying, not just looking cool.",
+  },
+  {
+    icon: "🚀",
+    title: "Fullstack + AI Expertise",
+    description: "Sleek web apps and intelligent workflows that work together seamlessly to save you time and accelerate growth.",
+  },
+  {
+    icon: "🤝",
+    title: "Clear Communication",
+    description: "Weekly updates, no technical jargon, and you're always in the loop.",
+  },
+];
+
 export const stats = [
   {
     icon: "🏆",
-    value: "15+",
+    value: "10+",
     label: "Projects Completed",
     subtitle: "Successfully delivered",
     bgColor: "bg-blue-500/10",
   },
   {
     icon: "👥",
-    value: "10+",
+    value: "6+",
     label: "Happy Clients",
     subtitle: "Satisfied customers",
     bgColor: "bg-teal-500/10",
   },
   {
-    icon: "📈",
-    value: "20K+",
-    label: "Following On Social Media",
-    subtitle: "Active community",
+    icon: "⏱️",
+    value: "100+",
+    label: "Hours Saved",
+    subtitle: "Estimated hours automated for clients",
     bgColor: "bg-purple-500/10",
   },
   {
     icon: "⚡",
-    value: "6+",
+    value: "3+",
     label: "Years of Experience",
     subtitle: "Professional expertise",
     bgColor: "bg-orange-500/10",
@@ -155,41 +178,41 @@ export const stats = [
 export const processSteps = [
   {
     number: "01",
-    title: "Discovery & Strategy",
+    title: "Discovery Call",
     description:
-      "We begin by deeply understanding your vision, business objectives, and target market. Through collaborative sessions, we identify core requirements, define success metrics, and establish a strategic roadmap that aligns technology with your business goals.",
+      "We hop on a quick call to understand your vision and goals. I ask the right questions to figure out what you actually need, not just what sounds cool. By the end, you'll have clarity on next steps and a realistic timeline.",
     icon: "🔍",
     progress: "20%",
   },
   {
     number: "02",
-    title: "Design & Architecture",
+    title: "Design & Planning",
     description:
-      "Our team crafts intuitive user experiences and robust system architecture. We create wireframes, prototypes, and technical specifications that ensure your product is both beautiful and built to scale from day one.",
+      "I create wireframes and a technical roadmap so you can see exactly what we're building before we write code. This prevents surprises and keeps us aligned on your vision throughout the project.",
     icon: "🎨",
     progress: "40%",
   },
   {
     number: "03",
-    title: "Development & Integration",
+    title: "Build & Iterate",
     description:
-      "Using modern frameworks and best practices, we build your product with clean, maintainable code. Our agile approach includes regular updates, iterative improvements, and seamless integration with your existing systems and third-party services.",
+      "I build your product in weekly sprints, so you see progress constantly. You get regular updates, demos, and opportunities to give feedback. This agile approach means we can adjust quickly if priorities change.",
     icon: "⚙️",
     progress: "70%",
   },
   {
     number: "04",
-    title: "Testing & Quality Assurance",
+    title: "Test & Polish",
     description:
-      "Rigorous testing across devices, browsers, and use cases ensures your product performs flawlessly. We conduct comprehensive QA, security audits, and performance optimization to deliver enterprise-grade reliability.",
+      "I test everything thoroughly across devices and browsers to catch bugs before your users do. Security, performance, and user experience all get attention to ensure your product feels professional and reliable.",
     icon: "🔬",
     progress: "90%",
   },
   {
     number: "05",
-    title: "Launch & Growth Support",
+    title: "Launch & Support",
     description:
-      "We don&apos;t just build and leave. Our partnership continues with deployment support, performance monitoring, and strategic guidance to help you scale. We&apos;re invested in your long-term success.",
+      "I deploy your product and stick around to make sure everything runs smoothly. If issues pop up or you need guidance on next steps, I'm here to help. Your success matters to me beyond launch day.",
     icon: "🚀",
     progress: "100%",
   },
@@ -199,105 +222,148 @@ export const faqs = [
   {
     question: "What is an MVP and why do I need one?",
     answer:
-      "An MVP (Minimum Viable Product) is a version of your product with just enough features to validate your business idea with real users. It allows you to test market demand, gather feedback, and iterate quickly without investing months or years in development. This approach reduces risk, saves money, and helps you build what customers actually want.",
+      "An MVP is the fastest way to test if your idea actually works. Instead of spending months building everything, you launch with core features, see how real users respond, and adjust from there. It saves you time, money, and the pain of building something nobody wants. Think of it as validating your concept before going all-in.",
   },
   {
     question: "How long does it take to build an MVP?",
     answer:
-      "Most MVPs can be developed in 6-12 weeks, depending on complexity and scope. We follow an agile methodology with weekly sprints, so you'll see progress continuously. For more complex products requiring multiple integrations or advanced features, timelines may extend to 12-16 weeks. We'll provide a detailed timeline during the discovery phase.",
+      "Most MVPs take 1-4 weeks from start to launch. Simple concepts with basic features can be faster, while more complex apps with multiple integrations might take closer to 6 weeks. You'll see progress every week, not just at the end. During our first call, I'll give you a realistic timeline based on what you need.",
   },
   {
-    question: "What technologies do you use for development?",
+    question: "What technologies do you use?",
     answer:
-      "We specialize in modern, proven technology stacks including Next.js, React, TypeScript, Node.js, PostgreSQL, and cloud platforms like AWS and Vercel. For AI automation, we leverage OpenAI, LangChain, and popular integration tools like Zapier. Technology choices are always tailored to your specific needs, scalability requirements, and long-term maintenance considerations.",
+      "I build with modern, reliable tools like Next.js, React, TypeScript, Node.js, and databases like PostgreSQL or Supabase. For automation, I use OpenAI, Claude, Zapier, and N8n. I pick the tech stack based on what makes sense for your project, not what's trendy. The goal is clean, maintainable code that won't become a nightmare to scale.",
   },
   {
-    question: "Do you provide support after the MVP is launched?",
+    question: "Do you stick around after launch?",
     answer:
-      "Absolutely. We offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, and feature enhancements. Our support packages range from essential maintenance to full ongoing development partnerships. We believe in long-term relationships and are committed to your product's continued success.",
+      "Yes. I don't just hand over the code and disappear. I offer ongoing support to fix bugs, monitor performance, and make updates as you grow. Whether you need occasional maintenance or a long-term development partner, I'm flexible. Your success after launch matters to me.",
   },
   {
-    question: "How much does it cost to develop an MVP?",
+    question: "How much does an MVP cost?",
     answer:
-      "MVP development typically ranges from $10,000 to $50,000, depending on complexity, features, and integrations required. We provide transparent, fixed-price quotes after the discovery phase so there are no surprises. Investment includes full-stack development, UI/UX design, testing, deployment, and initial support. We also offer flexible payment plans for early-stage founders.",
+      "MVP development costs vary based on complexity, features, and timeline. We offer flexible pricing models including fixed-price projects and hourly rates. After understanding your requirements, we provide a detailed quote with transparent pricing and no hidden costs.",
   },
 ];
 
 export const automationSteps = [
   {
     number: 1,
-    title: "Process Analysis & Discovery",
-    description: "Comprehensive audit of existing workflows to identify automation opportunities and quantify efficiency gains.",
+    title: "Understand Your Workflow",
+    description: "I walk through your current processes to spot what's eating up your time. We identify tasks that can be automated and calculate how many hours you'll save each week.",
     icon: "🔍",
   },
   {
     number: 2,
-    title: "Intelligent System Design",
+    title: "Design the System",
     description:
-      "Strategic integration of enterprise AI tools and custom APIs engineered for optimal performance and reliability.",
+      "I map out exactly how the automation will work, connecting your tools and building custom solutions where needed. You'll see the plan before anything goes live.",
     icon: "⚙️",
   },
   {
     number: 3,
-    title: "Deployment & Continuous Optimization",
-    description: "Full implementation with rigorous testing, monitoring, and ongoing refinement to maximize ROI.",
+    title: "Deploy & Optimize",
+    description: "I set everything up, test thoroughly, and monitor performance. As your business grows, I refine the automation to keep it running smoothly and saving you time.",
     icon: "🚀",
   },
 ];
 
 export const automationCaseStudies = [
   {
-    title: "Enterprise Customer Support Automation",
+    title: "AI Customer Support",
     description:
-      "AI-powered conversational system delivering 24/7 support with 85% resolution rate and 60% reduction in ticket volume.",
+      "Built an AI chatbot that handles 85% of customer questions automatically. The support team now only deals with complex issues, cutting ticket volume by 60%.",
     image: "/customer-support-ai.jpg",
     tags: ["OpenAI", "Python", "Zapier"],
   },
   {
-    title: "B2B Lead Qualification Engine",
+    title: "Lead Qualification System",
     description:
-      "Intelligent nurturing system that increased qualified pipeline by 3x through automated scoring and personalized outreach.",
+      "Automated lead scoring and follow-up for a B2B team. Sales reps now spend time with qualified prospects only, tripling their pipeline without hiring more people.",
     image: "/lead-nurturing.jpg",
     tags: ["LangChain", "Node.js", "SendGrid"],
   },
   {
-    title: "Multi-Channel Content Orchestration",
+    title: "Content Publishing Workflow",
     description:
-      "End-to-end content generation and distribution platform reducing production time by 70% across all marketing channels.",
+      "Created an AI system that generates and schedules social content across platforms. Marketing team cut content production time by 70% while posting more consistently.",
     image: "/ai-content-generator.jpg",
     tags: ["OpenAI", "Python", "Buffer API"],
   },
 ];
 
+export const automationServices = [
+  {
+    icon: "🤖",
+    title: "Workflow Automation",
+    description: "Stop doing repetitive tasks manually. I build systems that handle your busy work automatically, so you can focus on what actually grows your business.",
+  },
+  {
+    icon: "🧠",
+    title: "AI Agents",
+    description: "Get AI assistants that handle complex tasks for you. From customer support to data analysis, these agents work 24/7 without breaks or mistakes.",
+  },
+  {
+    icon: "🔗",
+    title: "Tool Integration",
+    description: "Connect your apps so they talk to each other seamlessly. No more copying data between systems or switching between tabs all day.",
+  },
+  {
+    icon: "💬",
+    title: "Smart Chatbots",
+    description: "Build chatbots that actually understand your customers. They handle common questions instantly, qualify leads, and escalate only when needed.",
+  },
+  {
+    icon: "🌐",
+    title: "Data Collection",
+    description: "Automatically gather data from websites and enrich your database. Get the information you need without hiring a team to do it manually.",
+  },
+  {
+    icon: "🔍",
+    title: "System Monitoring",
+    description: "Get alerts when something breaks before it becomes a crisis. Automated monitoring catches issues early and fixes simple problems on its own.",
+  },
+  {
+    icon: "🎤",
+    title: "Voice AI",
+    description: "Add voice capabilities to your products. From voice commands to automated phone calls, make your services more accessible and hands-free.",
+  },
+  {
+    icon: "✍️",
+    title: "AI Content Generation",
+    description: "Create high-quality content at scale using optimized AI prompts. Consistent tone, accurate outputs, and less time spent editing.",
+  },
+];
+
 export const automationFaqs = [
   {
-    question: "What types of business processes can be automated?",
+    question: "What can be automated in my business?",
     answer:
-      "Nearly any repetitive, rule-based process can benefit from automation. Common use cases include customer support workflows, lead qualification and nurturing, data entry and synchronization, content generation and distribution, invoice processing, appointment scheduling, email campaigns, reporting and analytics, CRM updates, and document management. We assess your unique workflows to identify high-impact opportunities that deliver measurable ROI.",
+      "Pretty much any repetitive task that follows a pattern. Customer support, lead follow-ups, data entry, content posting, invoice processing, scheduling, CRM updates, reporting—the list goes on. During our call, I'll walk through your workflows and point out the biggest time-wasters that automation can handle.",
   },
   {
-    question: "How do AI automation solutions differ from traditional automation?",
+    question: "How is AI automation different from regular automation?",
     answer:
-      "Traditional automation follows rigid, predefined rules and struggles with unstructured data or contextual decisions. AI automation leverages machine learning and natural language processing to handle complex scenarios, understand context, learn from patterns, and make intelligent decisions. This means systems can interpret customer inquiries, generate personalized responses, extract insights from unstructured documents, and continuously improve performance—capabilities impossible with conventional automation.",
+      "Regular automation is like a simple robot following strict instructions. AI automation is smarter—it understands context, handles unpredictable scenarios, and learns from patterns. So instead of just moving data around, it can read customer messages, write personalized responses, and make decisions based on what it sees. That's the game-changer.",
   },
   {
-    question: "What is the typical ROI timeline for automation implementation?",
+    question: "How quickly will I see results?",
     answer:
-      "Most clients see measurable returns within 3-6 months of deployment. Initial efficiency gains appear immediately as automated processes begin handling routine tasks. Full ROI typically materializes within 6-12 months as systems mature and adoption scales across teams. Factors influencing timeline include process complexity, integration requirements, and implementation scope. We provide detailed ROI projections during the discovery phase, tracking key metrics like time saved, cost reduction, and productivity increases.",
+      "You'll see time savings immediately once the automation goes live. Most clients hit positive ROI within 3-6 months as the system handles more volume. Full payback typically happens in 6-12 months. The exact timeline depends on what we're automating and how complex your setup is. I'll give you realistic projections after we assess your workflows.",
   },
   {
-    question: "Do I need technical expertise to manage automated systems?",
+    question: "Do I need to know how to code?",
     answer:
-      "No technical expertise is required. We design automation solutions with user-friendly interfaces and intuitive management dashboards. Your team receives comprehensive training and documentation covering system operation, monitoring, and basic troubleshooting. We also provide ongoing support for maintenance, updates, and optimization. For complex modifications or scaling, our team handles technical implementation while you maintain strategic oversight through accessible reporting tools.",
+      "Not at all. I build everything with user-friendly dashboards so your team can monitor and adjust without touching code. You'll get training on how to use the system, and I'm available for ongoing support when you need it. If you want to make major changes down the road, I handle the technical work.",
   },
   {
-    question: "How do you ensure data security and compliance in automated workflows?",
+    question: "Is my data secure?",
     answer:
-      "Security and compliance are fundamental to every automation we build. We implement end-to-end encryption for data transmission, secure API authentication protocols, role-based access controls, and audit logging for all automated actions. For regulated industries, we ensure GDPR, HIPAA, SOC 2, or other relevant compliance standards are met. All integrations undergo security assessments, and we follow industry best practices for credential management and data handling throughout the automation lifecycle.",
+      "Yes. I take security seriously. All data is encrypted in transit and at rest, APIs are locked down with proper authentication, and access is controlled based on roles. If you're in a regulated industry (healthcare, finance, etc.), I make sure everything meets compliance requirements like GDPR or HIPAA. Your data stays safe.",
   },
   {
-    question: "Can automation solutions integrate with our existing tools and systems?",
+    question: "Can this work with my current tools?",
     answer:
-      "Yes, integration with your existing technology stack is a core component of our approach. We work with popular platforms including Salesforce, HubSpot, Slack, Google Workspace, Microsoft 365, Stripe, Shopify, and hundreds of other business tools via APIs and integration platforms like Zapier and Make. For proprietary systems, we develop custom integrations to ensure seamless data flow across your entire ecosystem without disrupting current operations.",
+      "Almost certainly. I integrate with popular platforms like Salesforce, HubSpot, Slack, Google Workspace, Stripe, Shopify, and hundreds more. If you have proprietary or custom systems, I can build custom integrations. The goal is to make your tools work together seamlessly without disrupting how your team already operates.",
   },
 ];

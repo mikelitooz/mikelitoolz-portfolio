@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export function Footer() {
   return (
@@ -9,25 +10,31 @@ export function Footer() {
         <p className="text-foreground/60 text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
         <div className="flex items-center gap-1">
           <Link
-            href="/"
+            href="https://x.com/izzydev_"
             className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
           >
             <BsTwitterX size={24} />
           </Link>
           <Link
-            href="/"
+            href="mailto:izzydevbuilds@gmail.com"
+            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
+          >
+            <MdEmail size={24} />
+          </Link>
+          <Link
+            href="https://github.com/chiizzy1"
             className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
           >
             <FaGithub size={24} />
           </Link>
           <Link
-            href="/"
+            href="https://www.linkedin.com/in/israelchukwudi/"
             className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
           >
             <FaLinkedinIn size={24} />
           </Link>
           <Link
-            href="/"
+            href="https://www.youtube.com/@Izzydev_1"
             className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
           >
             <FaYoutube size={24} />

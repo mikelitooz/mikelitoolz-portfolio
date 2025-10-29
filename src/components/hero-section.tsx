@@ -1,14 +1,15 @@
 "use client"
 
-import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { gsap } from "@/lib/gsap"
+import { AnimatedButton } from "./ui/animated-button"
+import AnimatedShaderBackground from "./ui/animated-shader-background"
 
 interface HeroSectionProps {
   title: string
   subtitle: string
-  cta1?: { label: string; href: string }
-  cta2?: { label: string; href: string }
+  cta1?: { label: string; hoverLabel: string; href: string }
+  cta2?: { label: string; hoverLabel: string; href: string }
 }
 
 export function HeroSection({ title, subtitle, cta1, cta2 }: HeroSectionProps) {
@@ -70,8 +71,9 @@ export function HeroSection({ title, subtitle, cta1, cta2 }: HeroSectionProps) {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-4">
-      <div className="text-center max-w-3xl mx-auto">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
+      <AnimatedShaderBackground />
+      <div className="relative z-10 text-center max-w-3xl mx-auto">
         <h1
           ref={titleRef}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
@@ -86,23 +88,25 @@ export function HeroSection({ title, subtitle, cta1, cta2 }: HeroSectionProps) {
         </p>
         <div
           ref={ctaContainerRef}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 items-center justify-center"
         >
           {cta1 && (
-            <Link
+            <AnimatedButton
               href={cta1.href}
-              className="px-8 py-3 text-lg sm:text-xl md:text-2xl bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors"
-            >
-              {cta1.label}
-            </Link>
+              label={cta1.label}
+              hoverLabel={cta1.hoverLabel}
+              variant="primary"
+              className="text-lg sm:text-xl md:text-2xl"
+            />
           )}
           {cta2 && (
-            <Link
+            <AnimatedButton
               href={cta2.href}
-              className="px-8 py-3 text-lg sm:text-xl md:text-2xl border border-accent text-accent rounded-lg font-semibold hover:bg-accent/10 transition-colors"
-            >
-              {cta2.label}
-            </Link>
+              label={cta2.label}
+              hoverLabel={cta2.hoverLabel}
+              variant="secondary"
+              className="text-lg sm:text-xl md:text-2xl"
+            />
           )}
         </div>
       </div>

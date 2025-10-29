@@ -5,7 +5,13 @@
       "Bash(npm run dev:*)",
       "Bash(npm install:*)",
       "Bash(mkdir:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(timeout /t:*)",
+      "Bash(git checkout:*)",
+      "Bash(findstr:*)",
+      "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\app\\favicon.ico\")",
+      "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\components\\ui\\pulse-beams.tsx\")",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
