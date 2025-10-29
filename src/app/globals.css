@@ -397,12 +397,13 @@ body {
   color: #fff3e8;
 }
 
-/* Float animation for hero elements */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* Hero Section Gradient Background */
+.hero-gradient {
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 165, 116, 0.15) 0%,
+    rgba(212, 165, 116, 0.08) 40%,
+    transparent 70%
+  ),
+  var(--background);
 }

@@ -11,7 +11,9 @@
       "Bash(findstr:*)",
       "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\app\\favicon.ico\")",
       "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\components\\ui\\pulse-beams.tsx\")",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\components\\ui\\animated-shader-background.tsx\")",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": []

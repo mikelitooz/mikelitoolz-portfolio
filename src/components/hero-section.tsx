@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import { gsap } from "@/lib/gsap"
 import { AnimatedButton } from "./ui/animated-button"
-import AnimatedShaderBackground from "./ui/animated-shader-background"
 
 interface HeroSectionProps {
   title: string
@@ -71,9 +70,8 @@ export function HeroSection({ title, subtitle, cta1, cta2 }: HeroSectionProps) {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-      <AnimatedShaderBackground />
-      <div className="relative z-10 text-center max-w-3xl mx-auto">
+    <section className="hero-gradient min-h-screen flex items-center justify-center pt-20 px-4">
+      <div className="text-center max-w-3xl mx-auto">
         <h1
           ref={titleRef}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
