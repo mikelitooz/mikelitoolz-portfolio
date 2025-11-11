@@ -72,24 +72,33 @@ export function Timeline({ steps }: TimelineProps) {
         );
       });
 
-      // Scroll-following glow on center line
-      gsap.to(glowRef.current, {
-        scrollTrigger: {
-          trigger: timelineRef.current,
-          start: "top center",
-          end: "bottom center",
-          scrub: 1,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            const timelineHeight = timelineRef.current?.offsetHeight || 0;
-            const glowPosition = progress * timelineHeight;
-            gsap.to(glowRef.current, {
-              top: glowPosition,
-              duration: 0.1,
-            });
+      // Scroll-following glow on center line with null safety
+      if (glowRef.current && timelineRef.current) {
+        gsap.to(glowRef.current, {
+          scrollTrigger: {
+            trigger: timelineRef.current,
+            start: "top center",
+            end: "bottom center",
+            scrub: 1,
+            invalidateOnRefresh: false,
+            onUpdate: (self) => {
+              // Guard against stale refs when page regains focus
+              if (!glowRef.current || !timelineRef.current) return;
+
+              const progress = self.progress;
+              const timelineHeight = timelineRef.current.offsetHeight || 0;
+              const glowPosition = progress * timelineHeight;
+
+              if (glowRef.current) {
+                gsap.to(glowRef.current, {
+                  top: glowPosition,
+                  duration: 0.1,
+                });
+              }
+            },
           },
-        },
-      });
+        });
+      }
     }, timelineRef);
 
     return () => ctx.revert();

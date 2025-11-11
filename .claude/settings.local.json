@@ -13,7 +13,11 @@
       "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\components\\ui\\pulse-beams.tsx\")",
       "Bash(rm:*)",
       "Bash(del \"c:\\Users\\DELL\\Desktop\\projects\\izzydevbuilds-portfolio\\src\\components\\ui\\animated-shader-background.tsx\")",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(NUL)",
+      "Bash(if exist NUL echo \"NUL exists\")",
+      "Bash(dir:*)",
+      "Bash(nul)"
     ],
     "deny": [],
     "ask": []

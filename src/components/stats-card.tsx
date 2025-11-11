@@ -73,22 +73,18 @@ export function StatsCard({ icon, value, label, subtitle, bgColor }: StatsCardPr
     return () => {
       // Kill ScrollTrigger instances first
       scrollTriggersRef.current.forEach(trigger => {
-        try {
-          if (trigger) {
-            trigger.kill()
-          }
-        } catch (e) {
-          // Silently ignore errors during cleanup
+        if (trigger && typeof trigger.kill === 'function') {
+          trigger.kill()
         }
       })
       scrollTriggersRef.current = []
 
       // Kill the tweens
-      try {
+      if (counterTween && typeof counterTween.kill === 'function') {
         counterTween.kill()
+      }
+      if (entranceTween && typeof entranceTween.kill === 'function') {
         entranceTween.kill()
-      } catch (e) {
-        // Silently ignore errors during cleanup
       }
     }
   }, [value])

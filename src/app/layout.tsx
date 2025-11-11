@@ -5,6 +5,7 @@ import "./globals.css";
 import { ReactLenis } from "@/lib/lenis";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ScrollTriggerSafety } from "@/components/scroll-trigger-safety";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({
@@ -84,9 +85,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/icon.png",
+    shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
     other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        url: "/icon-192x192.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        url: "/icon-512x512.png",
+      },
       {
         rel: "icon",
         type: "image/png",
@@ -116,6 +129,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
+        <ScrollTriggerSafety />
         <ReactLenis root>
           <Navbar />
           {children}
