@@ -1,46 +1,11 @@
-import Link from "next/link";
-import { BsTwitterX } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import Container from "./Container";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-8 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-foreground/60 text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
-        <div className="flex items-center gap-1">
-          <Link
-            href="https://x.com/izzydev_"
-            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
-          >
-            <BsTwitterX size={24} />
-          </Link>
-          <Link
-            href="mailto:izzydevbuilds@gmail.com"
-            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
-          >
-            <MdEmail size={24} />
-          </Link>
-          <Link
-            href="https://github.com/chiizzy1"
-            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
-          >
-            <FaGithub size={24} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/israelchukwudi/"
-            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
-          >
-            <FaLinkedinIn size={24} />
-          </Link>
-          <Link
-            href="https://www.youtube.com/@Izzydev_1"
-            className="text-foreground hover:text-accent transition-colors w-10 h-10 flex items-center justify-center rounded-full"
-          >
-            <FaYoutube size={24} />
-          </Link>
-        </div>
-      </div>
+    <footer className="py-6 px-4">
+      <Container>
+        <p className="text-foreground text-center text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
+      </Container>
     </footer>
   );
 }

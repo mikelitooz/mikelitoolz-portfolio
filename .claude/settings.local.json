@@ -17,9 +17,27 @@
       "Bash(NUL)",
       "Bash(if exist NUL echo \"NUL exists\")",
       "Bash(dir:*)",
-      "Bash(nul)"
+      "Bash(nul)",
+      "WebSearch",
+      "WebFetch(domain:esuoladaniel.framer.website)",
+      "WebFetch(domain:www.startdeed.com)",
+      "Bash(timeout 5 bash:*)",
+      "Bash(curl:*)",
+      "Bash(npx playwright:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_wait_for",
+      "Bash(touch:*)",
+      "mcp__playwright__browser_close"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "playwright",
+    "brave-search",
+    "context7",
+    "firecrawl-mcp"
+  ]
 }

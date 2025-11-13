@@ -26,3 +26,5 @@ export { default as SupabaseIcon } from "./supabase-96.svg";
 export { default as ShadcnIcon } from "./shadcn-ui-seeklogo.svg";
 export { default as AboutImage } from "./about.png";
 export { default as ProfileImage } from "./profile.jpg";
+export { default as QrCode } from "./izzydev_.svg";
+export { default as BgImage } from "./dotted-bg.png";

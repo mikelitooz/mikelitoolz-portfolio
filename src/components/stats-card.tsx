@@ -1,11 +1,8 @@
-"use client"
-
-import { GlowingEffect } from "@/components/ui/glowing-effect"
-import { useEffect, useRef } from "react"
-import { gsap, ScrollTrigger } from "@/lib/gsap"
+import { LucideProps } from "lucide-react";
+import { RefAttributes } from "react";
 
 interface StatsCardProps {
-  icon: React.ReactNode;
+  icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
   value: string;
   label: string;
   subtitle: string;
@@ -13,104 +10,11 @@ interface StatsCardProps {
 }
 
 export function StatsCard({ icon, value, label, subtitle, bgColor }: StatsCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null)
-  const valueRef = useRef<HTMLDivElement>(null)
-  const scrollTriggersRef = useRef<ScrollTrigger[]>([])
-
-  useEffect(() => {
-    if (!valueRef.current || !cardRef.current) return
-
-    // Extract number from value (e.g., "15+" -> 15, "20K+" -> 20)
-    const numMatch = value.match(/(\d+)/)
-    const targetNumber = numMatch ? parseInt(numMatch[1]) : 0
-    const suffix = value.replace(/\d+/, "")
-
-    // Counter animation
-    const counter = { value: 0 }
-
-    const counterTween = gsap.to(counter, {
-      value: targetNumber,
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: cardRef.current,
-        start: "top 80%",
-        once: true,
-      },
-      onUpdate: () => {
-        if (valueRef.current) {
-          valueRef.current.textContent = Math.floor(counter.value) + suffix
-        }
-      },
-    })
-
-    // Card entrance animation
-    const entranceTween = gsap.fromTo(
-      cardRef.current,
-      { opacity: 0, y: 30, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "back.out(1.2)",
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: "top 80%",
-          once: true,
-        }
-      }
-    )
-
-    // Store ScrollTrigger instances after creation
-    if (counterTween.scrollTrigger) {
-      scrollTriggersRef.current.push(counterTween.scrollTrigger)
-    }
-    if (entranceTween.scrollTrigger) {
-      scrollTriggersRef.current.push(entranceTween.scrollTrigger)
-    }
-
-    return () => {
-      // Kill ScrollTrigger instances first
-      scrollTriggersRef.current.forEach(trigger => {
-        if (trigger && typeof trigger.kill === 'function') {
-          trigger.kill()
-        }
-      })
-      scrollTriggersRef.current = []
-
-      // Kill the tweens
-      if (counterTween && typeof counterTween.kill === 'function') {
-        counterTween.kill()
-      }
-      if (entranceTween && typeof entranceTween.kill === 'function') {
-        entranceTween.kill()
-      }
-    }
-  }, [value])
-
   return (
-    <div
-      ref={cardRef}
-      className="relative bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-all hover:transform hover:scale-105"
-      style={{ opacity: 0 }}
-    >
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={80}
-        inactiveZone={0.1}
-        borderWidth={2}
-      />
-      <div className={`${bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-6`}>
-        {icon}
-      </div>
-      <div ref={valueRef} className="text-4xl font-bold mb-2">
-        0{value.replace(/\d+/, "")}
-      </div>
-      <h3 className="text-lg font-semibold mb-2">{label}</h3>
-      <p className="text-foreground/60 text-sm">{subtitle}</p>
+    <div className="relative p-8 text-center">
+      <div className="text-5xl font-bold mb-2 text-foreground">{value}</div>
+      <h3 className="text-base font-semibold mb-2 text-foreground">{label}</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">{subtitle}</p>
     </div>
   );
 }

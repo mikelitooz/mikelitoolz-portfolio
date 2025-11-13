@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import Container from "./Container";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -51,85 +52,78 @@ export function Navbar() {
     <>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent"
+          isScrolled ? "bg-foreground/5 backdrop-blur-md" : "bg-transparent"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <Link href="/" className="group transition-colors duration-500 z-50">
-            <span className="text-xl font-bold text-primary group-hover:text-accent">
-              IzzyDev<span className="text-accent group-hover:text-primary">Builds</span>
-            </span>
-          </Link>
+        <Container>
+          <div className="py-4 flex h-20 items-center justify-between">
+            <Link href="/" className="group transition-colors duration-500 z-50">
+              <span className="text-xl font-bold text-primary group-hover:text-accent">
+                IzzyDev<span className="text-accent group-hover:text-primary">Builds</span>
+              </span>
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative text-sm font-medium transition-colors group ${
-                    isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                  <span
-                    className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-8">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`relative text-sm font-medium transition-colors group ${
+                      isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
                     }`}
-                  />
-                </Link>
-              );
-            })}
-            <a
-              href="#contact"
-              onClick={handleContactClick}
-              className="relative text-sm font-medium transition-colors group text-foreground/70 hover:text-foreground"
-            >
-              Contact
-              <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 w-0 group-hover:w-full" />
-            </a>
-          </div>
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
+              <a
+                href="#contact"
+                onClick={handleContactClick}
+                className="relative text-sm font-medium transition-colors group text-foreground/70 hover:text-foreground"
+              >
+                Contact
+                <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 w-0 group-hover:w-full" />
+              </a>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
-            aria-label="Toggle menu"
-          >
-            <span
-              className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                isMobileMenuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-            />
-          </button>
-        </div>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              />
+              <span className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
+              <span
+                className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                  isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              />
+            </button>
+          </div>
+        </Container>
       </nav>
 
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${
-          isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
         {/* Backdrop */}
-        <div
-          className="absolute inset-0 bg-background/95 backdrop-blur-lg"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
+        <div className="absolute inset-0 bg-background/95 backdrop-blur-lg" onClick={() => setIsMobileMenuOpen(false)} />
 
         {/* Menu Content */}
         <div className="relative h-full flex flex-col items-center justify-center gap-8">

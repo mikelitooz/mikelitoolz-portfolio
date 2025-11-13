@@ -1,92 +1,59 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
-import { useEffect, useRef } from "react"
-import { gsap } from "@/lib/gsap"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  link?: string
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  link?: string;
 }
 
 export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!cardRef.current) return
-
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        cardRef.current,
-        {
-          opacity: 0,
-          y: 50,
-          scale: 0.95,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top 85%",
-            once: true,
-          },
-        }
-      )
-    })
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <div
-      ref={cardRef}
-      className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
-      style={{ opacity: 0 }}
-    >
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={80}
-        inactiveZone={0.1}
-        borderWidth={2}
-      />
-      <div className="relative h-48 overflow-hidden bg-secondary">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-foreground/70 text-sm mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag) => (
-            <span key={tag} className="text-xs px-3 py-1 bg-secondary text-accent rounded-full">
-              {tag}
-            </span>
-          ))}
+    <div className="group rounded-[20px] border border-foreground transition-all duration-300">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 py-6 px-8">
+        {/* Left side - Content */}
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-2xl lg:text-3xl font-bold">{title}</h3>
+
+            <div className="flex flex-wrap gap-3">
+              {tags.map((tag) => (
+                <div key={tag} className="text-sm px-3 py-0.5 border">
+                  <span>{tag}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <p className="text-base lg:text-lg leading-[1.8]">{description}</p>
+            {link && (
+              <Link
+                href={link}
+                className="inline-flex items-center gap-3 text-project-card-text border px-4 py-2.5 rounded-[50px]  transition-all font-medium text-base group/link w-fit"
+              >
+                <span>View Project</span>
+                <div className="w-8 h-8 rounded-full bg-card-foreground flex items-center justify-center group-hover/link:translate-x-1 transition-transform">
+                  <ArrowRight className="text-accent-foreground" />
+                </div>
+              </Link>
+            )}
+          </div>
         </div>
-        {link && (
-          <Link
-            href={link}
-            className="inline-block text-accent hover:text-primary transition-colors font-medium text-sm"
-          >
-            View Project →
-          </Link>
-        )}
+
+        {/* Right side - Mockup Preview */}
+        <div className="flex items-center justify-center">
+          <div className="w-full p-4 rounded-2xl bg-card-foreground/10">
+            <div className="relative w-full h-[300px]">
+              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.02]" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
