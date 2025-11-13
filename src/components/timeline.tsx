@@ -135,7 +135,7 @@ export function Timeline({ steps }: TimelineProps) {
               {/* Content */}
               <div className={`flex-1 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
                 <div
-                  className="timeline-card relative bg-secondary/50 backdrop-blur-sm border border-accent/20 rounded-lg p-6 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 ml-16 md:ml-0 overflow-hidden"
+                  className="timeline-card relative bg-secondary/50 backdrop-blur-sm border border-accent/20 rounded-lg p-6 hover:border-accent transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 ml-24 md:ml-0 overflow-hidden"
                   style={{ opacity: 0 }}
                 >
                   <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.1} borderWidth={2} />

@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <main>
       <HeroSection
-        title="Your Idea Doesn't Need Perfection. It Needs Validation."
-        subtitle="Most MVPs die because they launch too late. I build products that get in front of users fast, collect real feedback faster, and iterate before your competitors even finish their roadmap. Last year: 12 launches. 8 got paying customers in 30 days. Let's make yours one of them."
+        title="I Build Products That Ship"
+        subtitle="Last year I launched 12 MVPs. 8 got paying customers within 30 days. The other 4 taught me what not to build. Let's make sure yours is one of the 8."
         cta1={{ label: "See My Work", hoverLabel: "View Portfolio", href: "#projects" }}
         cta2={{ label: "Explore Automation", hoverLabel: "AI Solutions", href: "/automation" }}
       />

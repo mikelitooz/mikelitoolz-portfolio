@@ -70,19 +70,19 @@ export const services = [
     icon: Rocket,
     title: "MVP Development",
     description:
-      "Your first version will be ugly. That's the point. I build the minimum you need to test with real users, then we iterate based on what actually happens—not what we think will happen.",
+      "Your first version doesn't need every feature. It needs the ones that prove your idea works. I build MVPs that test assumptions fast and iterate based on what real users actually do, not what surveys say they'll do.",
   },
   {
     icon: Rocket,
     title: "AI Automation",
     description:
-      "I automate the boring stuff—data entry, lead qualification, content generation. Most automation projects pay for themselves in saved time within 2 months.",
+      "If you're spending hours on data entry, follow-ups, or content generation, you're bleeding time and money. I automate the repetitive tasks so your team can focus on decisions that actually move the needle.",
   },
   {
     icon: Rocket,
     title: "Interface Design",
     description:
-      "Pretty isn't enough. I design interfaces that make sense to your actual users, not just to other designers. If they can't figure it out in 10 seconds, I redesign it.",
+      "A beautiful interface that confuses users is useless. I design for clarity first, aesthetics second. If someone has to think for more than 5 seconds, I redesign it until they don't.",
   },
 ];
 
@@ -90,7 +90,7 @@ export const projects = [
   {
     title: "SaaS Analytics Dashboard",
     description:
-      "A startup founder was drowning in Google Analytics trying to figure out which features users actually cared about. Built a simplified dashboard that tracks 5 key metrics. They now check it every morning instead of avoiding their analytics tab.",
+      "Founder was drowning in Google Analytics trying to understand what users cared about. Built a dashboard tracking 5 key metrics. Now they check it every morning instead of avoiding analytics entirely. Decision-making went from guesswork to data-driven.",
     image: "/saas-dashboard.jpg",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
     link: "#",
@@ -99,7 +99,7 @@ export const projects = [
   {
     title: "AI Content Generator",
     description:
-      "Marketing team needed 20 blog posts per month but could only write 5. Built an AI tool that generates first drafts matching their brand voice. They now edit instead of staring at blank pages. 15 posts published last month.",
+      "Marketing team could write 5 blog posts per month but needed 20. Built an AI tool matching their brand voice. They now edit drafts instead of staring at blank pages. Last month: 18 posts published, zero all-nighters.",
     image: "/ai-content-generator.jpg",
     tags: ["React", "Node.js", "OpenAI", "MongoDB"],
     link: "#",
@@ -108,7 +108,7 @@ export const projects = [
   {
     title: "Multi-Vendor Marketplace",
     description:
-      "E-commerce platform needed to onboard vendors faster. Built a self-service system where sellers can list products and start taking orders in under 10 minutes. First vendor made a sale within an hour of signing up.",
+      "Onboarding vendors took days of back-and-forth. Built a self-service portal where sellers list products in under 10 minutes. First vendor made their first sale within an hour. Marketplace now processes 100+ orders per day.",
     image: "/marketplace-platform.jpg",
     tags: ["Next.js", "Stripe", "PostgreSQL", "WebSocket"],
     link: "#",
@@ -117,7 +117,7 @@ export const projects = [
   {
     title: "Project Management Tool",
     description:
-      "Team was spending 2 hours per week in planning meetings. Built a workspace where AI analyzes task dependencies and suggests what to work on next. Meetings dropped to 30 minutes. Team ships faster.",
+      "Team spent 2 hours weekly in planning meetings discussing dependencies. Built AI-powered workspace suggesting what to work on next based on task analysis. Meetings dropped to 30 minutes. Shipping speed increased 40%.",
     image: "/task-management-board.png",
     tags: ["React", "Firebase", "AI", "Tailwind"],
     link: "#",
@@ -126,7 +126,7 @@ export const projects = [
   {
     title: "Lead Automation System",
     description:
-      "Sales team was manually qualifying 100+ leads weekly. Built an AI system that scores leads based on behavior and routes only hot prospects to reps. Sales team now spends Fridays on strategy instead of cold outreach.",
+      "Sales team manually qualified 100+ leads per week. Built AI system scoring leads based on behavior, routing only hot prospects to reps. Sales team now spends Fridays strategizing instead of cold calling dead ends.",
     image: "/lead-automation.jpg",
     tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
     link: "#",
@@ -135,7 +135,7 @@ export const projects = [
   {
     title: "Mobile Backend API",
     description:
-      "Mobile app kept crashing when users exceeded 10K. Rewrote the backend API with proper caching and database indexing. Now handles 50K+ users without breaking. Response times under 100ms.",
+      "App crashed when user count hit 10K. Rewrote backend with proper caching and indexing. Now handles 50K+ users without breaking. Response times under 100ms. Founder stopped losing sleep over server costs and downtime.",
     image: "/mobile-backend.jpg",
     tags: ["Node.js", "Express", "PostgreSQL", "JWT"],
     link: "#",
@@ -146,23 +146,23 @@ export const projects = [
 export const whyWorkWithMe = [
   {
     icon: Rocket,
-    title: "Fast, Reliable Execution",
-    description: "From idea to launch faster than you expect. No delays, no excuses.",
+    title: "Speed Without Shortcuts",
+    description: "Fast execution, zero compromises on quality. You get both.",
   },
   {
     icon: Rocket,
-    title: "Built to Make You Money",
-    description: "I focus on features that get customers paying, not just looking cool.",
+    title: "Revenue-First Thinking",
+    description: "I prioritize features that get users paying, not just looking.",
   },
   {
     icon: Rocket,
-    title: "Fullstack + AI Expertise",
-    description: "Sleek web apps and intelligent workflows that work together seamlessly to save you time and accelerate growth.",
+    title: "Fullstack + AI Fluency",
+    description: "I build web apps and intelligent workflows that work together seamlessly.",
   },
   {
     icon: Rocket,
-    title: "Clear Communication",
-    description: "Weekly updates, no technical jargon, and you're always in the loop.",
+    title: "Clear, Human Communication",
+    description: "Weekly updates in plain English. No jargon, no surprises.",
   },
 ];
 
@@ -202,35 +202,35 @@ export const processSteps = [
     number: 1,
     title: "Discovery Call",
     description:
-      "We hop on a quick call to understand your vision and goals. I ask the right questions to figure out what you actually need, not just what sounds cool. By the end, you'll have clarity on next steps and a realistic timeline.",
+      "We talk through your vision, goals, and constraints. I ask pointed questions to figure out what you actually need versus what sounds impressive. You'll leave the call with clarity on next steps and a realistic timeline.",
     icon: Search,
   },
   {
     number: 2,
     title: "Design & Planning",
     description:
-      "I create wireframes and a technical roadmap so you can see exactly what we're building before we write code. This prevents surprises and keeps us aligned on your vision throughout the project.",
+      "I create wireframes and a technical roadmap so you see exactly what we're building before any code gets written. This prevents scope creep, misalignment, and expensive surprises down the road.",
     icon: Palette,
   },
   {
     number: 3,
     title: "Build & Iterate",
     description:
-      "I build your product in weekly sprints, so you see progress constantly. You get regular updates, demos, and opportunities to give feedback. This agile approach means we can adjust quickly if priorities change.",
+      "I build in weekly sprints with regular demos and feedback loops. You see progress constantly, not just at launch. If priorities shift, we adjust quickly without derailing the entire project.",
     icon: Cog,
   },
   {
     number: 4,
     title: "Test & Polish",
     description:
-      "I test everything thoroughly across devices and browsers to catch bugs before your users do. Security, performance, and user experience all get attention to ensure your product feels professional and reliable.",
+      "I test thoroughly across devices and browsers to catch bugs before users do. Security, performance, and usability all get attention so your product feels professional, not rushed.",
     icon: FlaskConical,
   },
   {
     number: 5,
     title: "Launch & Support",
     description:
-      "I deploy your product and stick around to make sure everything runs smoothly. If issues pop up or you need guidance on next steps, I'm here to help. Your success matters to me beyond launch day.",
+      "I deploy your product and monitor the first few days closely. If issues arise or you need guidance on next steps, I'm here. Your success matters beyond launch day.",
     icon: Rocket,
   },
 ];
@@ -239,7 +239,7 @@ export const faqs = [
   {
     question: "What is an MVP and why do I need one?",
     answer:
-      "An MVP is the fastest way to test if your idea actually works. Instead of spending months building everything, you launch with core features, see how real users respond, and adjust from there. It saves you time, money, and the pain of building something nobody wants. Think of it as validating your concept before going all-in.",
+      "An MVP is the fastest way to test if your idea solves a real problem. Instead of spending months building every feature you imagine, you launch with core functionality, watch how real users behave, and iterate from there. It's about validation first, perfection later. Most successful products started ugly and improved based on feedback.",
   },
   {
     question: "How long does it take to build an MVP?",
@@ -249,17 +249,17 @@ export const faqs = [
   {
     question: "What technologies do you use?",
     answer:
-      "I build with modern, reliable tools like Next.js, React, TypeScript, Node.js, and databases like PostgreSQL or Supabase. For automation, I use OpenAI, Claude, Zapier, and N8n. I pick the tech stack based on what makes sense for your project, not what's trendy. The goal is clean, maintainable code that won't become a nightmare to scale.",
+      "I build with modern, reliable tools like Next.js, React, TypeScript, Node.js, and databases like PostgreSQL or Supabase. For automation, I use OpenAI, Claude, Zapier, and N8n. I choose tech based on what makes sense for your project, not what's trendy. The goal is maintainable code that won't become a nightmare to scale.",
   },
   {
     question: "Do you stick around after launch?",
     answer:
-      "Yes. I don't just hand over the code and disappear. I offer ongoing support to fix bugs, monitor performance, and make updates as you grow. Whether you need occasional maintenance or a long-term development partner, I'm flexible. Your success after launch matters to me.",
+      "Yes. I don't just deliver code and vanish. I offer ongoing support for bug fixes, monitoring, and updates as you grow. Whether you need occasional maintenance or a long-term development partner, I'm flexible. Your success after launch matters to me.",
   },
   {
     question: "How much does an MVP cost?",
     answer:
-      "MVP development costs vary based on complexity, features, and timeline. We offer flexible pricing models including fixed-price projects and hourly rates. After understanding your requirements, we provide a detailed quote with transparent pricing and no hidden costs.",
+      "It depends on scope, complexity, and timeline. I offer flexible pricing including fixed-price projects and hourly rates. After understanding your requirements, I'll provide a detailed quote with transparent pricing and zero hidden costs. Most MVPs range from a few thousand to mid five figures.",
   },
 ];
 
@@ -268,21 +268,21 @@ export const automationSteps = [
     number: 1,
     title: "Understand Your Workflow",
     description:
-      "I walk through your current processes to spot what's eating up your time. We identify tasks that can be automated and calculate how many hours you'll save each week.",
+      "I walk through your current processes to identify what's draining your time. We pinpoint tasks ready for automation and calculate how many hours you'll reclaim each week.",
     icon: Rocket,
   },
   {
     number: 2,
     title: "Design the System",
     description:
-      "I map out exactly how the automation will work, connecting your tools and building custom solutions where needed. You'll see the plan before anything goes live.",
+      "I map out how the automation will work, connecting your existing tools and building custom solutions where needed. You see the plan before anything goes live.",
     icon: Rocket,
   },
   {
     number: 3,
     title: "Deploy & Optimize",
     description:
-      "I set everything up, test thoroughly, and monitor performance. As your business grows, I refine the automation to keep it running smoothly and saving you time.",
+      "I set everything up, test rigorously, and monitor performance. As your business grows, I refine the automation to keep it running smoothly and saving you time.",
     icon: Rocket,
   },
 ];
@@ -291,21 +291,21 @@ export const automationCaseStudies = [
   {
     title: "AI Customer Support",
     description:
-      "Built an AI chatbot that handles 85% of customer questions automatically. The support team now only deals with complex issues, cutting ticket volume by 60%.",
+      "Built AI chatbot handling 85% of customer questions automatically. Support team now focuses only on complex issues. Ticket volume dropped 60%, response time under 2 minutes.",
     image: "/customer-support-ai.jpg",
     tags: ["OpenAI", "Python", "Zapier"],
   },
   {
     title: "Lead Qualification System",
     description:
-      "Automated lead scoring and follow-up for a B2B team. Sales reps now spend time with qualified prospects only, tripling their pipeline without hiring more people.",
+      "Automated lead scoring and follow-up for B2B sales team. Reps now spend time with qualified prospects only. Pipeline tripled without hiring more people.",
     image: "/lead-nurturing.jpg",
     tags: ["LangChain", "Node.js", "SendGrid"],
   },
   {
     title: "Content Publishing Workflow",
     description:
-      "Created an AI system that generates and schedules social content across platforms. Marketing team cut content production time by 70% while posting more consistently.",
+      "Created AI system generating and scheduling social content across platforms. Marketing team cut production time 70% while posting more consistently than ever.",
     image: "/ai-content-generator.jpg",
     tags: ["OpenAI", "Python", "Buffer API"],
   },
@@ -316,49 +316,49 @@ export const automationServices = [
     icon: Rocket,
     title: "Workflow Automation",
     description:
-      "Stop doing repetitive tasks manually. I build systems that handle your busy work automatically, so you can focus on what actually grows your business.",
+      "Eliminate repetitive manual tasks. I build systems handling your busywork automatically so you can focus on what actually grows the business.",
   },
   {
     icon: Rocket,
     title: "AI Agents",
     description:
-      "Get AI assistants that handle complex tasks for you. From customer support to data analysis, these agents work 24/7 without breaks or mistakes.",
+      "Deploy AI assistants handling complex tasks for you. From customer support to data analysis, these agents work 24/7 without breaks or errors.",
   },
   {
     icon: Rocket,
     title: "Tool Integration",
     description:
-      "Connect your apps so they talk to each other seamlessly. No more copying data between systems or switching between tabs all day.",
+      "Connect your apps so they talk to each other seamlessly. Stop copying data between systems or switching tabs constantly.",
   },
   {
     icon: Rocket,
     title: "Smart Chatbots",
     description:
-      "Build chatbots that actually understand your customers. They handle common questions instantly, qualify leads, and escalate only when needed.",
+      "Build chatbots that understand context and nuance. They handle common questions instantly, qualify leads, and escalate only when necessary.",
   },
   {
     icon: Rocket,
     title: "Data Collection",
     description:
-      "Automatically gather data from websites and enrich your database. Get the information you need without hiring a team to do it manually.",
+      "Automatically gather data from websites and enrich your database. Get information you need without hiring a team to do it manually.",
   },
   {
     icon: Rocket,
     title: "System Monitoring",
     description:
-      "Get alerts when something breaks before it becomes a crisis. Automated monitoring catches issues early and fixes simple problems on its own.",
+      "Receive alerts when something breaks before it becomes a crisis. Automated monitoring catches issues early and fixes simple problems autonomously.",
   },
   {
     icon: Rocket,
     title: "Voice AI",
     description:
-      "Add voice capabilities to your products. From voice commands to automated phone calls, make your services more accessible and hands-free.",
+      "Add voice capabilities to your products. From voice commands to automated phone calls, make services more accessible and hands-free.",
   },
   {
     icon: Rocket,
     title: "AI Content Generation",
     description:
-      "Create high-quality content at scale using optimized AI prompts. Consistent tone, accurate outputs, and less time spent editing.",
+      "Create high-quality content at scale using optimized AI prompts. Consistent tone, accurate outputs, less time editing.",
   },
 ];
 
@@ -366,31 +366,31 @@ export const automationFaqs = [
   {
     question: "What can be automated in my business?",
     answer:
-      "Pretty much any repetitive task that follows a pattern. Customer support, lead follow-ups, data entry, content posting, invoice processing, scheduling, CRM updates, reporting—the list goes on. During our call, I'll walk through your workflows and point out the biggest time-wasters that automation can handle.",
+      "Almost any repetitive task following a pattern. Customer support, lead follow-ups, data entry, content posting, invoice processing, scheduling, CRM updates, reporting. During our call, I'll walk through your workflows and identify the biggest time-wasters automation can eliminate.",
   },
   {
     question: "How is AI automation different from regular automation?",
     answer:
-      "Regular automation is like a simple robot following strict instructions. AI automation is smarter—it understands context, handles unpredictable scenarios, and learns from patterns. So instead of just moving data around, it can read customer messages, write personalized responses, and make decisions based on what it sees. That's the game-changer.",
+      "Regular automation follows strict instructions like a simple robot. AI automation understands context, handles unpredictable scenarios, and learns from patterns. Instead of just moving data around, it reads customer messages, writes personalized responses, and makes decisions based on what it sees. That's the difference.",
   },
   {
     question: "How quickly will I see results?",
     answer:
-      "You'll see time savings immediately once the automation goes live. Most clients hit positive ROI within 3-6 months as the system handles more volume. Full payback typically happens in 6-12 months. The exact timeline depends on what we're automating and how complex your setup is. I'll give you realistic projections after we assess your workflows.",
+      "Time savings start immediately once automation goes live. Most clients hit positive ROI within 3-6 months as the system handles increasing volume. Full payback typically happens in 6-12 months. Exact timeline depends on what we're automating and setup complexity. I'll give you realistic projections after assessing your workflows.",
   },
   {
     question: "Do I need to know how to code?",
     answer:
-      "Not at all. I build everything with user-friendly dashboards so your team can monitor and adjust without touching code. You'll get training on how to use the system, and I'm available for ongoing support when you need it. If you want to make major changes down the road, I handle the technical work.",
+      "Not at all. I build everything with user-friendly dashboards so your team can monitor and adjust without touching code. You'll get training on using the system, and I'm available for ongoing support. If you want major changes later, I handle the technical work.",
   },
   {
     question: "Is my data secure?",
     answer:
-      "Yes. I take security seriously. All data is encrypted in transit and at rest, APIs are locked down with proper authentication, and access is controlled based on roles. If you're in a regulated industry (healthcare, finance, etc.), I make sure everything meets compliance requirements like GDPR or HIPAA. Your data stays safe.",
+      "Yes. All data is encrypted in transit and at rest. APIs are locked down with proper authentication. Access is controlled based on roles. If you're in a regulated industry (healthcare, finance, etc.), I ensure everything meets compliance requirements like GDPR or HIPAA. Your data stays safe.",
   },
   {
     question: "Can this work with my current tools?",
     answer:
-      "Almost certainly. I integrate with popular platforms like Salesforce, HubSpot, Slack, Google Workspace, Stripe, Shopify, and hundreds more. If you have proprietary or custom systems, I can build custom integrations. The goal is to make your tools work together seamlessly without disrupting how your team already operates.",
+      "Almost certainly. I integrate with popular platforms like Salesforce, HubSpot, Slack, Google Workspace, Stripe, Shopify, and hundreds more. If you have proprietary or custom systems, I can build custom integrations. The goal is making your tools work together seamlessly without disrupting your team's workflow.",
   },
 ];

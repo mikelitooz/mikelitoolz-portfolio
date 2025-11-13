@@ -11,10 +11,10 @@ interface HowWeWorkProps {
 const HowWeWork: FC<HowWeWorkProps> = ({ page }) => {
   const pageSteps = page === "automation" ? automationSteps : processSteps;
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden py-16 md:py-24">
       <Container className="flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-full py-8">
-          <SectionTitle title="How We Work Together" />
+        <div className="flex flex-col items-center justify-center w-full">
+          <SectionTitle title="From First Call to First Launch" />
           <Timeline steps={pageSteps} />
         </div>
       </Container>

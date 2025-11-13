@@ -10,10 +10,10 @@ interface FAQSectionProps {
 
 const FAQSection: FC<FAQSectionProps> = ({page}) => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden py-16 md:py-24">
       <Container className="flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-full py-8">
-          <SectionTitle title="Frequently Asked Questions" />
+        <div className="flex flex-col items-center justify-center w-full">
+          <SectionTitle title="Questions You're Probably Asking" />
           <FAQAccordion faqs={page === 'automation' ? automationFaqs : faqs} />
         </div>
       </Container>

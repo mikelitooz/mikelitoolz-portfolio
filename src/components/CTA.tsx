@@ -15,9 +15,7 @@ const CTASection: FC = ({}) => {
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
             <div className="flex flex-col gap-10 sm:gap-20 lg:gap-30">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-foreground leading-tight">
-                Got a project idea?
-                <br />
-                Let&apos;s work together
+                Got an Idea?<br /> Book Your Free Strategy Call Today!
               </h3>
 
               <div className="flex flex-col" aria-label="Social media links">
@@ -27,10 +25,10 @@ const CTASection: FC = ({}) => {
                       key={link.name}
                       href={link.url}
                       target="_blank"
-                      className="flex items-center text-accent-foreground gap-3 transition ease-in-out group w-fit"
+                      className="flex items-center text-accent-foreground gap-3 group w-fit"
                     >
-                      <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
-                      <span className="text-lg group-hover:pl-3">{link.name}</span>
+                      <ArrowUpRight className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:rotate-45" />
+                      <span className="text-lg transition-all duration-300 ease-in-out group-hover:pl-3">{link.name}</span>
                     </Link>
                   );
                 })}

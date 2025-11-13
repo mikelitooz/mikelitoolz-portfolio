@@ -29,7 +29,14 @@
       "mcp__playwright__browser_evaluate",
       "mcp__playwright__browser_wait_for",
       "Bash(touch:*)",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "Bash(git -C \"C:/Users/DELL/Desktop/projects/izzydevbuilds-portfolio\" status)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_hover",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_console_messages"
     ],
     "deny": [],
     "ask": []

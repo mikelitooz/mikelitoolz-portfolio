@@ -13,7 +13,7 @@ export function ServiceCard({ icon, title, description }: ServiceCardProps) {
  const IconComponent = icon;
 
   return (
-    <div className="bg-white rounded-3xl p-10 shadow-[0_2px_20px_rgba(45,51,64,0.08)] hover:shadow-[0_4px_30px_rgba(45,51,64,0.12)] transition-all duration-300 text-center">
+    <div className="bg-white rounded-3xl p-10 shadow-[0_2px_20px_rgba(45,51,64,0.08)] hover:shadow-[0_4px_30px_rgba(45,51,64,0.12)] transition-all duration-300 ease-in-out text-center">
       <div className="mb-6 flex justify-center">
         <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center">
           <IconComponent className="w-8 h-8 text-accent" />

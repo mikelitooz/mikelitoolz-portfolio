@@ -57,9 +57,9 @@ export function Navbar() {
       >
         <Container>
           <div className="py-4 flex h-20 items-center justify-between">
-            <Link href="/" className="group transition-colors duration-500 z-50">
-              <span className="text-xl font-bold text-primary group-hover:text-accent">
-                IzzyDev<span className="text-accent group-hover:text-primary">Builds</span>
+            <Link href="/" className="group z-50">
+              <span className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300 ease-in-out">
+                IzzyDev<span className="text-accent group-hover:text-primary transition-colors duration-300 ease-in-out">Builds</span>
               </span>
             </Link>
 
@@ -71,13 +71,13 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative text-sm font-medium transition-colors group ${
+                    className={`relative text-sm font-medium transition-colors duration-300 ease-in-out group ${
                       isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
                     }`}
                   >
                     {link.label}
                     <span
-                      className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ${
+                      className={`absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ease-in-out ${
                         isActive ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     />
@@ -87,10 +87,10 @@ export function Navbar() {
               <a
                 href="#contact"
                 onClick={handleContactClick}
-                className="relative text-sm font-medium transition-colors group text-foreground/70 hover:text-foreground"
+                className="relative text-sm font-medium transition-colors duration-300 ease-in-out group text-foreground/70 hover:text-foreground"
               >
                 Contact
-                <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 w-0 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
               </a>
             </div>
 
@@ -134,7 +134,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={handleLinkClick}
-                className={`text-2xl font-medium transition-colors ${
+                className={`text-2xl font-medium transition-colors duration-300 ease-in-out ${
                   isActive ? "text-accent" : "text-foreground/70 hover:text-foreground"
                 }`}
               >
@@ -145,7 +145,7 @@ export function Navbar() {
           <a
             href="#contact"
             onClick={handleContactClick}
-            className="text-2xl font-medium transition-colors text-foreground/70 hover:text-foreground"
+            className="text-2xl font-medium transition-colors duration-300 ease-in-out text-foreground/70 hover:text-foreground"
           >
             Contact
           </a>

@@ -11,10 +11,10 @@ interface ProjectSectionProps {
 const ProjectSection: FC<ProjectSectionProps> = ({ page }) => {
   const pageProjects = page === "automation" ? automationCaseStudies : projects;
   return (
-    <section className="relative overflow-hidden" id="projects">
+    <section className="relative overflow-hidden py-16 md:py-24" id="projects">
       <Container className="flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-full py-8">
-          <SectionTitle title="Recent Projects" />
+        <div className="flex flex-col items-center justify-center w-full">
+          <SectionTitle title="Real Products, Real Users, Real Results" />
           <div className="flex flex-col gap-6">
             {pageProjects.map((project, index) => (
               <ProjectCard key={index} {...project} />

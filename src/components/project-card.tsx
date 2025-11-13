@@ -14,7 +14,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
   return (
-    <div className="group rounded-[20px] border border-foreground transition-all duration-300">
+    <div className="group rounded-[20px] border border-foreground transition-all duration-300 ease-in-out">
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 py-6 px-8">
         {/* Left side - Content */}
         <div className="flex flex-col gap-8">
@@ -34,10 +34,10 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
             {link && (
               <Link
                 href={link}
-                className="inline-flex items-center gap-3 text-project-card-text border px-4 py-2.5 rounded-[50px]  transition-all font-medium text-base group/link w-fit"
+                className="inline-flex items-center gap-3 text-project-card-text border px-4 py-2.5 rounded-[50px] transition-all duration-300 ease-in-out font-medium text-base group/link w-fit"
               >
                 <span>View Project</span>
-                <div className="w-8 h-8 rounded-full bg-card-foreground flex items-center justify-center group-hover/link:translate-x-1 transition-transform">
+                <div className="w-8 h-8 rounded-full bg-card-foreground flex items-center justify-center group-hover/link:translate-x-1 transition-transform duration-300 ease-in-out">
                   <ArrowRight className="text-accent-foreground" />
                 </div>
               </Link>
@@ -49,7 +49,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
         <div className="flex items-center justify-center">
           <div className="w-full p-4 rounded-2xl bg-card-foreground/10">
             <div className="relative w-full h-[300px]">
-              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.02]" />
+              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300 ease-in-out" />
             </div>
           </div>
         </div>

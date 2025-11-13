@@ -26,10 +26,10 @@ interface TechStackSectionProps {
 const TechStackSection: FC<TechStackSectionProps> = ({ page }) => {
   const pageTechStack = page === "automation" ? automationTools : fullStackTools;
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden py-16 md:py-24">
       <Container className="flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-full py-8">
-          <SectionTitle title="Technology Stack" />
+        <div className="flex flex-col items-center justify-center w-full">
+          <SectionTitle title="Tools That Move Fast" />
           <div className="relative w-full overflow-hidden">
             <Swiper
               modules={[Autoplay]}
