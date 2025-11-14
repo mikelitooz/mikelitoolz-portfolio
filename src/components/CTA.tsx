@@ -1,21 +1,21 @@
 import { socialLinks } from "@/constants";
 import { ArrowUpRight } from "lucide-react";
 import { FC } from "react";
-import { BsTwitterX } from "react-icons/bs";
 import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
-import { QrCode } from "@/assets";
+import { GmailIcon, QrCode } from "@/assets";
 
 const CTASection: FC = ({}) => {
   return (
     <section id="contact">
       <Container>
         <div className="bg-accent px-6 sm:px-8 md:px-10 lg:px-16 py-6 md:py-10 rounded-[20px]">
-          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
-            <div className="flex flex-col gap-10 sm:gap-20 lg:gap-30">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-foreground leading-tight">
-                Got an Idea?<br /> Book Your Free Strategy Call Today!
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6 md:gap-10">
+            <div className="flex flex-col gap-10 sm:gap-20 lg:gap-30 items-center md:items-start">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left text-accent-foreground leading-tight">
+                Got an Idea?
+                <br /> Book Your Free Strategy Call Today!
               </h3>
 
               <div className="flex flex-col" aria-label="Social media links">
@@ -36,23 +36,23 @@ const CTASection: FC = ({}) => {
             </div>
 
             {/* Right Side - Contact Card */}
-            <div className="flex flex-col gap-6 bg-background/10 p-6 rounded-[50px]">
+            <div className="flex flex-col gap-6 bg-background/10 p-6 rounded-[50px] w-full max-w-[300px]">
               {/* Profile Badge */}
               <Link
-                href="https://x.com/izzydev_"
+                href="mailto:izzydevbuilds@gmail.com"
                 target="_blank"
                 className="bg-accent-foreground/90 rounded-full p-3 flex items-center gap-3 shadow-lg"
               >
-                <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-                  <BsTwitterX className="text-white" />
+                <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center p-1.5">
+                  <Image src={GmailIcon} alt="Gmail logo" />
                 </div>
-                <span className="font-medium text-foreground">IzzyDev</span>
+                <span className="font-semibold tracking-[120%] text-foreground">Send a DM Let&apos;s build!</span>
               </Link>
 
-              <div className="bg-background/15 rounded-3xl p-6 shadow-lg">
-                <div className="bg-white rounded-[20px] p-2">
-                  <Image src={QrCode} alt="scan qr code" width={150} height={150} />
-                 </div>
+              <div className="bg-background/15 rounded-3xl p-6 shadow-lg w-full">
+                <div className="bg-white rounded-[20px] w-full p-2">
+                  <Image src={QrCode} alt="scan qr code" width={200} height={200} />
+                </div>
               </div>
             </div>
           </div>
@@ -63,3 +63,16 @@ const CTASection: FC = ({}) => {
 };
 
 export default CTASection;
+
+{
+  /* <Link
+  href="https://x.com/izzydev_"
+  target="_blank"
+  className="bg-accent-foreground/90 rounded-full p-3 flex items-center gap-3 shadow-lg"
+>
+  <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
+    <BsTwitterX className="text-white" />
+  </div>
+  <span className="font-medium text-foreground">IzzyDev</span>
+</Link>; */
+}

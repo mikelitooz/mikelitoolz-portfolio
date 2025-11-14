@@ -15,7 +15,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
   return (
     <div className="group rounded-[20px] border border-foreground transition-all duration-300 ease-in-out">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 py-6 px-8">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 py-4 px-6">
         {/* Left side - Content */}
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -49,7 +49,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
         <div className="flex items-center justify-center">
           <div className="w-full p-4 rounded-2xl bg-card-foreground/10">
             <div className="relative w-full h-[300px]">
-              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-300 ease-in-out" />
+              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.05] transition-transform duration-300 ease-in-out" />
             </div>
           </div>
         </div>

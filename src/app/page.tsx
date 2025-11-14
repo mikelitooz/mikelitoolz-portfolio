@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <HeroSection
         title="Your Idea Doesn't Need Perfection. It Needs Validation."
-        subtitle="Most MVPs die because they launch too late. I build products that get in front of users fast, collect real feedback faster, and iterate before your competitors even finish their roadmap. Last year: 12 launches. 8 got paying customers in 30 days. Let's make yours one of them."
+        subtitle="Most MVPs die because they launch too late. I build products that get in front of users fast, collect real feedback faster, and iterate before your competitors even finish their roadmap."
         cta1={{ label: "See My Work", hoverLabel: "View Portfolio", href: "#projects" }}
         cta2={{ label: "Explore Automation", hoverLabel: "AI Solutions", href: "/automation" }}
       />

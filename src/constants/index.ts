@@ -1,7 +1,9 @@
 import {
   ApiIcon,
+  AutomationIcon,
   ClaudeIcon,
   CssIcon,
+  DesignIcon,
   FigmaIcon,
   FirebaseIcon,
   GoogleDocsIcon,
@@ -9,6 +11,7 @@ import {
   HtmlIcon,
   JavaScriptIcon,
   LangchainIcon,
+  MVPIcon,
   MySQLIcon,
   N8nIcon,
   NextjsIcon,
@@ -59,7 +62,7 @@ export const automationTools = [
 export const socialLinks = [
   { name: "Twitter / X", url: "https://x.com/izzydev_" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/israelchukwudi/" },
-  { name: "Instagram", url: "https://www.instagram.com/izzydev_/" },
+  { name: "Telegram", url: "https://www.instagram.com/izzydev_/" },
   { name: "YouTube", url: "https://www.youtube.com/@Izzydev_1" },
   { name: "GitHub", url: "https://github.com/chiizzy1" },
   { name: "Email", url: "mailto:izzydevbuilds@gmail.com" },
@@ -67,20 +70,20 @@ export const socialLinks = [
 
 export const services = [
   {
-    icon: Rocket,
+    icon: MVPIcon,
     title: "MVP Development",
     description:
       "Your first version doesn't need every feature. It needs the ones that prove your idea works. I build MVPs that test assumptions fast and iterate based on what real users actually do, not what surveys say they'll do.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "AI Automation",
     description:
       "If you're spending hours on data entry, follow-ups, or content generation, you're bleeding time and money. I automate the repetitive tasks so your team can focus on decisions that actually move the needle.",
   },
   {
-    icon: Rocket,
-    title: "Interface Design",
+    icon: DesignIcon,
+    title: "UI/UX Design",
     description:
       "A beautiful interface that confuses users is useless. I design for clarity first, aesthetics second. If someone has to think for more than 5 seconds, I redesign it until they don't.",
   },
@@ -313,49 +316,49 @@ export const automationCaseStudies = [
 
 export const automationServices = [
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "Workflow Automation",
     description:
       "Eliminate repetitive manual tasks. I build systems handling your busywork automatically so you can focus on what actually grows the business.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "AI Agents",
     description:
       "Deploy AI assistants handling complex tasks for you. From customer support to data analysis, these agents work 24/7 without breaks or errors.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "Tool Integration",
     description:
       "Connect your apps so they talk to each other seamlessly. Stop copying data between systems or switching tabs constantly.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "Smart Chatbots",
     description:
       "Build chatbots that understand context and nuance. They handle common questions instantly, qualify leads, and escalate only when necessary.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "Data Collection",
     description:
       "Automatically gather data from websites and enrich your database. Get information you need without hiring a team to do it manually.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "System Monitoring",
     description:
       "Receive alerts when something breaks before it becomes a crisis. Automated monitoring catches issues early and fixes simple problems autonomously.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "Voice AI",
     description:
       "Add voice capabilities to your products. From voice commands to automated phone calls, make services more accessible and hands-free.",
   },
   {
-    icon: Rocket,
+    icon: AutomationIcon,
     title: "AI Content Generation",
     description:
       "Create high-quality content at scale using optimized AI prompts. Consistent tone, accurate outputs, less time editing.",
