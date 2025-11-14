@@ -4,7 +4,7 @@ import { FC } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import Image from "next/image";
-import { GmailIcon, QrCode } from "@/assets";
+import { CalendarIcon, QrCode } from "@/assets";
 
 const CTASection: FC = ({}) => {
   return (
@@ -39,12 +39,12 @@ const CTASection: FC = ({}) => {
             <div className="flex flex-col gap-6 bg-background/10 p-6 rounded-[50px] w-full max-w-[300px]">
               {/* Profile Badge */}
               <Link
-                href="mailto:izzydevbuilds@gmail.com"
+                href="https://cal.com/izzydevbuild/30min"
                 target="_blank"
                 className="bg-accent-foreground/90 rounded-full p-3 flex items-center gap-3 shadow-lg"
               >
                 <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center p-1.5">
-                  <Image src={GmailIcon} alt="Gmail logo" />
+                  <Image src={CalendarIcon} alt="Gmail logo" />
                 </div>
                 <span className="font-semibold tracking-[120%] text-foreground">Send a DM Let&apos;s build!</span>
               </Link>
@@ -63,16 +63,3 @@ const CTASection: FC = ({}) => {
 };
 
 export default CTASection;
-
-{
-  /* <Link
-  href="https://x.com/izzydev_"
-  target="_blank"
-  className="bg-accent-foreground/90 rounded-full p-3 flex items-center gap-3 shadow-lg"
->
-  <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-    <BsTwitterX className="text-white" />
-  </div>
-  <span className="font-medium text-foreground">IzzyDev</span>
-</Link>; */
-}

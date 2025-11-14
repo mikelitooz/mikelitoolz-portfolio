@@ -30,6 +30,7 @@ export { default as QrCode } from "./izzydev_.svg";
 export { default as BgImage } from "./dotted-bg.png";
 export { default as Cal_ComLogo } from "./cal-com-seeklogo.svg";
 export { default as GmailIcon } from "./gmail-icon-logo-svgrepo-com.svg";
+export { default as CalendarIcon } from "./icons8-google-calendar.svg";
 export { default as MVPIcon } from "./icons8-mvp-64.png";
 export { default as AutomationIcon } from "./icons8-automation-40.png";
 export { default as DesignIcon } from "./icons8-design-40.png";
