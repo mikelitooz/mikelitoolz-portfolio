@@ -46,7 +46,7 @@ const CTASection: FC = ({}) => {
                 <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center p-1.5">
                   <Image src={CalendarIcon} alt="Gmail logo" />
                 </div>
-                <span className="font-semibold tracking-[120%] text-foreground">Send a DM Let&apos;s build!</span>
+                <span className="font-semibold tracking-[120%] text-foreground">Book a free call!</span>
               </Link>
 
               <div className="bg-background/15 rounded-3xl p-6 shadow-lg w-full">
