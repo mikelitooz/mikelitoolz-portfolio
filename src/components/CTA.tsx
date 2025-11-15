@@ -18,7 +18,7 @@ const CTASection: FC = ({}) => {
                 <br /> Book Your Free Strategy Call Today!
               </h3>
 
-              <div className="flex flex-col" aria-label="Social media links">
+              <div className="hidden md:flex flex-col" aria-label="Social media links">
                 {socialLinks.map((link) => {
                   return (
                     <Link
@@ -55,6 +55,22 @@ const CTASection: FC = ({}) => {
                 </div>
               </div>
             </div>
+
+            <div className="grid grid-cols-12 md:hidden gap-7" aria-label="Social media links">
+                {socialLinks.map((link) => {
+                  return (
+                    <Link
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      className="col-span-6 flex items-center text-accent-foreground gap-3 group w-fit"
+                    >
+                      <ArrowUpRight className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:rotate-45" />
+                      <span className="text-lg transition-all duration-300 ease-in-out group-hover:pl-3">{link.name}</span>
+                    </Link>
+                  );
+                })}
+              </div>
           </div>
         </div>
       </Container>
