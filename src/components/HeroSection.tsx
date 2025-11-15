@@ -73,9 +73,9 @@ const HeroSection: FC<HeroSectionProps> = ({ title, subtitle, cta1, cta2 }) => {
 
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-center bg-cover"
       style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255, 0.9), rgba(255,255,255, 0.9)), url(${BgImage.src})`,
+        backgroundImage: `linear-gradient(rgba(255,255,255, 0.8), rgba(255,255,255, 0.9)), url(${BgImage.src})`,
       }}
     >
       {/* <Image src={BgImage} alt="" fill priority className="object-cover object-center -z-10" /> */}

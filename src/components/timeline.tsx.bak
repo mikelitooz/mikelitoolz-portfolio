@@ -148,7 +148,7 @@ export function Timeline({ steps }: TimelineProps) {
               </div>
 
               {/* Center Node */}
-              <div className="timeline-node absolute left-8 -translate-x-1/2 md:left-1/2 flex items-center justify-center">
+              <div className="timeline-node absolute left-8 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full bg-accent/20 border-2 border-accent flex items-center justify-center backdrop-blur-sm z-10 shadow-[0_0_15px_rgba(212,165,116,0.4)]">
                   <span className="text-lg font-bold text-accent">{String(step.number).padStart(2, "0")}</span>
                 </div>

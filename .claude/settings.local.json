@@ -36,7 +36,11 @@
       "mcp__playwright__browser_resize",
       "mcp__playwright__browser_hover",
       "mcp__playwright__browser_snapshot",
-      "mcp__playwright__browser_console_messages"
+      "mcp__playwright__browser_console_messages",
+      "Bash(npx tailwindcss:*)",
+      "Bash(timeout 3 bash:*)",
+      "Bash(del nul)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
