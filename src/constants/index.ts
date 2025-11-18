@@ -1,4 +1,5 @@
 import {
+  AirbillsImage,
   ApiIcon,
   AutomationIcon,
   ClaudeIcon,
@@ -10,6 +11,7 @@ import {
   GoogleSheetsIcon,
   HtmlIcon,
   JavaScriptIcon,
+  KayiImage,
   LangchainIcon,
   MVPIcon,
   MySQLIcon,
@@ -20,6 +22,7 @@ import {
   OpenAIIcon,
   PythonIcon,
   ReactIcon,
+  ReminderImage,
   ShadcnIcon,
   SupabaseIcon,
   TailwindIcon,
@@ -91,6 +94,24 @@ export const services = [
 
 export const projects = [
   {
+    title: "AirbillsPay",
+    description:
+      "The founder's users were stuck using multiple, unreliable apps just to pay for airtime, data, and TV. I Built a single, high-performance platform to centralize it all. Now, a 10-minute, high-friction chore is a 30-second tap. The service went from fragmented to trusted, capturing users who previously dropped off.",
+    image: AirbillsImage,
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
+    link: "https://app.airbillspay.com/",
+    variant: "featured" as const,
+  },
+  {
+    title: "Kayi Digital Bank",
+    description:
+      "The founders needed to capture Nigeria's unbanked market and high-volume diaspora remittances, but lacked a unified platform. Built a full-featured digital bank and 'super app' from the ground up. This MVP gave them a secure, all-in-one tool for payments, wallets, and remittances, turning a complex vision into a market-ready product.",
+    image: KayiImage,
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
+    link: "https://www.kayi.ng/",
+    variant: "featured" as const,
+  },
+  {
     title: "SaaS Analytics Dashboard",
     description:
       "Founder was drowning in Google Analytics trying to understand what users cared about. Built a dashboard tracking 5 key metrics. Now they check it every morning instead of avoiding analytics entirely. Decision-making went from guesswork to data-driven.",
@@ -109,15 +130,6 @@ export const projects = [
     variant: "standard" as const,
   },
   {
-    title: "Multi-Vendor Marketplace",
-    description:
-      "Onboarding vendors took days of back-and-forth. Built a self-service portal where sellers list products in under 10 minutes. First vendor made their first sale within an hour. Marketplace now processes 100+ orders per day.",
-    image: "/marketplace-platform.jpg",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "WebSocket"],
-    link: "#",
-    variant: "standard" as const,
-  },
-  {
     title: "Project Management Tool",
     description:
       "Team spent 2 hours weekly in planning meetings discussing dependencies. Built AI-powered workspace suggesting what to work on next based on task analysis. Meetings dropped to 30 minutes. Shipping speed increased 40%.",
@@ -125,24 +137,6 @@ export const projects = [
     tags: ["React", "Firebase", "AI", "Tailwind"],
     link: "#",
     variant: "standard" as const,
-  },
-  {
-    title: "Lead Automation System",
-    description:
-      "Sales team manually qualified 100+ leads per week. Built AI system scoring leads based on behavior, routing only hot prospects to reps. Sales team now spends Fridays strategizing instead of cold calling dead ends.",
-    image: "/lead-automation.jpg",
-    tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
-    link: "#",
-    variant: "featured" as const,
-  },
-  {
-    title: "Mobile Backend API",
-    description:
-      "App crashed when user count hit 10K. Rewrote backend with proper caching and indexing. Now handles 50K+ users without breaking. Response times under 100ms. Founder stopped losing sleep over server costs and downtime.",
-    image: "/mobile-backend.jpg",
-    tags: ["Node.js", "Express", "PostgreSQL", "JWT"],
-    link: "#",
-    variant: "compact" as const,
   },
 ];
 
@@ -297,6 +291,15 @@ export const automationCaseStudies = [
       "Built AI chatbot handling 85% of customer questions automatically. Support team now focuses only on complex issues. Ticket volume dropped 60%, response time under 2 minutes.",
     image: "/customer-support-ai.jpg",
     tags: ["OpenAI", "Python", "Zapier"],
+    link: "https://app.airbillspay.com/",
+  },
+  {
+    title: "Appointment Booking Workflow",
+    description:
+      "A clinic was losing 10+ hours/week (est. $1,500/mo) to manual booking entry from Google Forms and losing revenue from unfilled cancellations. I Replaced their broken system with a unified n8n workflow. Now, bookings are synced instantly and cancellations automatically trigger the waitlist, recovering lost revenue and saving all admin time.",
+    image: ReminderImage,
+    tags: ["n8n", "Cal.com", "Google Sheets"],
+    link: "",
   },
   {
     title: "Lead Qualification System",
@@ -304,6 +307,7 @@ export const automationCaseStudies = [
       "Automated lead scoring and follow-up for B2B sales team. Reps now spend time with qualified prospects only. Pipeline tripled without hiring more people.",
     image: "/lead-nurturing.jpg",
     tags: ["LangChain", "Node.js", "SendGrid"],
+    link: "",
   },
   {
     title: "Content Publishing Workflow",
@@ -311,6 +315,15 @@ export const automationCaseStudies = [
       "Created AI system generating and scheduling social content across platforms. Marketing team cut production time 70% while posting more consistently than ever.",
     image: "/ai-content-generator.jpg",
     tags: ["OpenAI", "Python", "Buffer API"],
+    link: "",
+  },
+  {
+    title: "Lead Automation System",
+    description:
+      "Sales team manually qualified 100+ leads per week. Built AI system scoring leads based on behavior, routing only hot prospects to reps. Sales team now spends Fridays strategizing instead of cold calling dead ends.",
+    image: "/lead-automation.jpg",
+    tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
+    link: "",
   },
 ];
 

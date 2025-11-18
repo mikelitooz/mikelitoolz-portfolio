@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   tags: string[];
   link?: string;
 }
@@ -34,6 +34,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
             {link && (
               <Link
                 href={link}
+                target="_blank"
                 className="inline-flex items-center gap-3 text-project-card-text border px-4 py-2.5 rounded-[50px] transition-all duration-300 ease-in-out font-medium text-base group/link w-fit"
               >
                 <span>View Project</span>
@@ -47,9 +48,9 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
 
         {/* Right side - Mockup Preview */}
         <div className="flex items-center justify-center">
-          <div className="w-full p-4 rounded-2xl bg-card-foreground/10">
+          <div className="w-full p-3 rounded-2xl bg-card-foreground/10">
             <div className="relative w-full h-[300px]">
-              <Image src={image} alt={`${title} preview`} fill className="object-cover rounded-xl group-hover:scale-[1.05] transition-transform duration-300 ease-in-out" />
+              <Image src={image} alt={`${title} preview`} fill className="object group-hover:scale-[1.02] transition-transform duration-300 ease-in-out" />
             </div>
           </div>
         </div>

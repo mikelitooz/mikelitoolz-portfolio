@@ -34,3 +34,8 @@ export { default as CalendarIcon } from "./icons8-google-calendar.svg";
 export { default as MVPIcon } from "./icons8-mvp-64.png";
 export { default as AutomationIcon } from "./icons8-automation-40.png";
 export { default as DesignIcon } from "./icons8-design-40.png";
+export { default as AirbillsImage } from "./airbillspay_2025-11-18T10-42-59.png";
+export { default as KayiImage } from "./kayi_2025-11-18T10-43-47.png";
+export { default as SwissImage } from "./swisskidsacademy_2025-11-18T8-25-11.png";
+export { default as BookingEventImage } from "./booking_workflow.png";
+export { default as ReminderImage } from "./reminder_workflow.png";
