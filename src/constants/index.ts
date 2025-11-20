@@ -291,7 +291,7 @@ export const automationCaseStudies = [
       "Built AI chatbot handling 85% of customer questions automatically. Support team now focuses only on complex issues. Ticket volume dropped 60%, response time under 2 minutes.",
     image: "/customer-support-ai.jpg",
     tags: ["OpenAI", "Python", "Zapier"],
-    link: "https://app.airbillspay.com/",
+    link: "",
   },
   {
     title: "Appointment Booking Workflow",
@@ -299,7 +299,7 @@ export const automationCaseStudies = [
       "A clinic was losing 10+ hours/week (est. $1,500/mo) to manual booking entry from Google Forms and losing revenue from unfilled cancellations. I Replaced their broken system with a unified n8n workflow. Now, bookings are synced instantly and cancellations automatically trigger the waitlist, recovering lost revenue and saving all admin time.",
     image: ReminderImage,
     tags: ["n8n", "Cal.com", "Google Sheets"],
-    link: "",
+    link: "https://www.youtube.com/watch?v=F4cqWnT_C4A&list=PL_eMcrNUJ-Q1TwPAf8CGItIIQMzN6tap1&pp=gAQB",
   },
   {
     title: "Lead Qualification System",

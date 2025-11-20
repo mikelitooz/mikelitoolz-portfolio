@@ -17,7 +17,7 @@ const ProjectSection: FC<ProjectSectionProps> = ({ page }) => {
           <SectionTitle title="Real Products, Real Users, Real Results" />
           <div className="flex flex-col gap-6">
             {pageProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <ProjectCard key={index} {...project} page={page} />
             ))}
           </div>
         </div>
