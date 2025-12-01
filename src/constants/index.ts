@@ -117,26 +117,8 @@ export const projects = [
       "Founder was drowning in Google Analytics trying to understand what users cared about. Built a dashboard tracking 5 key metrics. Now they check it every morning instead of avoiding analytics entirely. Decision-making went from guesswork to data-driven.",
     image: "/saas-dashboard.jpg",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
-    link: "#",
+    link: "",
     variant: "featured" as const,
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "Marketing team could write 5 blog posts per month but needed 20. Built an AI tool matching their brand voice. They now edit drafts instead of staring at blank pages. Last month: 18 posts published, zero all-nighters.",
-    image: "/ai-content-generator.jpg",
-    tags: ["React", "Node.js", "OpenAI", "MongoDB"],
-    link: "#",
-    variant: "standard" as const,
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "Team spent 2 hours weekly in planning meetings discussing dependencies. Built AI-powered workspace suggesting what to work on next based on task analysis. Meetings dropped to 30 minutes. Shipping speed increased 40%.",
-    image: "/task-management-board.png",
-    tags: ["React", "Firebase", "AI", "Tailwind"],
-    link: "#",
-    variant: "standard" as const,
   },
 ];
 
@@ -291,7 +273,7 @@ export const automationCaseStudies = [
       "Built AI chatbot handling 85% of customer questions automatically. Support team now focuses only on complex issues. Ticket volume dropped 60%, response time under 2 minutes.",
     image: "/customer-support-ai.jpg",
     tags: ["OpenAI", "Python", "Zapier"],
-    link: "",
+    link: "https://youtu.be/YwFi7QV7ug4?si=1NlV2bZG3666Ug0o",
   },
   {
     title: "Appointment Booking Workflow",
@@ -302,29 +284,45 @@ export const automationCaseStudies = [
     link: "https://www.youtube.com/watch?v=F4cqWnT_C4A&list=PL_eMcrNUJ-Q1TwPAf8CGItIIQMzN6tap1&pp=gAQB",
   },
   {
-    title: "Lead Qualification System",
+    title: "AI Content Generator",
     description:
-      "Automated lead scoring and follow-up for B2B sales team. Reps now spend time with qualified prospects only. Pipeline tripled without hiring more people.",
-    image: "/lead-nurturing.jpg",
-    tags: ["LangChain", "Node.js", "SendGrid"],
-    link: "",
-  },
-  {
-    title: "Content Publishing Workflow",
-    description:
-      "Created AI system generating and scheduling social content across platforms. Marketing team cut production time 70% while posting more consistently than ever.",
+      "Marketing team could write 5 blog posts per month but needed 20. Built an AI tool matching their brand voice. They now edit drafts instead of staring at blank pages. Last month: 18 posts published, zero all-nighters.",
     image: "/ai-content-generator.jpg",
-    tags: ["OpenAI", "Python", "Buffer API"],
+    tags: ["n8n", "OpenAI", "Notion"],
     link: "",
   },
   {
-    title: "Lead Automation System",
+    title: "Project Management Tool",
     description:
-      "Sales team manually qualified 100+ leads per week. Built AI system scoring leads based on behavior, routing only hot prospects to reps. Sales team now spends Fridays strategizing instead of cold calling dead ends.",
-    image: "/lead-automation.jpg",
-    tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
+      "Team spent 2 hours weekly in planning meetings discussing dependencies. Built AI-powered workspace suggesting what to work on next based on task analysis. Meetings dropped to 30 minutes. Shipping speed increased 40%.",
+    image: "/task-management-board.png",
+    tags: ["n8n", "OpenAI", "Notion"],
     link: "",
   },
+  // {
+  //   title: "Lead Qualification System",
+  //   description:
+  //     "Automated lead scoring and follow-up for B2B sales team. Reps now spend time with qualified prospects only. Pipeline tripled without hiring more people.",
+  //   image: "/lead-nurturing.jpg",
+  //   tags: ["LangChain", "Node.js", "SendGrid"],
+  //   link: "",
+  // },
+  // {
+  //   title: "Content Publishing Workflow",
+  //   description:
+  //     "Created AI system generating and scheduling social content across platforms. Marketing team cut production time 70% while posting more consistently than ever.",
+  //   image: "/ai-content-generator.jpg",
+  //   tags: ["OpenAI", "Python", "Buffer API"],
+  //   link: "",
+  // },
+  // {
+  //   title: "Lead Automation System",
+  //   description:
+  //     "Sales team manually qualified 100+ leads per week. Built AI system scoring leads based on behavior, routing only hot prospects to reps. Sales team now spends Fridays strategizing instead of cold calling dead ends.",
+  //   image: "/lead-automation.jpg",
+  //   tags: ["Node.js", "Zapier", "OpenAI", "PostgreSQL"],
+  //   link: "",
+  // },
 ];
 
 export const automationServices = [
