@@ -63,12 +63,12 @@ export const automationTools = [
 ];
 
 export const socialLinks = [
-  { name: "Twitter / X", url: "https://x.com/izzydev_" },
+  { name: "Twitter / X", url: "https://x.com/izzydevbuilds" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/israelchukwudi/" },
-  { name: "Telegram", url: "https://www.instagram.com/izzydev_/" },
+  { name: "Telegram", url: "https://t.me/izzydevbuilds" },
   { name: "YouTube", url: "https://www.youtube.com/@Izzydev_1" },
   { name: "GitHub", url: "https://github.com/chiizzy1" },
-  { name: "Email", url: "mailto:izzydevbuilds@gmail.com" },
+  { name: "Email", url: "mailto:israel@izzydevbuilds.xyz" },
 ];
 
 export const services = [

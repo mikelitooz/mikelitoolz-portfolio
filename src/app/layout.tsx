@@ -6,6 +6,7 @@ import { ReactLenis } from "@/lib/lenis";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollTriggerSafety } from "@/components/scroll-trigger-safety";
+import { StructuredData, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({
@@ -15,9 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Izzy | Fullstack Developer & AI Automation Specialist",
+  title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist | Build Your MVP Fast",
   description:
-    "Turn your idea into a fast, scalable MVP with a developer who combines code and no-code tools. Specializing in Next.js, AI automation, and workflow optimization for startups.",
+    "Experienced fullstack developer with 4+ years specializing in MVP development and AI automation. Build Next.js applications and intelligent workflows that help startups launch fast and scale smart. 10+ successful projects delivered. Expert in n8n, Claude AI, OpenAI, and workflow optimization.",
   keywords: [
     "fullstack developer",
     "MVP development",
@@ -30,26 +31,38 @@ export const metadata: Metadata = {
     "TypeScript",
     "Supabase",
     "TailwindCSS",
-    "n8n",
+    "n8n expert",
+    "n8n automation",
     "Claude AI",
+    "OpenAI integration",
     "custom software development",
     "technical consulting",
     "rapid prototyping",
+    "hire fullstack developer",
+    "MVP developer for startups",
+    "n8n workflow automation",
+    "AI workflow builder",
+    "startup CTO",
+    "technical consultant",
+    "SaaS developer",
+    "fintech developer",
+    "Israel Chukwudi",
+    "Izzy developer",
   ],
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Turn Your Idea Into a Live Product Fast | Izzy - Fullstack Developer",
+    title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
     description:
-      "Most founders struggle to find developers who ship on time without technical drama. I build MVPs and AI automation systems that help you launch quickly, test your market, and scale without the headaches.",
+      "Build your MVP fast with an experienced developer who specializes in Next.js and AI automation. 4+ years experience, 10+ successful projects. Expert in n8n, Claude AI, OpenAI, and workflow optimization for startups.",
     url: "https://www.izzydevbuilds.xyz",
     siteName: "IzzyDevBuilds",
     images: [
       {
-        url: "https://x.com/izzydev_/photo", // Replace with your actual OG image path
+        url: "https://www.izzydevbuilds.xyz/icon-512x512.png",
         width: 1200,
         height: 630,
-        alt: "Izzy - Fullstack Developer & AI Automation Specialist",
+        alt: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
       },
     ],
     locale: "en_US",
@@ -59,12 +72,12 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Turn Your Idea Into a Live Product Fast | Izzy - Fullstack Developer",
+    title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
     description:
-      "Building MVPs and AI automation systems that help founders launch quickly and scale without headaches. Expert in Next.js, AI, and workflow optimization.",
-    images: ["https://x.com/izzydev_/photo"], // Replace with your actual Twitter image path
-    creator: "@izzydev_", // Replace with your Twitter handle
-    site: "@izzydev_", // Replace with your Twitter handle
+      "Build MVPs and AI automation systems that help startups launch quickly and scale smart. Expert in Next.js, n8n, Claude AI, and workflow optimization. 4+ years experience, 10+ successful projects.",
+    images: ["https://www.izzydevbuilds.xyz/icon-512x512.png"],
+    creator: "@izzydev_",
+    site: "@izzydev_",
   },
 
   // Additional metadata
@@ -126,8 +139,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebSiteSchema();
+
   return (
     <html lang="en">
+      <head>
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={websiteSchema} />
+      </head>
       <body className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
         <ScrollTriggerSafety />
         <ReactLenis root>
