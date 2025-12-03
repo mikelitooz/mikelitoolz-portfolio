@@ -8,9 +8,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -47,13 +48,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: post.image ? [post.image] : ['https://www.izzydevbuilds.xyz/icon-512x512.png'],
     },
     alternates: {
-      canonical: `https://www.izzydevbuilds.xyz/blog/${params.slug}`,
+      canonical: `https://www.izzydevbuilds.xyz/blog/${slug}`,
     },
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -126,8 +128,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Featured Image */}
           {post.image && (
-            <div className="mb-12 overflow-hidden rounded-3xl">
-              <Image src={post.image} alt={post.title} className="h-full w-full object-cover" />
+            <div className="relative mb-12 aspect-video overflow-hidden rounded-3xl">
+              <Image src={post.image} alt={post.title} fill className="object-cover" />
             </div>
           )}
 

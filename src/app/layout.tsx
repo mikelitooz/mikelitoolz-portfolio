@@ -16,6 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.izzydevbuilds.xyz'),
   title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist | Build Your MVP Fast",
   description:
     "Experienced fullstack developer with 4+ years specializing in MVP development and AI automation. Build Next.js applications and intelligent workflows that help startups launch fast and scale smart. 10+ successful projects delivered. Expert in n8n, Claude AI, OpenAI, and workflow optimization.",

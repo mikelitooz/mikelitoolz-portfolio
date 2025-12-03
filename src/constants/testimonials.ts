@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
       company: 'AirbillsPay',
     },
     content:
-      'Chinwuba is someone that is dedicated to his work and he always meet up on deadlines with a professional result. He is also a good team player that tries to understand what the project demands and his code base is well structured.',
+      'Israel is someone that is dedicated to his work and he always meet up on deadlines with a professional result. He is also a good team player that tries to understand what the project demands and his code base is well structured.',
     rating: 5,
     date: '2024-09-20',
     project: 'AirbillsPay Payment Platform',

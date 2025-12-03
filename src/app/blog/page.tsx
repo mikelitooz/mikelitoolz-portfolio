@@ -46,8 +46,8 @@ export default function BlogPage() {
                 >
                   {/* Image placeholder */}
                   {post.image ? (
-                    <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-accent/20 to-accent/5">
-                      <Image src={post.image} alt={post.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-accent/20 to-accent/5">
+                      <Image src={post.image} alt={post.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
                     </div>
                   ) : (
                     <div className="aspect-video w-full bg-gradient-to-br from-accent/20 to-accent/5" />
