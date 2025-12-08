@@ -271,7 +271,7 @@ export const automationCaseStudies = [
     title: "AI Customer Support",
     description:
       "Built AI chatbot handling 85% of customer questions automatically. Support team now focuses only on complex issues. Ticket volume dropped 60%, response time under 2 minutes.",
-    image: "/customer-support-ai.jpg",
+    image: "/chat-support.png",
     tags: ["OpenAI", "Python", "Zapier"],
     link: "https://youtu.be/YwFi7QV7ug4?si=1NlV2bZG3666Ug0o",
   },
@@ -287,16 +287,16 @@ export const automationCaseStudies = [
     title: "AI Content Generator",
     description:
       "Marketing team could write 5 blog posts per month but needed 20. Built an AI tool matching their brand voice. They now edit drafts instead of staring at blank pages. Last month: 18 posts published, zero all-nighters.",
-    image: "/ai-content-generator.jpg",
-    tags: ["n8n", "OpenAI", "Notion"],
+    image: "/content-creator-workflow.png",
+    tags: ["n8n", "OpenAI", "Http Requests", "API integration"],
     link: "",
   },
   {
     title: "Project Management Tool",
     description:
       "Team spent 2 hours weekly in planning meetings discussing dependencies. Built AI-powered workspace suggesting what to work on next based on task analysis. Meetings dropped to 30 minutes. Shipping speed increased 40%.",
-    image: "/task-management-board.png",
-    tags: ["n8n", "OpenAI", "Notion"],
+    image: "/make.png",
+    tags: ["Make.com", "OpenAI", "Zapier"],
     link: "",
   },
   // {
