@@ -25,7 +25,7 @@ export { default as TailwindIcon } from "./tailwind-svgrepo-com.svg";
 export { default as SupabaseIcon } from "./supabase-96.svg";
 export { default as ShadcnIcon } from "./shadcn-ui-seeklogo.svg";
 export { default as AboutImage } from "./about.png";
-export { default as ProfileImage } from "./profile.jpg";
+export { default as ProfileImage } from "./linkedIn-profile-image.png";
 export { default as QrCode } from "./izzydev_.svg";
 export { default as BgImage } from "./dotted-bg.png";
 export { default as Cal_ComLogo } from "./cal-com-seeklogo.svg";

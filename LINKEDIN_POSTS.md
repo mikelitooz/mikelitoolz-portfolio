@@ -5,11 +5,12 @@
 ---
 
 ## POST 1: WELCOME BACK POST
+
 **Reintroduction to Network**
 
 After months of heads-down building, I'm back on LinkedIn with something to share.
 
-I've been working with 10+ founders and businesses to ship MVPs and automate operations using AI. The results? 610% ROI on automation investments. MVPs launched in 1-4 weeks instead of 6 months. Real products solving real problems.
+I've been working with 10+ founders and businesses to ship MVPs and automate operations using AI. The results? 600% ROI on automation investments. MVPs launched in 1-4 weeks instead of 6 months. Real products solving real problems.
 
 Here's what I've learned:
 
@@ -27,15 +28,16 @@ What are you working on right now? Drop a comment or DM me.
 ---
 
 ## POST 2: STORY POST
-**Client Success Story - $63K Annual Savings**
 
-I saved a client $63,000 last year with one automation workflow.
+**Client Success Story - $40K Annual Savings**
+
+I saved a client $40k last year with one automation workflow.
 
 They were spending 172 hours per month on customer support. Two full-time reps reading emails, categorizing tickets, writing responses, updating systems. Rinse and repeat.
 
-The cost? $6,880 per month in direct labor. Plus the hidden cost: burnout, turnover, and slower response times during peak hours.
+The cost? $4,300 per month in direct labor. Plus the hidden cost: burnout, turnover, and slower response times during peak hours.
 
-Here's what we built:
+Here's what I built:
 
 An AI-powered support system using n8n and Claude AI. It automatically categorizes incoming emails, drafts responses based on their knowledge base, and handles 85% of common questions without human intervention.
 
@@ -43,14 +45,16 @@ The team now reviews 7-8 high-priority emails per day instead of 50+. Response t
 
 The numbers:
 
-Setup cost: $5,000
-Monthly cost: $867
+Setup cost: $3,000
+Monthly cost: $550
 Time saved: 154 hours/month
-Monthly net gain: $5,293
-Annual ROI: 610%
+Monthly net gain: $3,300
+Annual ROI: 600%
 Payback period: Less than 1 month
 
-But here's what the spreadsheet doesn't show: team satisfaction went from 6/10 to 9/10. Turnover dropped to zero. Customers are happier because they get instant, accurate responses 24/7.
+But here's what the spreadsheet doesn't show: team satisfaction went from 6/10 to 9/10. Turnover dropped to zero.
+
+They also closed more deals and increased sales. Why? Because customers were happier and orders were fulfilled faster.
 
 Not every task needs automation. But if you're spending 10+ hours per week on something repetitive, the math probably works in your favor.
 
@@ -62,6 +66,7 @@ What task would you automate first if you could? Comment below.
 ---
 
 ## POST 3: FRAMEWORK POST
+
 **One-Week MVP Validation Framework**
 
 Your MVP doesn't need more features. It needs validation.
@@ -108,6 +113,7 @@ What assumption are you testing this week?
 ---
 
 ## POST 4: CONTRARIAN/HOT TAKE POST
+
 **Stop Asking If People Will Buy**
 
 Stop asking people if they'd buy your product. They're lying to you.
@@ -140,6 +146,7 @@ DM me if this hits different and you want to talk about actually validating your
 ---
 
 ## POST 5: LIST POST
+
 **5 Automations That Save 10+ Hours/Week**
 
 5 automations that save 10+ hours per week (steal these).
@@ -176,6 +183,7 @@ What task is eating up your time right now? Comment and I'll tell you if it's wo
 ---
 
 ## POST 6: PERSONAL INSIGHT POST
+
 **10 MVPs, 10 Lessons**
 
 I built 10+ MVPs this year. Here's what I learned about what actually matters.
@@ -194,7 +202,7 @@ Nobody cares that you used the latest React framework or that your code is clean
 
 **Most automation projects fail because of scope creep.**
 
-Clients come in wanting to automate everything. I push back. We pick ONE workflow that saves the most time. Nail it. Then expand. Trying to automate your entire business at once is how you waste money and get nothing done.
+Clients come in wanting to automate everything. I push back. I pick ONE workflow that saves the most time. Nail it. Then expand. Trying to automate your entire business at once is how you waste money and get nothing done.
 
 **The best MVPs feel incomplete.**
 
@@ -212,6 +220,7 @@ What's the biggest lesson you've learned building products this year?
 ---
 
 ## POST 7: CASE STUDY POST
+
 **AirbillsPay: 10 Minutes to 30 Seconds**
 
 How I turned a 10-minute payment nightmare into a 30-second experience.
@@ -250,16 +259,19 @@ Book a discovery call: https://cal.com/izzydevbuild/30min
 ## POSTING STRATEGY
 
 ### Week 1: Profile Relaunch
+
 - **Day 1:** Post 1 (Welcome Back) - Reintroduce yourself
 - **Day 3:** Post 2 (Client Success Story) - Show concrete results
 - **Day 5:** Post 5 (Automation List) - Provide immediate value
 
 ### Week 2: Authority Building
+
 - **Day 8:** Post 3 (MVP Framework) - Share expertise
 - **Day 11:** Post 4 (Hot Take) - Spark conversation
 - **Day 14:** Post 6 (Personal Lessons) - Build connection
 
 ### Week 3: Conversion Focus
+
 - **Day 17:** Post 7 (Case Study) - Drive discovery calls
 
 ---
@@ -267,18 +279,21 @@ Book a discovery call: https://cal.com/izzydevbuild/30min
 ## ENGAGEMENT GUIDELINES
 
 **When people comment:**
+
 - Respond within 2 hours (shows you're active)
 - Ask follow-up questions to keep conversation going
 - Offer to continue discussion in DMs for detailed questions
 - Invite qualified leads to book a discovery call
 
 **Engagement actions:**
+
 - Comment on 5-10 posts from your target audience daily
 - Share insights in Slack/Discord communities
 - Repost content from founders/startups you've helped
 - Tag collaborators when sharing project wins (with permission)
 
 **Success metrics to track:**
+
 - Engagement rate (likes, comments, shares)
 - DMs received
 - Discovery calls booked
@@ -290,23 +305,27 @@ Book a discovery call: https://cal.com/izzydevbuild/30min
 ## OPTIMIZATION TIPS
 
 **Hook Testing:**
+
 - First 2 lines must work standalone (visible before "See more")
 - Test different hooks for same content
 - Numbers and metrics grab attention ("610% ROI", "30 seconds")
 
 **Formatting:**
+
 - Short paragraphs (1-3 sentences max)
 - Line break every 2-3 sentences
 - Use bullets/numbered lists for scannability
 - Bold doesn't work on LinkedIn - use caps sparingly
 
 **Call-to-Action Variety:**
+
 - Comment requests: "What task would you automate first?"
 - DM invitations: "DM me if this resonates"
 - Discovery calls: Link to cal.com
 - Social sharing: "Reshare if you found this valuable"
 
 **Hashtag Strategy:**
+
 - 3-5 hashtags maximum
 - Mix popular (#StartupFounders) with niche (#n8nAutomation)
 - Place at the END of posts
@@ -318,7 +337,7 @@ Book a discovery call: https://cal.com/izzydevbuild/30min
 
 These 7 posts will:
 ✅ Reestablish your LinkedIn presence with authority
-✅ Showcase concrete results (610% ROI, 85% automation, 30-second transactions)
+✅ Showcase concrete results (600% ROI, 85% automation, 30-second transactions)
 ✅ Provide immediate value to your network
 ✅ Drive meaningful conversations and discovery calls
 ✅ Position you as the go-to expert for MVP development and AI automation
