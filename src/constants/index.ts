@@ -105,9 +105,9 @@ export const projects = [
   {
     title: "Kayi Digital Bank",
     description:
-      "The founders needed to capture Nigeria's unbanked market and high-volume diaspora remittances, but lacked a unified platform. Built a full-featured digital bank and 'super app' from the ground up. This MVP gave them a secure, all-in-one tool for payments, wallets, and remittances, turning a complex vision into a market-ready product.",
+      "The founders had the banking infrastructure, but they needed a digital face people could trust. In fintech, a bad first impression is fatal. I built the high-performance landing interface that served as the brand's first impression. It wasn't just a website; it was a trust-building engine that converted curious visitors into signed-up users by making the complex value proposition feel simple.",
     image: KayiImage,
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     link: "https://www.kayi.ng/",
     variant: "featured" as const,
   },
@@ -181,7 +181,7 @@ export const processSteps = [
     number: 1,
     title: "Discovery Call",
     description:
-      "We talk through your vision, goals, and constraints. I ask pointed questions to figure out what you actually need versus what sounds impressive. You'll leave the call with clarity on next steps and a realistic timeline.",
+      "I dive deep into your vision, goals, and constraints. I ask pointed questions to figure out what you actually need versus what sounds impressive. You'll leave the call with clarity on next steps and a realistic timeline.",
     icon: Search,
   },
   {
