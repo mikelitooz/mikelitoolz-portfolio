@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import Container from "./Container";
@@ -53,19 +54,20 @@ export function Navbar() {
     <>
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-foreground/5 backdrop-blur-md" : "bg-transparent"
+          isScrolled && !isMobileMenuOpen ? "bg-foreground/5 backdrop-blur-md" : "bg-transparent"
         }`}
       >
         <Container>
           <div className="py-4 flex h-20 items-center justify-between">
             <Link href="/" className="group z-50">
               <span className="text-xl font-bold text-primary group-hover:text-accent transition-colors duration-300 ease-in-out">
-                IzzyDev<span className="text-accent group-hover:text-primary transition-colors duration-300 ease-in-out">Builds</span>
+                IzzyDev
+                <span className="text-accent group-hover:text-primary transition-colors duration-300 ease-in-out">Builds</span>
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-8">
+            <div className="hidden md:flex gap-8 items-center">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -93,6 +95,13 @@ export function Navbar() {
                 Contact
                 <span className="absolute bottom-0 left-0 h-[2px] bg-accent transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
               </a>
+              <div
+                className="contra-hire-me-button"
+                data-analyticsuserid="a50dccd3-c110-4c81-9aaa-dfb3145cd8b3"
+                data-theme="light"
+                data-username="izzydevbuilds"
+              ></div>
+              <Script src="https://contra.com/static/embed/sdk.js" strategy="lazyOnload" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -150,6 +159,12 @@ export function Navbar() {
           >
             Contact
           </a>
+          <div
+            className="contra-hire-me-button"
+            data-analyticsuserid="a50dccd3-c110-4c81-9aaa-dfb3145cd8b3"
+            data-theme="light"
+            data-username="izzydevbuilds"
+          ></div>
         </div>
       </div>
     </>
