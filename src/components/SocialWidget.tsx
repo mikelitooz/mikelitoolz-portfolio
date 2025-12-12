@@ -15,8 +15,7 @@ const SocialWidget = () => {
   );
   const whatsappUrl = `https://wa.me/${waPhoneNumber}?text=${waMessage}`;
 
-  // Telegram logic
-  const telegramUrl = "https://t.me/izzydevbuilds";
+  const telegramUrl = `https://t.me/izzydevbuilds?text=${waMessage}`;
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
