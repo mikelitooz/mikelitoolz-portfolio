@@ -6,6 +6,7 @@ import { ReactLenis } from "@/lib/lenis";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollTriggerSafety } from "@/components/scroll-trigger-safety";
+import SocialWidget from "@/components/SocialWidget";
 import { StructuredData, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/structured-data";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
@@ -16,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.izzydevbuilds.xyz'),
+  metadataBase: new URL("https://www.izzydevbuilds.xyz"),
   title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist | Build Your MVP Fast",
   description:
     "Experienced fullstack developer with 4+ years specializing in MVP development and AI automation. Build Next.js applications and intelligent workflows that help startups launch fast and scale smart. 10+ successful projects delivered. Expert in n8n, Claude AI, OpenAI, and workflow optimization.",
@@ -155,6 +156,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <SocialWidget />
         </ReactLenis>
       </body>
     </html>
