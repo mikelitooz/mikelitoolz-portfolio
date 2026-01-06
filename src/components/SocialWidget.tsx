@@ -73,13 +73,13 @@ const SocialWidget = () => {
               href={telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0088cc] text-white shadow-lg transition-transform hover:scale-110 hover:bg-[#0077b5] focus:outline-none focus:ring-4 focus:ring-[#0088cc]/30"
+              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-swiss-charcoal text-swiss-platinum border border-swiss-border shadow-lg transition-transform hover:scale-110 hover:bg-[#0088cc] hover:border-[#0088cc] hover:text-white focus:outline-none"
               aria-label="Chat on Telegram"
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setHasInteracted(true)}
             >
-              <FaTelegramPlane className="h-6 w-6" />
+              <FaTelegramPlane className="h-5 w-5" />
             </motion.a>
 
             {/* WhatsApp */}
@@ -88,7 +88,7 @@ const SocialWidget = () => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 hover:bg-[#20b857] focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-swiss-charcoal text-swiss-platinum border border-swiss-border shadow-lg transition-transform hover:scale-110 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white focus:outline-none"
               aria-label="Chat on WhatsApp"
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
@@ -100,20 +100,25 @@ const SocialWidget = () => {
         )}
       </AnimatePresence>
 
-      {/* Main Toggle Button */}
+      {/* Main Toggle Button - Squircle */}
       <motion.button
         onClick={toggleOpen}
-        className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white text-black shadow-xl focus:outline-none focus:ring-4 focus:ring-gray-300/50"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-swiss-platinum text-swiss-charcoal shadow-2xl focus:outline-none border border-white/10"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         animate={
           !isOpen && !hasInteracted
             ? {
-                rotate: [0, -10, 10, -10, 10, 0],
+                scale: [1, 1.05, 1],
+                boxShadow: [
+                  "0px 0px 0px rgba(237, 237, 237, 0)",
+                  "0px 0px 20px rgba(237, 237, 237, 0.3)",
+                  "0px 0px 0px rgba(237, 237, 237, 0)",
+                ],
                 transition: {
-                  duration: 2,
+                  duration: 3,
                   repeat: Infinity,
-                  repeatDelay: 5,
+                  repeatDelay: 2,
                   ease: "easeInOut",
                 },
               }
@@ -130,7 +135,7 @@ const SocialWidget = () => {
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FaTimes className="h-6 w-6 text-gray-800" />
+              <FaTimes className="h-6 w-6" />
             </motion.div>
           ) : (
             <motion.div
@@ -140,20 +145,17 @@ const SocialWidget = () => {
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FaCommentDots className="h-7 w-7 text-gray-800" />
+              <FaCommentDots className="h-6 w-6" />
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Notification Badge */}
+        {/* Status Dot (Green Pulse) - Adjusted for Squircle */}
         {!isOpen && !hasInteracted && (
-          <motion.span
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white shadow-sm"
-          >
-            1
-          </motion.span>
+          <span className="absolute -top-1 -right-1 h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500 border-2 border-swiss-charcoal"></span>
+          </span>
         )}
       </motion.button>
     </div>

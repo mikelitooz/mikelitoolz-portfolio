@@ -3,74 +3,68 @@ import { ArrowUpRight } from "lucide-react";
 import { FC } from "react";
 import Container from "./Container";
 import Link from "next/link";
+import Script from "next/script";
 import Image from "next/image";
 import { CalendarIcon, QrCode } from "@/assets";
+import MagneticButton from "./ui/MagneticButton";
 
 const CTASection: FC = ({}) => {
   return (
-    <section id="contact">
+    <section id="contact" className="py-24 md:py-32">
       <Container>
-        <div className="bg-accent px-6 sm:px-8 md:px-10 lg:px-16 py-6 md:py-10 rounded-[20px]">
-          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6 md:gap-10">
-            <div className="flex flex-col gap-10 sm:gap-20 lg:gap-30 items-center md:items-start">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center md:text-left text-accent-foreground leading-tight">
-                Got an Idea?
-                <br /> Book Your Free Strategy Call Today!
-              </h3>
-
-              <div className="hidden md:flex flex-col" aria-label="Social media links">
-                {socialLinks.map((link) => {
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      className="flex items-center text-accent-foreground gap-3 group w-fit"
-                    >
-                      <ArrowUpRight className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:rotate-45" />
-                      <span className="text-lg transition-all duration-300 ease-in-out group-hover:pl-3">{link.name}</span>
-                    </Link>
-                  );
-                })}
+        <div className="flex flex-col gap-8 md:gap-12">
+          {/* Main Action Grid - Swiss Split */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full">
+            {/* Left: Cal.com (High Contrast) */}
+            <Link
+              href="https://cal.com/izzydevbuild/30min"
+              target="_blank"
+              className="w-full aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] bg-swiss-platinum flex flex-col items-center justify-center text-swiss-black transition-colors duration-300 hover:bg-white group overflow-hidden relative cursor-pointer"
+            >
+              <div className="z-10 flex flex-col items-center gap-4 p-8 text-center">
+                <span className="text-xl md:text-2xl font-medium tracking-widest uppercase opacity-70">Ready to Validate?</span>
+                <h2 className="text-[10vw] md:text-[5vw] font-bold leading-none tracking-tighter group-hover:tracking-tight transition-all duration-500">
+                  BOOK CALL
+                </h2>
               </div>
-            </div>
+              <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            </Link>
 
-            {/* Right Side - Contact Card */}
-            <div className="flex flex-col gap-6 bg-background/10 p-6 rounded-[50px] w-full max-w-[300px]">
-              {/* Profile Badge */}
+            {/* Right: Contra (Verified Partner) */}
+            <div className="w-full aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] border border-swiss-border bg-swiss-charcoal/50 flex flex-col items-center justify-center relative overflow-hidden group hover:border-swiss-platinum/30 transition-colors duration-500">
+              <div className="z-10 flex flex-col items-center gap-8">
+                <span className="text-xl md:text-2xl font-medium tracking-widest uppercase text-swiss-gray">Direct Hire</span>
+
+                {/* Contra Button Container */}
+                <div className="transform scale-125 md:scale-150">
+                  <div
+                    className="contra-hire-me-button"
+                    data-analyticsuserid="a50dccd3-c110-4c81-9aaa-dfb3145cd8b3"
+                    data-theme="dark"
+                    data-username="izzydevbuilds"
+                  ></div>
+                </div>
+              </div>
+
+              {/* Decorative Background for Contra */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-swiss-stone/10 to-transparent opacity-50" />
+            </div>
+          </div>
+
+          <Script src="https://contra.com/static/embed/sdk.js" strategy="lazyOnload" />
+
+          {/* Footer Socials */}
+          <div className="mt-8 flex gap-12 flex-wrap justify-center">
+            {socialLinks.map((link) => (
               <Link
-                href="https://cal.com/izzydevbuild/30min"
+                key={link.name}
+                href={link.url}
                 target="_blank"
-                className="bg-accent-foreground/90 rounded-full p-3 flex items-center gap-3 shadow-lg"
+                className="text-lg text-swiss-gray hover:text-swiss-platinum transition-colors tracking-tight uppercase"
               >
-                <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center p-1.5">
-                  <Image src={CalendarIcon} alt="Gmail logo" />
-                </div>
-                <span className="font-semibold tracking-[120%] text-foreground">Book a free call!</span>
+                {link.name}
               </Link>
-
-              <div className="bg-background/15 rounded-3xl p-6 shadow-lg w-full">
-                <div className="bg-white rounded-[20px] w-full p-2">
-                  <Image src={QrCode} alt="scan qr code" width={200} height={200} />
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-12 md:hidden gap-7" aria-label="Social media links">
-                {socialLinks.map((link) => {
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      className="col-span-6 flex items-center text-accent-foreground gap-3 group w-fit"
-                    >
-                      <ArrowUpRight className="w-5 h-5 transition-transform duration-300 ease-in-out group-hover:rotate-45" />
-                      <span className="text-lg transition-all duration-300 ease-in-out group-hover:pl-3">{link.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
+            ))}
           </div>
         </div>
       </Container>

@@ -1,190 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  /* StartDeed-inspired light theme palette */
+  /* =========================================
+     VIBE DESIGN SYSTEM: SWISS CARBON (shreej.al Inspired)
+     ========================================= */
 
-  /* Core colors - Startdeed exact match */
-  --background: rgb(255, 255, 255);
-  --foreground: rgb(45, 51, 64);           /* #2D3340 - Dark charcoal text */
+  /* Core Palette - Dark Mode First */
+  --swiss-black: #0a0a0a; /* Deepest Black */
+  --swiss-charcoal: #111111; /* Main Background */
+  --swiss-stone: #1c1c1c; /* Card / Surface */
+  --swiss-platinum: #ededed; /* Primary Text */
+  --swiss-gray: #888888; /* Muted Text */
+  --swiss-border: #333333; /* Subtle Borders */
 
-  /* Card & Surface colors - Light backgrounds */
-  --card: rgb(255, 255, 255);
-  --card-foreground: rgb(45, 51, 64);
-  --secondary: rgb(248, 248, 250);         /* Very light gray for alternating sections */
-  --secondary-foreground: rgb(45, 51, 64);
+  /* Fluid Typography (Transit-Scale) */
+  --font-h1: clamp(3.5rem, 6vw + 1rem, 9rem);
+  --font-body: clamp(1rem, 0.25vw + 1rem, 1.25rem);
 
-  /* Accent colors - Purple primary (matches Startdeed exactly) */
-  --accent-primary: rgb(161, 104, 211);    /* #A168D3 - Purple for CTAs ONLY */
-  --accent-secondary: rgb(137, 121, 90);   /* Warm taupe - secondary accent */
-  --accent-tertiary: rgb(129, 91, 176);    /* Deeper purple */
-  --background-alt: rgb(246, 240, 251);    /* Lavender section background */
+  /* Semantic Mappings */
+  --background: var(--swiss-charcoal);
+  --foreground: var(--swiss-platinum);
 
-  /* Primary accent (purple for CTAs) */
-  --accent: rgb(161, 104, 211);
-  --accent-foreground: rgb(255, 255, 255);
+  --card: var(--swiss-stone);
+  --card-foreground: var(--swiss-platinum);
 
-  /* Muted text and borders - Startdeed-inspired */
-  --muted: rgb(245, 245, 247);
-  --muted-foreground: rgba(45, 51, 64, 0.65);  /* Slightly darker for better readability */
-  --border: rgba(46, 52, 64, 0.15);            /* rgba(46,52,64,0.15) - Startdeed exact */
+  --popover: var(--swiss-stone);
+  --popover-foreground: var(--swiss-platinum);
 
-  /* Interactive states */
-  --accent-hover: rgba(161, 104, 211, 0.15);
-  --ring: rgba(161, 104, 211, 0.3);
+  --primary: var(--swiss-platinum);
+  --primary-foreground: var(--swiss-charcoal);
 
-  /* Standard utility colors */
-  --primary: rgb(45, 51, 64);
-  --primary-foreground: rgb(255, 255, 255);
-  --input: rgb(248, 248, 250);
-  --popover: rgb(255, 255, 255);
-  --popover-foreground: rgb(45, 51, 64);
-  --destructive: rgb(239, 68, 68);
-  --destructive-foreground: rgb(255, 255, 255);
+  --secondary: var(--swiss-black);
+  --secondary-foreground: var(--swiss-platinum);
 
-  /* Charts with light theme colors */
-  --chart-1: rgb(161, 104, 211);
-  --chart-2: rgb(137, 121, 90);
-  --chart-3: rgb(129, 91, 176);
-  --chart-4: rgb(99, 102, 241);
-  --chart-5: rgb(236, 72, 153);
+  --muted: var(--swiss-stone);
+  --muted-foreground: var(--swiss-gray);
 
-  /* Radius - Startdeed uses max 8px for everything */
-  --radius: 0.5rem; /* 8px */
+  --accent: #4ade80; /* Neon Green Pop from shreej.al */
+  --accent-foreground: var(--swiss-black);
 
-  /* Sidebar */
-  --sidebar: rgb(248, 248, 250);
-  --sidebar-foreground: rgb(45, 51, 64);
-  --sidebar-primary: rgb(161, 104, 211);
-  --sidebar-primary-foreground: rgb(255, 255, 255);
-  --sidebar-accent: rgb(255, 255, 255);
-  --sidebar-accent-foreground: rgb(45, 51, 64);
-  --sidebar-border: rgba(45, 51, 64, 0.1);
-  --sidebar-ring: rgba(161, 104, 211, 0.3);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: var(--swiss-border);
+  --input: var(--swiss-border);
+  --ring: var(--swiss-platinum);
+
+  --radius: 0px; /* Sharp edges for Swiss style */
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* New Swiss Carbon Tokens */
+  --color-swiss-black: var(--swiss-black);
+  --color-swiss-charcoal: var(--swiss-charcoal);
+  --color-swiss-stone: var(--swiss-stone);
+  --color-swiss-platinum: var(--swiss-platinum);
+  --color-swiss-gray: var(--swiss-gray);
+  --color-swiss-border: var(--swiss-border);
+
+  /* Legacy Mappings (for backward compat) */
+  --color-luxury-black: var(--swiss-black);
+  --color-luxury-gold: var(--accent); /* Now maps to Neon Green */
+  --color-luxury-charcoal: var(--swiss-charcoal);
+
+  /* System Mappings */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-md: var(--radius);
+  --radius-sm: var(--radius);
 }
 
-/* Force light theme - no dark mode detection */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
+/* Base Reset */
+/* Base Reset */
+html,
 body {
-  /* Solid white background - sections handle their own backgrounds */
-  background: rgb(255, 255, 255);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  min-height: 100vh;
-  line-height: 1.6; /* Startdeed uses generous line-height for readability */
 }
 
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Vibe Utilities */
+.bg-noise {
+  display: none; /* Clean Swiss look */
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
-}
-
-/* Tech Stack Carousel Styles */
-.swiper {
-  width: 100%;
-  position: relative;
-}
-
-.swiper-slide {
-  height: auto;
-  padding: 0.5rem;
-}
-
-/* Prevent horizontal scroll on mobile */
-@media (max-width: 640px) {
-  .swiper-wrapper {
-    padding-inline: 1rem;
-  }
-}
-
-/* Hero Section Gradient Background - StartDeed inspired lavender gradient */
-.hero-gradient {
- 
-}
-
-/* Typography - StartDeed-inspired - REDUCED SIZES */
-.hero-heading {
-  font-size: clamp(36px, 6vw, 56px);
+/* Typography Utilities */
+.text-transit-heading {
+  font-size: var(--font-h1);
+  line-height: 0.85;
   letter-spacing: -0.04em;
   font-weight: 700;
-  line-height: 1.15;
+  text-transform: uppercase;
 }
 
-.section-heading {
-  font-size: clamp(28px, 4vw, 42px);
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-.subsection-heading {
-  font-size: clamp(18px, 2.5vw, 22px);
+.text-fluid-body {
+  font-size: var(--font-body);
+  line-height: 1.5;
   letter-spacing: -0.02em;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-/* Alternating section backgrounds */
-.section-lavender {
-  background-color: var(--background-alt);
 }

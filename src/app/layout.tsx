@@ -2,7 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { ReactLenis } from "@/lib/lenis";
+import SmoothScroll from "@/components/SmoothScroll";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ScrollTriggerSafety } from "@/components/scroll-trigger-safety";
@@ -152,12 +152,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
         <ScrollTriggerSafety />
-        <ReactLenis root>
+        <SmoothScroll>
+          <div className="bg-noise" />
           <Navbar />
           {children}
           <Footer />
           <SocialWidget />
-        </ReactLenis>
+        </SmoothScroll>
       </body>
     </html>
   );

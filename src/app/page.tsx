@@ -1,13 +1,15 @@
 "use client";
 
 import ServicesSection from "@/components/ServicesSection";
-import ProjectSection from "@/components/ProjectSection";
+import ProjectBento from "@/components/ProjectBento";
+// import ProjectSection from "@/components/ProjectSection";
 import HowWeWork from "@/components/HowWeWork";
-import AboutMe from "@/components/AboutMe";
+import QuietudePhilosophy from "@/components/QuietudePhilosophy";
+// import AboutMe from "@/components/AboutMe";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTA";
 import TechStackSection from "@/components/TechStackSection";
-import HeroSection from "@/components/HeroSection";
+import HeroVibe from "@/components/HeroVibe";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { PageSchemas } from "@/components/PageSchemas";
 import { faqs } from "@/constants";
@@ -17,22 +19,17 @@ export default function Home() {
     <>
       <PageSchemas services={["mvp", "design"]} faqs={faqs} />
       <main>
-        <HeroSection
-          title="Your Idea Doesn't Need Perfection. It Needs Validation."
-          subtitle="Most MVPs die because they launch too late. I build products that get in front of users fast, collect real feedback faster, and iterate before your competitors even finish their roadmap."
-          cta1={{ label: "See My Work", hoverLabel: "View Portfolio", href: "#projects" }}
-          cta2={{ label: "Explore Automation", hoverLabel: "AI Solutions", href: "/automation" }}
-        />
+        <HeroVibe />
 
         <ServicesSection page="home" />
 
-        <ProjectSection page="home" />
+        <ProjectBento page="home" />
 
         <TestimonialsSection />
 
         <HowWeWork page="home" />
 
-        <AboutMe />
+        <QuietudePhilosophy />
 
         <TechStackSection page="home" />
 

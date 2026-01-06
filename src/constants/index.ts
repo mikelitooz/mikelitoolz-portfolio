@@ -30,7 +30,7 @@ import {
   WebhookIcon,
   ZapierIcon,
 } from "@/assets";
-import { Search, Palette, Cog, FlaskConical, Rocket } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 export const fullStackTools = [
   { id: "fullstac-1", name: "React", icon: ReactIcon },
@@ -182,35 +182,30 @@ export const processSteps = [
     title: "Discovery Call",
     description:
       "I dive deep into your vision, goals, and constraints. I ask pointed questions to figure out what you actually need versus what sounds impressive. You'll leave the call with clarity on next steps and a realistic timeline.",
-    icon: Search,
   },
   {
     number: 2,
     title: "Design & Planning",
     description:
       "I create wireframes and a technical roadmap so you see exactly what we're building before any code gets written. This prevents scope creep, misalignment, and expensive surprises down the road.",
-    icon: Palette,
   },
   {
     number: 3,
     title: "Build & Iterate",
     description:
       "I build in weekly sprints with regular demos and feedback loops. You see progress constantly, not just at launch. If priorities shift, we adjust quickly without derailing the entire project.",
-    icon: Cog,
   },
   {
     number: 4,
     title: "Test & Polish",
     description:
       "I test thoroughly across devices and browsers to catch bugs before users do. Security, performance, and usability all get attention so your product feels professional, not rushed.",
-    icon: FlaskConical,
   },
   {
     number: 5,
     title: "Launch & Support",
     description:
       "I deploy your product and monitor the first few days closely. If issues arise or you need guidance on next steps, I'm here. Your success matters beyond launch day.",
-    icon: Rocket,
   },
 ];
 
@@ -248,21 +243,18 @@ export const automationSteps = [
     title: "Understand Your Workflow",
     description:
       "I walk through your current processes to identify what's draining your time. We pinpoint tasks ready for automation and calculate how many hours you'll reclaim each week.",
-    icon: Rocket,
   },
   {
     number: 2,
     title: "Design the System",
     description:
       "I map out how the automation will work, connecting your existing tools and building custom solutions where needed. You see the plan before anything goes live.",
-    icon: Rocket,
   },
   {
     number: 3,
     title: "Deploy & Optimize",
     description:
       "I set everything up, test rigorously, and monitor performance. As your business grows, I refine the automation to keep it running smoothly and saving you time.",
-    icon: Rocket,
   },
 ];
 
