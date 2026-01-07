@@ -185,8 +185,8 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-foreground tracking-tighter">ISRAEL CHUKWUDI</h1>
-            <p className="mt-4 text-lg md:text-2xl text-swiss-gray tracking-widest uppercase">Fullstack Developer</p>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-foreground tracking-tighter">CHINWUBA ISRAEL</h1>
+            <p className="mt-4 text-lg md:text-2xl text-swiss-gray tracking-widest uppercase">Design Engineer</p>
           </motion.div>
 
           {/* Section 2: Engineering - LEFT */}
@@ -196,8 +196,8 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-start justify-center pl-8 md:pl-16 lg:pl-24"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">Precision</h2>
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Engineering.</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">Fluid</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Systems.</h2>
           </motion.div>
 
           {/* Section 3: AI - RIGHT */}
@@ -207,8 +207,8 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-end justify-center pr-8 md:pr-16 lg:pr-24 text-right"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">AI</h2>
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Intelligence.</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">Intelligent</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Agents.</h2>
           </motion.div>
 
           {/* Section 4: CTA - CENTER */}
@@ -227,6 +227,9 @@ export default function BlackBoxHero() {
             </a>
           </motion.div>
         </div>
+
+        {/* Gradient Overlay for Smooth Transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 md:h-64 bg-linear-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
     </section>
   );

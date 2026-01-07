@@ -67,12 +67,11 @@ export function Navbar() {
               { href: "/#work", label: "Work" },
               { href: "/#about", label: "About" },
               { href: "/automation", label: "Automation" },
-              // { href: "/blog", label: "Insights" },
               { href: "/#contact", label: "Contact" },
             ].map((link) => (
               <Link key={link.label} href={link.href} className="relative group overflow-hidden">
                 <span className="relative z-10">{link.label}</span>
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
+                <span className="absolute bottom-0 left-0 w-full h-px bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
               </Link>
             ))}
           </div>
@@ -96,7 +95,7 @@ export function Navbar() {
             animate={{ clipPath: "circle(150% at calc(100% - 3rem) 3rem)" }}
             exit={{ clipPath: "circle(0px at calc(100% - 3rem) 3rem)" }}
             transition={{ type: "spring", stiffness: 20, damping: 10 }}
-            className="fixed inset-0 bg-swiss-charcoal z-[60] flex flex-col items-center justify-center gap-8 text-swiss-platinum"
+            className="fixed inset-0 bg-swiss-charcoal z-60 flex flex-col items-center justify-center gap-8 text-swiss-platinum"
           >
             {/* Close Button */}
             <button
@@ -111,7 +110,6 @@ export function Navbar() {
               { href: "/#work", label: "Work" },
               { href: "/#about", label: "About" },
               { href: "/automation", label: "Automation" },
-              { href: "/blog", label: "Insights" },
               { href: "/#contact", label: "Contact" },
             ].map((link) => (
               <Link
