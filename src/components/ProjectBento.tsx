@@ -2,6 +2,7 @@
 
 import { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Container from "./Container";
 import { SectionTitle } from "./section-title";
 import { automationCaseStudies, projects } from "@/constants";
@@ -46,9 +47,13 @@ const ProjectBento: FC<ProjectBentoProps> = ({ page }) => {
 
                 {/* Hover Details Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px]">
-                  <span className="px-8 py-4 bg-swiss-platinum text-swiss-black font-bold uppercase tracking-widest rounded-full hover:scale-105 transition-transform">
+                  <Link
+                    href={project.link || "#"}
+                    target="_blank"
+                    className="px-8 py-4 bg-swiss-platinum text-swiss-black font-bold uppercase tracking-widest rounded-full hover:scale-105 transition-transform"
+                  >
                     View Case Study
-                  </span>
+                  </Link>
                 </div>
               </div>
 

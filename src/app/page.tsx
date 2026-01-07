@@ -9,7 +9,7 @@ import QuietudePhilosophy from "@/components/QuietudePhilosophy";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTA";
 import TechStackSection from "@/components/TechStackSection";
-import HeroVibe from "@/components/HeroVibe";
+import BlackBoxHero from "@/components/BlackBoxHero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { PageSchemas } from "@/components/PageSchemas";
 import { faqs } from "@/constants";
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <PageSchemas services={["mvp", "design"]} faqs={faqs} />
       <main>
-        <HeroVibe />
+        <BlackBoxHero />
 
         <ServicesSection page="home" />
 

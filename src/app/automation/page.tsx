@@ -15,7 +15,14 @@ export default function AutomationPage() {
     <>
       <PageSchemas services={["automation"]} faqs={automationFaqs} />
       <main>
-        <HeroVibe title={["CLONE", "YOUR", "BEST", "DAY"]} ctaText="AUTOMATE NOW" ctaLink="#contact" />
+        <HeroVibe
+          title={["CLONE", "YOUR", "BEST", "DAY"]}
+          subtitle="What If Your Team Could Clone Their Best Day, Every Day?"
+          description="You're not short on ideas. You're short on time. I build AI systems that handle the repetitive grind so your team can focus on strategy, creativity, and growth. Most clients save 10+ hours per week within the first month. What could you build with that time back?"
+          ctaText="AUTOMATE NOW"
+          ctaLink="#contact"
+          layout="split"
+        />
 
         <ProjectBento page="automation" />
         <ServicesSection page="automation" />

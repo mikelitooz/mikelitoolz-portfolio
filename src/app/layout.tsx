@@ -157,7 +157,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <SocialWidget />
+          {/* <SocialWidget /> */}
         </SmoothScroll>
       </body>
     </html>

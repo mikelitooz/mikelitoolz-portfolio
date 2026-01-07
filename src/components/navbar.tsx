@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Container from "./Container";
 import MagneticButton from "./ui/MagneticButton";
 
@@ -52,11 +53,11 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8 mix-blend-difference text-white">
-      <div className="flex justify-between items-start">
+    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8">
+      <div className="flex justify-between items-start mix-blend-difference text-white">
         {/* Logo / Brand - Top Left */}
-        <Link href="/" className="text-sm font-bold tracking-widest uppercase hover:opacity-70 transition-opacity">
-          IzzyDevBuilds
+        <Link href="/" className="text-xl font-bold tracking-tighter uppercase hover:opacity-70 transition-opacity">
+          IZZYDEVBUILDS
         </Link>
 
         {/* Desktop Nav - Top Middle/Right */}
@@ -66,7 +67,7 @@ export function Navbar() {
               { href: "/#work", label: "Work" },
               { href: "/#about", label: "About" },
               { href: "/automation", label: "Automation" },
-              { href: "/blog", label: "Insights" },
+              // { href: "/blog", label: "Insights" },
               { href: "/#contact", label: "Contact" },
             ].map((link) => (
               <Link key={link.label} href={link.href} className="relative group overflow-hidden">
@@ -75,7 +76,7 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">Fullstack Developer & AI Specialist</span>
+          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">Design Engineer & AI Specialist</span>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -87,25 +88,44 @@ export function Navbar() {
       </div>
 
       {/* Mobile Nav Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-background text-foreground z-40 flex flex-col items-center justify-center gap-8 text-2xl font-bold uppercase tracking-tighter">
-          <Link href="/#work" onClick={() => setIsMobileMenuOpen(false)}>
-            Work
-          </Link>
-          <Link href="/#about" onClick={() => setIsMobileMenuOpen(false)}>
-            About
-          </Link>
-          <Link href="/automation" onClick={() => setIsMobileMenuOpen(false)}>
-            Automation
-          </Link>
-          <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)}>
-            Insights
-          </Link>
-          <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
-            Contact
-          </Link>
-        </div>
-      )}
+      {/* Mobile Nav Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ clipPath: "circle(0px at calc(100% - 3rem) 3rem)" }}
+            animate={{ clipPath: "circle(150% at calc(100% - 3rem) 3rem)" }}
+            exit={{ clipPath: "circle(0px at calc(100% - 3rem) 3rem)" }}
+            transition={{ type: "spring", stiffness: 20, damping: 10 }}
+            className="fixed inset-0 bg-swiss-charcoal z-[60] flex flex-col items-center justify-center gap-8 text-swiss-platinum"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 md:top-8 md:right-12 text-sm font-bold uppercase tracking-widest hover:opacity-70 transition-opacity text-swiss-platinum"
+            >
+              Close
+            </button>
+
+            {/* Links */}
+            {[
+              { href: "/#work", label: "Work" },
+              { href: "/#about", label: "About" },
+              { href: "/automation", label: "Automation" },
+              { href: "/blog", label: "Insights" },
+              { href: "/#contact", label: "Contact" },
+            ].map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-4xl md:text-5xl font-bold uppercase tracking-tighter hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

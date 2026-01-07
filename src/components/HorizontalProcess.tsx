@@ -35,7 +35,7 @@ export default function HorizontalProcess({ steps }: HorizontalProcessProps) {
               <div key={step.number} className="group relative border-b border-swiss-border/50 py-16">
                 <div className="flex flex-col items-start gap-8">
                   {/* Number - Large Editorial Style */}
-                  <span className="text-8xl md:text-9xl font-bold text-swiss-border/20 leading-none select-none">
+                  <span className="text-8xl md:text-9xl font-bold text-swiss-platinum/20 leading-none select-none">
                     {String(step.number).padStart(2, "0")}
                   </span>
 
