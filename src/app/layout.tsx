@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.izzydevbuilds.xyz"),
-  title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist | Build Your MVP Fast",
+  title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist | Build Your MVP Fast",
   description:
     "Experienced fullstack developer with 4+ years specializing in MVP development and AI automation. Build Next.js applications and intelligent workflows that help startups launch fast and scale smart. 10+ successful projects delivered. Expert in n8n, Claude AI, OpenAI, and workflow optimization.",
   keywords: [
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     "technical consultant",
     "SaaS developer",
     "fintech developer",
-    "Israel Chukwudi",
+    "Chinwuba Israel",
     "Izzy developer",
   ],
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
+    title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
     description:
       "Build your MVP fast with an experienced developer who specializes in Next.js and AI automation. 4+ years experience, 10+ successful projects. Expert in n8n, Claude AI, OpenAI, and workflow optimization for startups.",
     url: "https://www.izzydevbuilds.xyz",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         url: "https://www.izzydevbuilds.xyz/icon-512x512.png",
         width: 1200,
         height: 630,
-        alt: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
+        alt: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
       },
     ],
     locale: "en_US",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Israel Chukwudi - Fullstack Developer & AI Automation Specialist",
+    title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
     description:
       "Build MVPs and AI automation systems that help startups launch quickly and scale smart. Expert in Next.js, n8n, Claude AI, and workflow optimization. 4+ years experience, 10+ successful projects.",
     images: ["https://www.izzydevbuilds.xyz/icon-512x512.png"],
