@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer";
 import { ScrollTriggerSafety } from "@/components/scroll-trigger-safety";
 import SocialWidget from "@/components/SocialWidget";
 import { StructuredData, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/structured-data";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({
@@ -163,6 +164,7 @@ export default function RootLayout({
           {/* <SocialWidget /> */}
         </SmoothScroll>
       </body>
+      <GoogleAnalytics gaId="G-440RLBVLYD" />
     </html>
   );
 }
