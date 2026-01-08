@@ -65,7 +65,7 @@ export function Navbar() {
           <div className="flex gap-8 text-sm font-medium tracking-wide">
             {[
               { href: "/#work", label: "Work" },
-              { href: "/#about", label: "About" },
+              { href: "/#services", label: "Services" },
               { href: "/automation", label: "Automation" },
               { href: "/#contact", label: "Contact" },
             ].map((link) => (
@@ -108,7 +108,7 @@ export function Navbar() {
             {/* Links */}
             {[
               { href: "/#work", label: "Work" },
-              { href: "/#about", label: "About" },
+              { href: "/#services", label: "Services" },
               { href: "/automation", label: "Automation" },
               { href: "/#contact", label: "Contact" },
             ].map((link) => (
