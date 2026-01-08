@@ -135,7 +135,7 @@ export const metadata: Metadata = {
     "theme-color": "#0e0904",
   },
   verification: {
-    google: "google-site-verification=d5a337WTJaTmtPq08kf6cv1GdJ536mi9ysEhVlEq-gc",
+    google: "d5a337WTJaTmtPq08kf6cv1GdJ536mi9ysEhVlEq-gc",
   },
 };
 
