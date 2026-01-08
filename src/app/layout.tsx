@@ -134,6 +134,9 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#0e0904",
     "theme-color": "#0e0904",
   },
+  verification: {
+    google: "google-site-verification=d5a337WTJaTmtPq08kf6cv1GdJ536mi9ysEhVlEq-gc",
+  },
 };
 
 export default function RootLayout({

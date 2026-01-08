@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* =========================================
-     VIBE DESIGN SYSTEM: SWISS CARBON (shreej.al Inspired)
-     ========================================= */
-
   /* Core Palette - Dark Mode First */
   --swiss-black: #0a0a0a; /* Deepest Black */
   --swiss-charcoal: #111111; /* Main Background */
@@ -36,7 +32,7 @@
   --muted: var(--swiss-stone);
   --muted-foreground: var(--swiss-gray);
 
-  --accent: #4ade80; /* Neon Green Pop from shreej.al */
+  --accent: #4ade80;
   --accent-foreground: var(--swiss-black);
 
   --destructive: #ef4444;
