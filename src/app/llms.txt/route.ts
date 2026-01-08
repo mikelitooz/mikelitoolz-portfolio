@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  const llmsTxt = `# IzzyDevBuilds - Fullstack Developer & AI Automation Specialist
+  const llmsTxt = `# IzzyDevBuilds - Fullstack Design Engineer & AI Automation Specialist
 
 > Israel Chukwudi (Izzy)
-> Fullstack developer specializing in MVP development and AI automation
+> Fullstack design engineer specializing in MVP development and AI automation
 > 4+ years experience | 10+ projects | 6+ happy clients
 > Contact: israel@izzydevbuilds.xyz
 
@@ -162,7 +162,7 @@ Available for new projects
 
 ## Keywords & Specializations
 
-Israel Chukwudi, Izzy, IzzyDevBuilds, fullstack developer, MVP development, AI automation specialist, Next.js expert, TypeScript developer, n8n expert, workflow automation, startup developer, fintech developer, SaaS developer, AI chatbot development, customer support automation, business process automation, rapid prototyping, technical consultant, API integration, Claude AI integration, OpenAI developer, Langchain expert, React developer, Node.js backend, Supabase developer, Firebase expert
+Israel Chukwudi, Izzy, IzzyDevBuilds, fullstack design engineer, MVP development, AI automation specialist, Next.js expert, TypeScript developer, n8n expert, workflow automation, startup developer, fintech developer, SaaS developer, AI chatbot development, customer support automation, business process automation, rapid prototyping, technical consultant, API integration, Claude AI integration, OpenAI developer, Langchain expert, React developer, Node.js backend, Supabase developer, Firebase expert
 
 ## Availability
 
@@ -170,12 +170,12 @@ Currently accepting new projects
 Response time: Within 24 hours
 Location: Remote (Global clients welcome)
 
-Last Updated: ${new Date().toISOString().split('T')[0]}`;
+Last Updated: ${new Date().toISOString().split("T")[0]}`;
 
   return new NextResponse(llmsTxt, {
     headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=3600, s-maxage=3600",
     },
   });
 }
