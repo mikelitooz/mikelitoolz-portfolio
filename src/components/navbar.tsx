@@ -57,7 +57,7 @@ export function Navbar() {
       <div className="flex justify-between items-start mix-blend-difference text-white">
         {/* Logo / Brand - Top Left */}
         <Link href="/" className="text-xl font-bold tracking-tighter uppercase hover:opacity-70 transition-opacity">
-          IZZYDEVBUILDS
+          MICHEAL IFEANYI
         </Link>
 
         {/* Desktop Nav - Top Middle/Right */}
@@ -75,7 +75,7 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">Design Engineer & AI Specialist</span>
+          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">AI Automation Engineer</span>
         </div>
 
         {/* Mobile Menu Toggle */}

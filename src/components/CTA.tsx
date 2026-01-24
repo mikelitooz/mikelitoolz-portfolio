@@ -8,17 +8,15 @@ import Image from "next/image";
 import { CalendarIcon, QrCode } from "@/assets";
 import MagneticButton from "./ui/MagneticButton";
 
-const CTASection: FC = ({}) => {
+const CTASection: FC = ({ }) => {
   return (
     <section id="contact" className="py-24 md:py-32">
       <Container>
         <div className="flex flex-col gap-8 md:gap-12">
           {/* Main Action Grid - Swiss Split */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full">
-            {/* Left: Cal.com (High Contrast) */}
             <Link
-              href="https://cal.com/izzydevbuild/30min"
-              target="_blank"
+              href="mailto:ifeanyi_micheal@yahoo.com?subject=AI%20Automation%20Inquiry"
               className="w-full aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] bg-swiss-platinum flex flex-col items-center justify-center text-swiss-black transition-colors duration-300 hover:bg-white group overflow-hidden relative cursor-pointer"
             >
               <div className="z-10 flex flex-col items-center gap-4 p-8 text-center">

@@ -1,36 +1,35 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "AI Automation Services | Save 20+ Hours/Week | IzzyDevBuilds",
-  description: "Custom AI automation systems using n8n, Claude AI, and Make. Handle customer support, lead nurturing, and data entry automatically. Real case studies with proven results.",
+  title: "AI Automation Services | Save 20+ Hours/Week | Micheal Ifeanyi",
+  description: "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.",
   keywords: [
     "AI automation services",
     "business process automation",
     "n8n automation expert",
-    "Claude AI integration",
     "workflow automation specialist",
     "automated customer support",
     "lead nurturing automation",
     "task automation",
     "AI workflow builder",
-    "make.com automation",
-    "zapier alternative",
+    "RAG pipelines",
+    "AI agents",
     "custom automation solutions"
   ],
   alternates: {
-    canonical: "https://www.izzydevbuilds.xyz/automation",
+    canonical: "https://www.michealifeanyi.com/automation",
   },
   openGraph: {
     title: "AI Automation Services | Save 20+ Hours/Week",
-    description: "Build custom AI automation systems that handle customer support, lead nurturing, data entry, and more. See real results from businesses like yours.",
-    url: "https://www.izzydevbuilds.xyz/automation",
-    siteName: "IzzyDevBuilds",
+    description: "Build autonomous AI agents and workflow infrastructures that save businesses time. See real results from businesses like yours.",
+    url: "https://www.michealifeanyi.com/automation",
+    siteName: "Micheal Ifeanyi",
     images: [
       {
-        url: "https://x.com/izzydev_/photo",
+        url: "https://www.michealifeanyi.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Automation Services by IzzyDevBuilds",
+        alt: "AI Automation Services by Micheal Ifeanyi",
       },
     ],
     locale: "en_US",
@@ -39,10 +38,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI Automation Services | Save 20+ Hours/Week",
-    description: "Custom AI automation systems that handle repetitive tasks automatically. Built with n8n, Claude AI, and Make.",
-    images: ["https://x.com/izzydev_/photo"],
-    creator: "@izzydevbuilds",
-    site: "@izzydevbuilds",
+    description: "Autonomous AI agents and workflow infrastructures that save businesses time. Built with n8n, RAG pipelines, and operational automation.",
+    images: ["https://www.michealifeanyi.com/og-image.png"],
   },
 }
 

@@ -185,8 +185,8 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-foreground tracking-tighter">CHINWUBA ISRAEL</h1>
-            <p className="mt-4 text-lg md:text-2xl text-swiss-gray tracking-widest uppercase">Design Engineer</p>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-foreground tracking-tighter">MICHEAL IFEANYI</h1>
+            <p className="mt-4 text-lg md:text-2xl text-swiss-gray tracking-widest uppercase">AI Automation Engineer</p>
           </motion.div>
 
           {/* Section 2: Engineering - LEFT */}

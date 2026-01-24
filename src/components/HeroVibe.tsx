@@ -18,8 +18,8 @@ interface HeroVibeProps {
 }
 
 export default function HeroVibe({
-  title = ["ISRAEL", "CHUKWUDI"],
-  subtitle = "I am a full-stack developer interested in creating websites and other random tools on the internet.",
+  title = ["MICHEAL", "IFEANYI"],
+  subtitle = "I build autonomous AI agents and workflow infrastructures that save businesses time.",
   description,
   ctaText = "START PROJECT",
   ctaLink = "#contact",
@@ -87,9 +87,8 @@ export default function HeroVibe({
         {/* Title Section */}
         <h1
           ref={titleRef}
-          className={`text-transit-heading leading-[0.8] tracking-tighter text-foreground text-left flex flex-col items-start gap-0 ${
-            isSplit ? "lg:w-1/2" : ""
-          }`}
+          className={`text-transit-heading leading-[0.8] tracking-tighter text-foreground text-left flex flex-col items-start gap-0 ${isSplit ? "lg:w-1/2" : ""
+            }`}
         >
           {title.map((line, i) => (
             <SplitTitle key={i} text={line} />
@@ -103,9 +102,8 @@ export default function HeroVibe({
           {subtitle && (
             <p
               ref={subtitleRef}
-              className={`font-medium leading-tight text-white ${
-                isSplit ? "text-3xl md:text-5xl tracking-tight" : "text-2xl md:text-4xl"
-              }`}
+              className={`font-medium leading-tight text-white ${isSplit ? "text-3xl md:text-5xl tracking-tight" : "text-2xl md:text-4xl"
+                }`}
             >
               {subtitle}
             </p>
@@ -113,9 +111,8 @@ export default function HeroVibe({
           {description && (
             <p
               ref={descriptionRef}
-              className={`text-swiss-gray leading-relaxed ${
-                isSplit ? "text-xl md:text-2xl max-w-xl" : "text-lg md:text-xl max-w-2xl"
-              }`}
+              className={`text-swiss-gray leading-relaxed ${isSplit ? "text-xl md:text-2xl max-w-xl" : "text-lg md:text-xl max-w-2xl"
+                }`}
             >
               {description}
             </p>
