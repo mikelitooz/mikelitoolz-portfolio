@@ -18,54 +18,41 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.izzydevbuilds.xyz"),
-  title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist | Build Your MVP Fast",
+  metadataBase: new URL("https://www.michealifeanyi.com"),
+  title: "Micheal Ifeanyi | AI Automation Engineer - Build Autonomous AI Agents & Workflow Infrastructure",
   description:
-    "Experienced fullstack developer with 4+ years specializing in MVP development and AI automation. Build Next.js applications and intelligent workflows that help startups launch fast and scale smart. 10+ successful projects delivered. Expert in n8n, Claude AI, OpenAI, and workflow optimization.",
+    "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation. Transform your manual processes into intelligent, self-running systems.",
   keywords: [
-    "fullstack developer",
-    "MVP development",
-    "AI automation",
-    "Next.js developer",
-    "startup developer",
-    "workflow automation",
-    "web development",
-    "React developer",
-    "TypeScript",
-    "Supabase",
-    "TailwindCSS",
+    "AI automation engineer",
     "n8n expert",
-    "n8n automation",
-    "Claude AI",
-    "OpenAI integration",
-    "custom software development",
-    "technical consulting",
-    "rapid prototyping",
-    "hire fullstack developer",
-    "MVP developer for startups",
-    "n8n workflow automation",
+    "AI agents",
+    "workflow automation",
+    "RAG pipelines",
+    "Pinecone",
+    "automation infrastructure",
+    "Micheal Ifeanyi",
+    "business automation",
+    "operational automation",
     "AI workflow builder",
-    "startup CTO",
-    "technical consultant",
-    "SaaS developer",
-    "fintech developer",
-    "Chinwuba Israel",
-    "Izzy developer",
+    "lead generation automation",
+    "cold email automation",
+    "healthcare automation",
+    "recruitment automation",
   ],
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
+    title: "Micheal Ifeanyi | AI Automation Engineer",
     description:
-      "Build your MVP fast with an experienced developer who specializes in Next.js and AI automation. 4+ years experience, 10+ successful projects. Expert in n8n, Claude AI, OpenAI, and workflow optimization for startups.",
-    url: "https://www.izzydevbuilds.xyz",
-    siteName: "IzzyDevBuilds",
+      "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.",
+    url: "https://www.michealifeanyi.com",
+    siteName: "Micheal Ifeanyi",
     images: [
       {
-        url: "https://www.izzydevbuilds.xyz/icon-512x512.png",
+        url: "https://www.michealifeanyi.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
+        alt: "Micheal Ifeanyi - AI Automation Engineer",
       },
     ],
     locale: "en_US",
@@ -75,17 +62,15 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Chinwuba Israel - Fullstack Design Engineer & AI Automation Specialist",
+    title: "Micheal Ifeanyi | AI Automation Engineer",
     description:
-      "Build MVPs and AI automation systems that help startups launch quickly and scale smart. Expert in Next.js, n8n, Claude AI, and workflow optimization. 4+ years experience, 10+ successful projects.",
-    images: ["https://www.izzydevbuilds.xyz/icon-512x512.png"],
-    creator: "@izzydev_",
-    site: "@izzydev_",
+      "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.",
+    images: ["https://www.michealifeanyi.com/og-image.png"],
   },
 
   // Additional metadata
   alternates: {
-    canonical: "https://www.izzydevbuilds.xyz",
+    canonical: "https://www.michealifeanyi.com",
   },
   robots: {
     index: true,

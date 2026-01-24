@@ -63,12 +63,10 @@ export const automationTools = [
 ];
 
 export const socialLinks = [
-  { name: "Twitter / X", url: "https://x.com/izzydevbuilds" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/israelchukwudi/" },
-  { name: "Telegram", url: "https://t.me/izzydevbuilds" },
-  { name: "YouTube", url: "https://www.youtube.com/@Izzydev_1" },
-  { name: "GitHub", url: "https://github.com/chiizzy1" },
-  { name: "Email", url: "mailto:israel@izzydevbuilds.xyz" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/micheal-ifeanyi-45730b163/" },
+  { name: "YouTube", url: "https://www.youtube.com/channel/UC6C_TpuVGp357Hm2Wzy7Tfg" },
+  { name: "GitHub", url: "https://github.com/mikelitoolz" },
+  { name: "Email", url: "mailto:ifeanyi_micheal@yahoo.com" },
 ];
 
 export const services = [
@@ -94,29 +92,29 @@ export const services = [
 
 export const projects = [
   {
-    title: "AirbillsPay",
+    title: "Automated Headhunter Agent",
     description:
-      "The founder's users were stuck using multiple, unreliable apps just to pay for airtime, data, and TV. I Built a single, high-performance platform to centralize it all. Now, a 10-minute, high-friction chore is a 30-second tap. The service went from fragmented to trusted, capturing users who previously dropped off.",
-    image: AirbillsImage,
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
-    link: "https://app.airbillspay.com/",
+      "Designed an AI-driven recruitment agent for the healthcare sector that scrapes candidate data, filters for specific qualifications (Minnesota-based nurses), and generates summary reports to streamline hiring for NextLTC. What used to take hours of manual searching now runs autonomously.",
+    image: "/headhunter-agent.jpg",
+    tags: ["n8n", "Web Scraping", "AI Agents"],
+    link: "",
     variant: "featured" as const,
   },
   {
-    title: "Kayi Digital Bank",
+    title: "Real Estate RAG Assistant",
     description:
-      "The founders had the banking infrastructure, but they needed a digital face people could trust. In fintech, a bad first impression is fatal. I built the high-performance landing interface that served as the brand's first impression. It wasn't just a website; it was a trust-building engine that converted curious visitors into signed-up users by making the complex value proposition feel simple.",
-    image: KayiImage,
-    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    link: "https://www.kayi.ng/",
+      "Built a Secure Multi-Channel Lead Ingestion Engine using a RAG pipeline and Pinecone vector database. It answers tenant questions instantly and qualifies leads before human intervention, reducing response time from hours to seconds.",
+    image: "/rag-assistant.jpg",
+    tags: ["Python", "Pinecone", "RAG", "AI Agents"],
+    link: "",
     variant: "featured" as const,
   },
   {
-    title: "SaaS Analytics Dashboard",
+    title: "Cold Email Outreach Engine",
     description:
-      "Founder was drowning in Google Analytics trying to understand what users cared about. Built a dashboard tracking 5 key metrics. Now they check it every morning instead of avoiding analytics entirely. Decision-making went from guesswork to data-driven.",
-    image: "/saas-dashboard.jpg",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
+      "Developed a complete cold outreach system handling scraping, lead enrichment, and automated email sequencing via n8n Cloud. The system runs on autopilot, delivering qualified leads without manual intervention.",
+    image: "/cold-email-engine.jpg",
+    tags: ["n8n Cloud", "Email Automation", "Lead Gen"],
     link: "",
     variant: "featured" as const,
   },
@@ -148,30 +146,23 @@ export const whyWorkWithMe = [
 export const stats = [
   {
     icon: Rocket,
-    value: "10+",
+    value: "5+",
     label: "Projects Completed",
     subtitle: "Successfully delivered",
     bgColor: "bg-blue-500/10",
   },
   {
     icon: Rocket,
-    value: "6+",
-    label: "Happy Clients",
-    subtitle: "Satisfied customers",
-    bgColor: "bg-teal-500/10",
-  },
-  {
-    icon: Rocket,
     value: "100+",
     label: "Hours Saved",
-    subtitle: "Estimated hours automated for clients",
+    subtitle: "Automated for clients",
     bgColor: "bg-purple-500/10",
   },
   {
     icon: Rocket,
-    value: "3+",
+    value: "1+",
     label: "Years of Experience",
-    subtitle: "Professional expertise",
+    subtitle: "Pivoted from Geology",
     bgColor: "bg-orange-500/10",
   },
 ];
