@@ -41,6 +41,7 @@ export interface CaseStudy {
   description: string;
   image: string | StaticImageData;
   video?: string;
+  architectureImage?: string;
   tags: string[];
   link: string;
   variant?: "featured";
@@ -159,6 +160,7 @@ export const caseStudies: CaseStudy[] = [
       "We built a unified n8n workflow that handles the complete appointment lifecycle through Cal.com integration. When a patient books, the system automatically logs the appointment to Google Sheets, sends a confirmation email, and alerts clinic staff. For cancellations and reschedules, the system instantly updates the appointment status, triggers the waitlist notification engine to offer the freed slot to waiting patients, and alerts staff via Gmail. The reminder engine runs on a scheduled cron job, sending automated reminders at 48 hours, 24 hours, and 2 hours before each appointment. At the 20-hour mark, a Voice AI agent calls the patient to confirm attendance, with the call summary and action taken logged automatically to the spreadsheet.",
     architecture:
       "Cal.com Webhook → n8n Event Router (BOOKING_CREATED / CANCELLED / RESCHEDULED) → Google Sheets (appointment database) → Gmail (staff alerts) → HTTP Webhook (waitlist notification trigger) → Scheduled Cron (reminder engine: 48h/24h/2h) → Voice AI Agent (20h confirmation call) → Google Sheets (status updates + call logs)",
+    architectureImage: "/architecture-workflow.png",
     technologies: [
       { name: "n8n", category: "Automation Platforms" },
       { name: "Cal.com", category: "Automation Platforms" },
@@ -192,6 +194,7 @@ export const caseStudies: CaseStudy[] = [
       "We built a 4-workflow automation ecosystem on n8n Cloud:\n\n1. **Viewing Scheduler**: Calendly triggers automatically create Google Calendar events, update the CRM (Google Sheets), and send dual confirmation emails — one to the client and one to the agent. A reminder engine runs every 6 hours, calculating 24h and 2h reminders and sending them to both parties.\n\n2. **Property Recommendations**: An AI-powered matching engine analyzes lead preferences (neighborhood, price range, beds, baths, timeline) against the property database and generates personalized property recommendations via OpenAI.\n\n3. **Follow-Up Sequences**: Automated email sequences triggered by lead status changes. New leads get a welcome sequence, viewing-scheduled leads get preparation emails, and cold leads get re-engagement campaigns.\n\n4. **Market Report Generator**: OpenAI analyzes current listings and market data to generate weekly market insight reports sent automatically to active leads.",
     architecture:
       "Calendly Trigger → Parse Booking → Google Calendar Event → Google Sheets CRM Update → Gmail (Client Confirmation + Agent Notification) → Scheduled Cron (6h reminder engine) → Gmail (24h/2h reminders)\n\nGoogle Sheets (Lead Data) → OpenAI (Property Matching AI) → Gmail (Personalized Recommendations)\n\nGoogle Sheets (Lead Status Change) → n8n Router → Gmail (Follow-Up Sequences)\n\nScheduled Cron (Weekly) → Google Sheets (Listings) → OpenAI (Market Analysis) → Gmail (Market Reports)",
+    architectureImage: "/architecture-workflow.png",
     technologies: [
       { name: "n8n Cloud", category: "Automation Platforms" },
       { name: "Calendly", category: "Automation Platforms" },
@@ -225,6 +228,7 @@ export const caseStudies: CaseStudy[] = [
       "I built an intelligent n8n workflow that automates the entire recruitment pipeline with psychology-driven segmentation.\n\nThe system integrates multiple data sources, using PhantomBuster to scrape LinkedIn and pulling from the Texas HHS Nursing Facility Directory (1,179 facilities). A 'Gatekeeper Filter' automatically disqualifies acute care specialists or those without compact licenses. Qualified candidates then pass through an 'Avatar Classification' engine that categorizes them into psychological profiles (e.g., Turnaround Specialist, MDS Expert, Interim Fixer, Passive Burnout). Finally, the system triggers persona-matched email templates optimized for the candidate's specific mindset.",
     architecture:
       "PhantomBuster / State Directories → n8n Webhook → Data Normalizer → Gatekeeper Filter (Disqualification) → OpenAI (Avatar Classification) → Routing Logic → Gmail API (Persona-Matched Templates)",
+    architectureImage: "/architecture-agent.png",
     technologies: [
       { name: "n8n", category: "Automation Platforms" },
       { name: "PhantomBuster", category: "Infrastructure" },
@@ -254,6 +258,7 @@ export const caseStudies: CaseStudy[] = [
       "We built a RAG (Retrieval-Augmented Generation) pipeline powered by Pinecone vector database that ingests property data, lease terms, and FAQ documents. The AI assistant answers tenant questions instantly with accurate, source-backed responses. It qualifies leads by asking targeted questions about budget, timeline, and preferences before routing hot prospects to human agents.",
     architecture:
       "Document Ingestion → Embedding Generation → Pinecone Vector Store → Query Processing → RAG Pipeline → Response Generation → Lead Qualification Router → CRM Update",
+    architectureImage: "/architecture-rag.png",
     technologies: [
       { name: "Python", category: "Infrastructure" },
       { name: "Pinecone", category: "Databases" },
@@ -283,6 +288,7 @@ export const caseStudies: CaseStudy[] = [
       "Deployed 'Glow Beauty', an intelligent WhatsApp AI agent built specifically to serve as a 24/7 store assistant. The system uses OpenAI to understand complex natural language queries about beauty products, while a Prisma-managed SQLite database acts as the product knowledge base. It dynamically searches inventory and recommends the right products directly in the chat.",
     architecture:
       "WhatsApp Cloud API ↔ NestJS Backend ↔ OpenAI (Intent & RAG) ↔ Prisma (SQLite Product Knowledge Base)",
+    architectureImage: "/architecture-agent.png",
     technologies: [
       { name: "NestJS", category: "Infrastructure" },
       { name: "OpenAI", category: "AI Models" },
@@ -312,6 +318,7 @@ export const caseStudies: CaseStudy[] = [
       "We built a robust WhatsApp AI assistant using n8n Cloud and the Meta Cloud/24 Manager APIs. The system features a custom data ingestion pipeline that syncs their spreadsheet database into a Pinecone vector store (LagosWeekenderKB). \n\nWhen a user messages, the OpenAI agent queries this database to provide hyper-specific, budget-matched itineraries and venue details. To ensure 100% pricing accuracy, we engineered a custom JavaScript 'Hallucination Guard' that intercepts the AI's response, detects any hedged language around prices (e.g., 'might', 'around', 'up to'), and automatically replaces it with a safe fallback ('Contact venue for exact pricing'). Furthermore, it utilizes Supabase Postgres for persistent chat memory, allowing the bot to maintain context across long weekend planning conversations.",
     architecture:
       "Data Pipeline: Google Sheets → Document Splitter → OpenAI Embeddings → Pinecone Vector Store\n\nChat Pipeline: WhatsApp Webhook → Message Extractor → OpenAI Agent (RAG + Supabase Memory) → Hallucination Guard (Custom JS) → Format Router → Meta Graph API Reply",
+    architectureImage: "/architecture-rag.png",
     technologies: [
       { name: "n8n Cloud", category: "Automation Platforms" },
       { name: "OpenAI", category: "AI Models" },
