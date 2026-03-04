@@ -1,22 +1,23 @@
 import { Metadata } from 'next';
 
 export const defaultKeywords = [
-  'fullstack developer',
-  'MVP development',
-  'AI automation',
-  'Next.js developer',
-  'startup developer',
+  'AI automation agency',
+  'AI agents',
   'workflow automation',
-  'web development',
-  'React developer',
+  'n8n expert',
+  'RAG pipelines',
+  'business automation',
+  'AI customer support',
+  'operational automation',
+  'Micheal Ifeanyi',
+  'automation infrastructure',
+  'lead generation automation',
+  'healthcare automation',
+  'real estate automation',
+  'cloud AI infrastructure',
   'TypeScript',
-  'Supabase',
-  'TailwindCSS',
-  'n8n',
-  'Claude AI',
-  'custom software development',
-  'technical consulting',
-  'rapid prototyping',
+  'Next.js',
+  'Python',
 ];
 
 export interface PageMetadataConfig {
@@ -63,14 +64,14 @@ export function generatePageMetadata({
     openGraph: {
       title: ogTitle,
       description: ogDescription,
-      url: canonical || 'https://www.izzydevbuilds.xyz',
-      siteName: 'IzzyDevBuilds',
+      url: canonical || 'https://www.michealifeanyi.com',
+      siteName: 'Micheal Ifeanyi — AI Automation Agency',
       images: openGraph?.images || [
         {
-          url: 'https://www.izzydevbuilds.xyz/og-image.png',
+          url: 'https://www.michealifeanyi.com/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'IzzyDevBuilds - Fullstack Developer & AI Automation Specialist',
+          alt: 'Micheal Ifeanyi — AI Automation Agency',
         },
       ],
       locale: 'en_US',
@@ -80,12 +81,10 @@ export function generatePageMetadata({
       card: 'summary_large_image',
       title: twitterTitle,
       description: twitterDescription,
-      images: twitter?.images || ['https://www.izzydevbuilds.xyz/og-image.png'],
-      creator: '@izzydev_',
-      site: '@izzydev_',
+      images: twitter?.images || ['https://www.michealifeanyi.com/og-image.png'],
     },
     alternates: {
-      canonical: canonical || 'https://www.izzydevbuilds.xyz',
+      canonical: canonical || 'https://www.michealifeanyi.com',
     },
     robots: {
       index: true,

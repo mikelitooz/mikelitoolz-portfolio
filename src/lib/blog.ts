@@ -81,7 +81,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       title: data.title,
       description: data.description,
       date: data.date,
-      author: data.author || 'Israel Chukwudi',
+      author: data.author || 'Micheal Ifeanyi',
       category: data.category,
       tags: data.tags || [],
       image: data.image,

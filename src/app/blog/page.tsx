@@ -6,11 +6,11 @@ import { StructuredData, generateBlogListingSchema } from "@/lib/structured-data
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog - MVP Development & AI Automation Insights | Israel Chukwudi",
+  title: "Blog - AI Automation & Workflow Insights | Micheal Ifeanyi",
   description:
-    "Learn about MVP development, AI automation, n8n workflows, and modern web development. Practical guides and insights from building real products.",
+    "Learn about AI automation, n8n workflows, and building production AI systems. Practical guides and insights from building real automation projects.",
   alternates: {
-    canonical: "https://www.izzydevbuilds.xyz/blog",
+    canonical: "https://www.michealifeanyi.com/blog",
   },
 };
 

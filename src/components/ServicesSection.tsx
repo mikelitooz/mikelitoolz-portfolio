@@ -17,7 +17,7 @@ const ServicesSection: FC<ServicesSectionProps> = ({ page }) => {
       <Container>
         <div className="flex flex-col gap-16 md:gap-24">
           <SectionTitle
-            title={page === "automation" ? "Solutions That Save You Hours" : "Products That Ship Fast"}
+            title={page === "automation" ? "Solutions That Save You Hours" : "Our Solutions"}
             className="text-left md:text-left"
           />
 

@@ -20,18 +20,18 @@ export function generateOrganizationSchema() {
     '@type': 'ProfessionalService',
     '@id': 'https://www.michealifeanyi.com/#organization',
     name: 'Micheal Ifeanyi',
-    alternateName: 'Micheal Ifeanyi - AI Automation Engineer',
+    alternateName: 'Micheal Ifeanyi - AI Automation Agency',
     url: 'https://www.michealifeanyi.com',
     logo: 'https://www.michealifeanyi.com/og-image.png',
     description:
-      'I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.',
+      'We build AI automation systems that run your business operations. AI customer support agents, workflow automation, RAG knowledge assistants, and cloud AI infrastructure.',
     founder: {
       '@type': 'Person',
       '@id': 'https://www.michealifeanyi.com/#person',
       name: 'Micheal Ifeanyi',
       givenName: 'Micheal',
       familyName: 'Ifeanyi',
-      jobTitle: 'AI Automation Engineer',
+      jobTitle: 'AI Automation Engineer & Agency Founder',
       email: 'ifeanyi_micheal@yahoo.com',
       url: 'https://www.michealifeanyi.com',
       image: 'https://www.michealifeanyi.com/og-image.png',
@@ -122,9 +122,9 @@ export function generateWebSiteSchema() {
     '@type': 'WebSite',
     '@id': 'https://www.michealifeanyi.com/#website',
     url: 'https://www.michealifeanyi.com',
-    name: 'Micheal Ifeanyi - AI Automation Engineer',
+    name: 'Micheal Ifeanyi - AI Automation Agency',
     description:
-      'I build autonomous AI agents and workflow infrastructures that save businesses time.',
+      'We build AI automation systems that run your business operations.',
     publisher: {
       '@id': 'https://www.michealifeanyi.com/#organization',
     },
@@ -146,7 +146,7 @@ export function generateServiceSchema(serviceType: 'mvp' | 'automation' | 'desig
       description:
         'Fast-track MVP development for startups. Build products that test assumptions fast and iterate based on what real users actually do. Typical delivery: 1-4 weeks.',
       serviceType: 'Software Development',
-      provider: { '@id': 'https://www.izzydevbuilds.xyz/#organization' },
+      provider: { '@id': 'https://www.michealifeanyi.com/#organization' },
       areaServed: 'Worldwide',
       offers: {
         '@type': 'Offer',
@@ -163,7 +163,7 @@ export function generateServiceSchema(serviceType: 'mvp' | 'automation' | 'desig
       description:
         'AI systems that save 10+ hours per week with proven ROI. Automate repetitive tasks so teams can focus on decisions that move the needle. Proven results: 85% auto-response rate, 60% ticket reduction.',
       serviceType: 'AI Automation',
-      provider: { '@id': 'https://www.izzydevbuilds.xyz/#organization' },
+      provider: { '@id': 'https://www.michealifeanyi.com/#organization' },
       areaServed: 'Worldwide',
       offers: {
         '@type': 'Offer',
@@ -180,7 +180,7 @@ export function generateServiceSchema(serviceType: 'mvp' | 'automation' | 'desig
       description:
         'Design for clarity first, aesthetics second. User-focused interface design that prioritizes usability over decoration. If users have to think for more than 5 seconds, we redesign it.',
       serviceType: 'Design Service',
-      provider: { '@id': 'https://www.izzydevbuilds.xyz/#organization' },
+      provider: { '@id': 'https://www.michealifeanyi.com/#organization' },
       areaServed: 'Worldwide',
       offers: {
         '@type': 'Offer',
@@ -199,7 +199,7 @@ export function generateServiceSchema(serviceType: 'mvp' | 'automation' | 'desig
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': `https://www.izzydevbuilds.xyz/#service-${serviceType}`,
+    '@id': `https://www.michealifeanyi.com/#service-${serviceType}`,
     ...service,
   };
 }
@@ -242,9 +242,9 @@ export function generateReviewSchema(testimonial: Testimonial) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Review',
-    '@id': `https://www.izzydevbuilds.xyz/#review-${testimonial.id}`,
+    '@id': `https://www.michealifeanyi.com/#review-${testimonial.id}`,
     itemReviewed: {
-      '@id': 'https://www.izzydevbuilds.xyz/#organization',
+      '@id': 'https://www.michealifeanyi.com/#organization',
     },
     reviewRating: {
       '@type': 'Rating',
@@ -278,12 +278,12 @@ export function generateProjectSchema(project: Project, index: number) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
-    '@id': `https://www.izzydevbuilds.xyz/#project-${index}`,
+    '@id': `https://www.michealifeanyi.com/#project-${index}`,
     name: project.title,
     description: project.description,
     url: project.link,
     creator: {
-      '@id': 'https://www.izzydevbuilds.xyz/#person',
+      '@id': 'https://www.michealifeanyi.com/#person',
     },
     keywords: project.tech.join(', '),
   };
@@ -318,25 +318,25 @@ export function generateArticleSchema(post: BlogPostSchema) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    '@id': `https://www.izzydevbuilds.xyz/blog/${post.slug}#article`,
+    '@id': `https://www.michealifeanyi.com/blog/${post.slug}#article`,
     headline: post.title,
     description: post.description,
-    image: post.image || 'https://www.izzydevbuilds.xyz/icon-512x512.png',
+    image: post.image || 'https://www.michealifeanyi.com/icon-512x512.png',
     datePublished: post.date,
     dateModified: post.date,
     author: {
       '@type': 'Person',
-      '@id': 'https://www.izzydevbuilds.xyz/#person',
+      '@id': 'https://www.michealifeanyi.com/#person',
       name: post.author,
     },
     publisher: {
-      '@id': 'https://www.izzydevbuilds.xyz/#organization',
+      '@id': 'https://www.michealifeanyi.com/#organization',
     },
     articleSection: post.category,
     keywords: post.tags.join(', '),
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.izzydevbuilds.xyz/blog/${post.slug}`,
+      '@id': `https://www.michealifeanyi.com/blog/${post.slug}`,
     },
   };
 }
@@ -345,24 +345,24 @@ export function generateBlogListingSchema(posts: BlogPostSchema[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    '@id': 'https://www.izzydevbuilds.xyz/blog#blog',
-    name: 'IzzyDevBuilds Blog',
-    description: 'Articles about MVP development, AI automation, and web development',
-    url: 'https://www.izzydevbuilds.xyz/blog',
+    '@id': 'https://www.michealifeanyi.com/blog#blog',
+    name: 'Micheal Ifeanyi — Technical Insights',
+    description: 'Technical insights on AI automation, n8n workflows, and building production AI systems',
+    url: 'https://www.michealifeanyi.com/insights',
     author: {
-      '@id': 'https://www.izzydevbuilds.xyz/#person',
+      '@id': 'https://www.michealifeanyi.com/#person',
     },
     publisher: {
-      '@id': 'https://www.izzydevbuilds.xyz/#organization',
+      '@id': 'https://www.michealifeanyi.com/#organization',
     },
     blogPost: posts.map((post) => ({
       '@type': 'BlogPosting',
-      '@id': `https://www.izzydevbuilds.xyz/blog/${post.slug}`,
+      '@id': `https://www.michealifeanyi.com/blog/${post.slug}`,
       headline: post.title,
       description: post.description,
       datePublished: post.date,
       author: {
-        '@id': 'https://www.izzydevbuilds.xyz/#person',
+        '@id': 'https://www.michealifeanyi.com/#person',
       },
     })),
   };

@@ -2,10 +2,8 @@
 
 import ServicesSection from "@/components/ServicesSection";
 import ProjectBento from "@/components/ProjectBento";
-// import ProjectSection from "@/components/ProjectSection";
+import BusinessProblems from "@/components/BusinessProblems";
 import HowWeWork from "@/components/HowWeWork";
-import QuietudePhilosophy from "@/components/QuietudePhilosophy";
-// import AboutMe from "@/components/AboutMe";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTA";
 import TechStackSection from "@/components/TechStackSection";
@@ -17,9 +15,11 @@ import { faqs } from "@/constants";
 export default function Home() {
   return (
     <>
-      <PageSchemas services={["mvp", "design"]} faqs={faqs} />
+      <PageSchemas services={["mvp", "automation"]} faqs={faqs} />
       <main>
         <BlackBoxHero />
+
+        <BusinessProblems />
 
         <ServicesSection page="home" />
 
@@ -28,8 +28,6 @@ export default function Home() {
         <TestimonialsSection />
 
         <HowWeWork page="home" />
-
-        <QuietudePhilosophy />
 
         <TechStackSection page="home" />
 

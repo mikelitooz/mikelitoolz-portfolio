@@ -1,73 +1,83 @@
-import { socialLinks } from "@/constants";
-import { ArrowUpRight } from "lucide-react";
-import { FC } from "react";
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Container from "./Container";
-import Link from "next/link";
-import Script from "next/script";
-import Image from "next/image";
-import { CalendarIcon, QrCode } from "@/assets";
-import MagneticButton from "./ui/MagneticButton";
+import { CALENDLY_URL } from "@/constants";
 
-const CTASection: FC = ({ }) => {
+const CalendlyModal = dynamic(() => import("./CalendlyModal"), { ssr: false });
+
+export default function CTASection() {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section className="relative py-24 md:py-32 bg-swiss-charcoal overflow-hidden" id="contact">
       <Container>
-        <div className="flex flex-col gap-8 md:gap-12">
-          {/* Main Action Grid - Swiss Split */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full">
-            <Link
-              href="mailto:ifeanyi_micheal@yahoo.com?subject=AI%20Automation%20Inquiry"
-              className="w-full aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] bg-swiss-platinum flex flex-col items-center justify-center text-swiss-black transition-colors duration-300 hover:bg-white group overflow-hidden relative cursor-pointer"
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative text-center max-w-4xl mx-auto"
+        >
+          {/* Decorative glow */}
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <p className="text-sm md:text-base text-swiss-gray tracking-[0.3em] uppercase mb-6">
+            Let&apos;s Work Together
+          </p>
+
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-swiss-platinum tracking-tight leading-[1.1]">
+            Stop Losing Hours to{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Manual Work
+            </span>
+          </h2>
+
+          <p className="mt-6 text-lg md:text-xl text-swiss-gray max-w-2xl mx-auto leading-relaxed">
+            Book a free 30-minute strategy session. We&apos;ll audit your
+            workflows, identify the biggest time-wasters, and show you exactly
+            how AI automation can save your team 10+ hours every week.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => setIsCalendlyOpen(true)}
+              className="group relative px-10 py-5 bg-foreground text-background font-semibold text-lg tracking-wide rounded-full hover:scale-105 transition-transform duration-300 overflow-hidden"
             >
-              <div className="z-10 flex flex-col items-center gap-4 p-8 text-center">
-                <span className="text-xl md:text-2xl font-medium tracking-widest uppercase opacity-70">Ready to Validate?</span>
-                <h2 className="text-[10vw] md:text-[5vw] font-bold leading-none tracking-tighter group-hover:tracking-tight transition-all duration-500">
-                  BOOK CALL
-                </h2>
-              </div>
-              <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            </Link>
+              <span className="relative z-10">Book Strategy Call</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </button>
 
-            {/* Right: Contra (Verified Partner) */}
-            <div className="w-full aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] border border-swiss-border bg-swiss-charcoal/50 flex flex-col items-center justify-center relative overflow-hidden group hover:border-swiss-platinum/30 transition-colors duration-500">
-              <div className="z-10 flex flex-col items-center gap-8">
-                <span className="text-xl md:text-2xl font-medium tracking-widest uppercase text-swiss-gray">Direct Hire</span>
-
-                {/* Contra Button Container */}
-                <div className="transform scale-125 md:scale-150">
-                  <div
-                    className="contra-hire-me-button"
-                    data-analyticsuserid="a50dccd3-c110-4c81-9aaa-dfb3145cd8b3"
-                    data-theme="dark"
-                    data-username="izzydevbuilds"
-                  ></div>
-                </div>
-              </div>
-
-              {/* Decorative Background for Contra */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-swiss-stone/10 to-transparent opacity-50" />
-            </div>
+            <a
+              href={`mailto:ifeanyi_micheal@yahoo.com`}
+              className="px-10 py-5 border border-swiss-gray/40 text-swiss-platinum font-medium text-lg tracking-wide rounded-full hover:border-swiss-platinum transition-colors duration-300"
+            >
+              Send an Email
+            </a>
           </div>
 
-          <Script src="https://contra.com/static/embed/sdk.js" strategy="lazyOnload" />
-
-          {/* Footer Socials */}
-          <div className="mt-8 flex gap-12 flex-wrap justify-center">
-            {socialLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                className="text-lg text-swiss-gray hover:text-swiss-platinum transition-colors tracking-tight uppercase"
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Trust signals */}
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-swiss-gray text-sm tracking-wide">
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              Free consultation
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              No commitment
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-400" />
+              Results in weeks, not months
+            </span>
           </div>
-        </div>
+        </motion.div>
       </Container>
+
+      {/* Calendly Modal */}
+      <CalendlyModal isOpen={isCalendlyOpen} onClose={() => setIsCalendlyOpen(false)} />
     </section>
   );
-};
-
-export default CTASection;
+}

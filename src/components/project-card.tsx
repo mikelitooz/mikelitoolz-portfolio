@@ -8,12 +8,13 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string | StaticImageData;
+  video?: string;
   tags: string[];
   link?: string;
   page: string
 }
 
-export function ProjectCard({ title, description, image, tags, link, page }: ProjectCardProps) {
+export function ProjectCard({ title, description, image, video, tags, link, page }: ProjectCardProps) {
   return (
     <div className="group rounded-[20px] border border-foreground transition-all duration-300 ease-in-out">
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 py-4 px-6">
@@ -50,8 +51,19 @@ export function ProjectCard({ title, description, image, tags, link, page }: Pro
         {/* Right side - Mockup Preview */}
         <div className="flex items-center justify-center">
           <div className="w-full p-3 rounded-2xl bg-card-foreground/10">
-            <div className="relative w-full h-[300px]">
-              <Image src={image} alt={`${title} preview`} fill className="object group-hover:scale-[1.02] transition-transform duration-300 ease-in-out" />
+            <div className="relative w-full h-[300px] overflow-hidden rounded-xl">
+              {video ? (
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="object-cover w-full h-full group-hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+                />
+              ) : (
+                <Image src={image} alt={`${title} preview`} fill className="object group-hover:scale-[1.02] transition-transform duration-300 ease-in-out" />
+              )}
             </div>
           </div>
         </div>

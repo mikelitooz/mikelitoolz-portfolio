@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, useScroll, useTransform, useMotionValueEvent, Variants, Easing } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const CalendlyModal = dynamic(() => import("./CalendlyModal"), { ssr: false });
 
 const FRAME_COUNT = 120;
 const SCROLL_HEIGHT = "400vh";
@@ -15,6 +18,7 @@ export default function BlackBoxHero() {
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentFrame, setCurrentFrame] = useState(0);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   // Scroll progress tracking
   const { scrollYProgress } = useScroll({
@@ -185,8 +189,9 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
           >
+            <p className="text-sm md:text-base text-swiss-gray tracking-[0.3em] uppercase mb-4">AI Automation Agency</p>
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold text-foreground tracking-tighter">MICHEAL IFEANYI</h1>
-            <p className="mt-4 text-lg md:text-2xl text-swiss-gray tracking-widest uppercase">AI Automation Engineer</p>
+            <p className="mt-4 text-lg md:text-xl text-swiss-gray max-w-2xl leading-relaxed">We build AI systems that run your operations — so your team can focus on growth.</p>
           </motion.div>
 
           {/* Section 2: Engineering - LEFT */}
@@ -196,8 +201,8 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-start justify-center pl-8 md:pl-16 lg:pl-24"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">Fluid</h2>
-            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Systems.</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-foreground tracking-tight">Automate</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-swiss-gray tracking-tight">Operations.</h2>
           </motion.div>
 
           {/* Section 3: AI - RIGHT */}
@@ -218,19 +223,30 @@ export default function BlackBoxHero() {
             variants={textVariants}
             className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pointer-events-auto"
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">Ready to Build?</h2>
-            <a
-              href="#contact"
-              className="mt-8 px-8 py-4 bg-foreground text-background font-medium text-lg tracking-wide rounded-full hover:bg-accent hover:text-background transition-colors duration-300 pointer-events-auto"
-            >
-              Start Project
-            </a>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">Ready to Automate?</h2>
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+              <button
+                onClick={() => setIsCalendlyOpen(true)}
+                className="px-8 py-4 bg-foreground text-background font-medium text-lg tracking-wide rounded-full hover:bg-accent hover:text-background transition-colors duration-300 pointer-events-auto"
+              >
+                Book Strategy Call
+              </button>
+              <a
+                href="#projects"
+                className="px-8 py-4 border border-swiss-gray/50 text-foreground font-medium text-lg tracking-wide rounded-full hover:border-foreground transition-colors duration-300 pointer-events-auto"
+              >
+                View Case Studies
+              </a>
+            </div>
           </motion.div>
         </div>
 
         {/* Gradient Overlay for Smooth Transition */}
         <div className="absolute bottom-0 left-0 right-0 h-32 md:h-64 bg-linear-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
+
+      {/* Calendly Modal */}
+      <CalendlyModal isOpen={isCalendlyOpen} onClose={() => setIsCalendlyOpen(false)} />
     </section>
   );
 }

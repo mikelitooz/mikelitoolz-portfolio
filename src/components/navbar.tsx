@@ -1,17 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Container from "./Container";
-import MagneticButton from "./ui/MagneticButton";
+import dynamic from "next/dynamic";
+
+const CalendlyModal = dynamic(() => import("./CalendlyModal"), { ssr: false });
 
 export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,6 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    // Prevent body scroll when mobile menu is open
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -33,49 +33,44 @@ export function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const desktopLinks = [
+    { href: "/solutions", label: "Solutions" },
+    { href: "/case-studies", label: "Case Studies" },
+    { href: "/insights", label: "Insights" },
+  ];
 
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/automation", label: "Automations" },
-    { href: "/blog", label: "Blog" },
+  const mobileLinks = [
+    { href: "/solutions", label: "Solutions" },
+    { href: "/case-studies", label: "Case Studies" },
+    { href: "/insights", label: "Insights" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:py-8">
       <div className="flex justify-between items-start mix-blend-difference text-white">
-        {/* Logo / Brand - Top Left */}
+        {/* Logo / Brand */}
         <Link href="/" className="text-xl font-bold tracking-tighter uppercase hover:opacity-70 transition-opacity">
           MICHEAL IFEANYI
         </Link>
 
-        {/* Desktop Nav - Top Middle/Right */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex flex-col items-end gap-1">
-          <div className="flex gap-8 text-sm font-medium tracking-wide">
-            {[
-              { href: "/#work", label: "Work" },
-              { href: "/#services", label: "Services" },
-              { href: "/automation", label: "Automation" },
-              { href: "/#contact", label: "Contact" },
-            ].map((link) => (
+          <div className="flex gap-8 text-sm font-medium tracking-wide items-center">
+            {desktopLinks.map((link) => (
               <Link key={link.label} href={link.href} className="relative group overflow-hidden">
                 <span className="relative z-10">{link.label}</span>
                 <span className="absolute bottom-0 left-0 w-full h-px bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left" />
               </Link>
             ))}
+            <button
+              onClick={() => setIsCalendlyOpen(true)}
+              className="px-5 py-2 border border-white/30 rounded-full text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300"
+            >
+              Book a Call
+            </button>
           </div>
-          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">AI Automation Engineer</span>
+          <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-2">AI Automation Agency</span>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -87,7 +82,6 @@ export function Navbar() {
       </div>
 
       {/* Mobile Nav Overlay */}
-      {/* Mobile Nav Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -97,7 +91,6 @@ export function Navbar() {
             transition={{ type: "spring", stiffness: 20, damping: 10 }}
             className="fixed inset-0 bg-swiss-charcoal z-60 flex flex-col items-center justify-center gap-8 text-swiss-platinum"
           >
-            {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-6 right-6 md:top-8 md:right-12 text-sm font-bold uppercase tracking-widest hover:opacity-70 transition-opacity text-swiss-platinum"
@@ -105,13 +98,7 @@ export function Navbar() {
               Close
             </button>
 
-            {/* Links */}
-            {[
-              { href: "/#work", label: "Work" },
-              { href: "/#services", label: "Services" },
-              { href: "/automation", label: "Automation" },
-              { href: "/#contact", label: "Contact" },
-            ].map((link) => (
+            {mobileLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
@@ -121,9 +108,22 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsCalendlyOpen(true);
+              }}
+              className="mt-4 px-8 py-4 bg-swiss-platinum text-swiss-black font-bold uppercase tracking-widest rounded-full text-lg"
+            >
+              Book a Call
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Calendly Modal */}
+      <CalendlyModal isOpen={isCalendlyOpen} onClose={() => setIsCalendlyOpen(false)} />
     </nav>
   );
 }

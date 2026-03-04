@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${post.title} | IzzyDevBuilds Blog`,
+    title: `${post.title} | Micheal Ifeanyi — Insights`,
     description: post.description,
     openGraph: {
       title: post.title,
@@ -39,16 +39,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
-      images: post.image ? [post.image] : ["https://www.izzydevbuilds.xyz/icon-512x512.png"],
+      images: post.image ? [post.image] : ["https://www.michealifeanyi.com/icon-512x512.png"],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: post.image ? [post.image] : ["https://www.izzydevbuilds.xyz/icon-512x512.png"],
+      images: post.image ? [post.image] : ["https://www.michealifeanyi.com/icon-512x512.png"],
     },
     alternates: {
-      canonical: `https://www.izzydevbuilds.xyz/blog/${slug}`,
+      canonical: `https://www.michealifeanyi.com/blog/${slug}`,
     },
   };
 }
@@ -63,9 +63,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const articleSchema = generateArticleSchema(post);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://www.izzydevbuilds.xyz" },
-    { name: "Blog", url: "https://www.izzydevbuilds.xyz/blog" },
-    { name: post.title, url: `https://www.izzydevbuilds.xyz/blog/${post.slug}` },
+    { name: "Home", url: "https://www.michealifeanyi.com" },
+    { name: "Blog", url: "https://www.michealifeanyi.com/blog" },
+    { name: post.title, url: `https://www.michealifeanyi.com/blog/${post.slug}` },
   ]);
 
   return (

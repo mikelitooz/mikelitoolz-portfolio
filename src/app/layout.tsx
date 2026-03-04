@@ -19,9 +19,9 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.michealifeanyi.com"),
-  title: "Micheal Ifeanyi | AI Automation Engineer - Build Autonomous AI Agents & Workflow Infrastructure",
+  title: "Micheal Ifeanyi | AI Automation Agency — AI Agents, Workflow Automation & RAG Systems",
   description:
-    "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation. Transform your manual processes into intelligent, self-running systems.",
+    "We build AI automation systems that run your business operations. AI customer support agents, workflow automation, RAG knowledge assistants, and cloud AI infrastructure. Save 10+ hours per week.",
   keywords: [
     "AI automation engineer",
     "n8n expert",
@@ -42,17 +42,17 @@ export const metadata: Metadata = {
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Micheal Ifeanyi | AI Automation Engineer",
+    title: "Micheal Ifeanyi | AI Automation Agency",
     description:
-      "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.",
+      "We build AI automation systems that run your operations. AI agents, workflow automation, RAG systems — save 10+ hours per week.",
     url: "https://www.michealifeanyi.com",
-    siteName: "Micheal Ifeanyi",
+    siteName: "Micheal Ifeanyi — AI Automation Agency",
     images: [
       {
         url: "https://www.michealifeanyi.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Micheal Ifeanyi - AI Automation Engineer",
+        alt: "Micheal Ifeanyi — AI Automation Agency",
       },
     ],
     locale: "en_US",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Micheal Ifeanyi | AI Automation Engineer",
+    title: "Micheal Ifeanyi | AI Automation Agency",
     description:
-      "I build autonomous AI agents and workflow infrastructures that save businesses time. Specializing in n8n, RAG pipelines, and operational automation.",
+      "We build AI automation systems that run your operations. AI agents, workflow automation, RAG systems — save 10+ hours per week.",
     images: ["https://www.michealifeanyi.com/og-image.png"],
   },
 
