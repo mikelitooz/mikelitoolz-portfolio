@@ -19,40 +19,31 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.michealifeanyi.com"),
-  title: "Micheal Ifeanyi | AI Automation Agency — AI Agents, Workflow Automation & RAG Systems",
+  title: "AI Automation Systems | Micheal Ifeanyi",
   description:
-    "We build AI automation systems that run your business operations. AI customer support agents, workflow automation, RAG knowledge assistants, and cloud AI infrastructure. Save 10+ hours per week.",
+    "AI automation agency helping businesses automate operations using AI agents, workflow automation, and cloud infrastructure.",
   keywords: [
-    "AI automation engineer",
-    "n8n expert",
+    "AI automation",
     "AI agents",
     "workflow automation",
-    "RAG pipelines",
-    "Pinecone",
-    "automation infrastructure",
-    "Micheal Ifeanyi",
-    "business automation",
-    "operational automation",
-    "AI workflow builder",
-    "lead generation automation",
-    "cold email automation",
-    "healthcare automation",
-    "recruitment automation",
+    "n8n automation",
+    "AI consulting",
+    "AI infrastructure",
   ],
 
   // Open Graph (Facebook, LinkedIn, etc.)
   openGraph: {
-    title: "Micheal Ifeanyi | AI Automation Agency",
+    title: "AI Automation Systems | Micheal Ifeanyi",
     description:
-      "We build AI automation systems that run your operations. AI agents, workflow automation, RAG systems — save 10+ hours per week.",
+      "AI automation agency helping businesses automate operations using AI agents, workflow automation, and cloud infrastructure.",
     url: "https://www.michealifeanyi.com",
-    siteName: "Micheal Ifeanyi — AI Automation Agency",
+    siteName: "Micheal Ifeanyi",
     images: [
       {
         url: "https://www.michealifeanyi.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Micheal Ifeanyi — AI Automation Agency",
+        alt: "Micheal Ifeanyi — AI Automation Systems",
       },
     ],
     locale: "en_US",
@@ -62,9 +53,9 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Micheal Ifeanyi | AI Automation Agency",
+    title: "AI Automation Systems | Micheal Ifeanyi",
     description:
-      "We build AI automation systems that run your operations. AI agents, workflow automation, RAG systems — save 10+ hours per week.",
+      "AI automation agency helping businesses automate operations using AI agents, workflow automation, and cloud infrastructure.",
     images: ["https://www.michealifeanyi.com/og-image.png"],
   },
 
@@ -86,34 +77,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-    other: [
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "192x192",
-        url: "/icon-192x192.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "512x512",
-        url: "/icon-512x512.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        url: "/favicon-32x32.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        url: "/favicon-16x16.png",
-      },
-    ],
+    shortcut: "/icon",
+    apple: "/apple-icon",
   },
   manifest: "/site.webmanifest",
   other: {

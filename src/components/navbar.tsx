@@ -36,13 +36,11 @@ export function Navbar() {
   const desktopLinks = [
     { href: "/solutions", label: "Solutions" },
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/insights", label: "Insights" },
   ];
 
   const mobileLinks = [
     { href: "/solutions", label: "Solutions" },
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/insights", label: "Insights" },
     { href: "/#contact", label: "Contact" },
   ];
 
