@@ -19,12 +19,12 @@ export function generateOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': 'https://www.michealifeanyi.com/#organization',
-    name: 'Micheal Ifeanyi',
-    alternateName: 'Micheal Ifeanyi - AI Automation Agency',
+    name: 'Micheal Ifeanyi AI Automation',
+    alternateName: 'Micheal Ifeanyi - AI Automation Consulting',
     url: 'https://www.michealifeanyi.com',
     logo: 'https://www.michealifeanyi.com/og-image.png',
     description:
-      'We build AI automation systems that run your business operations. AI customer support agents, workflow automation, RAG knowledge assistants, and cloud AI infrastructure.',
+      'AI automation agency helping businesses automate operations using AI agents, workflow automation, and secure cloud infrastructure.',
     founder: {
       '@type': 'Person',
       '@id': 'https://www.michealifeanyi.com/#person',
@@ -122,9 +122,9 @@ export function generateWebSiteSchema() {
     '@type': 'WebSite',
     '@id': 'https://www.michealifeanyi.com/#website',
     url: 'https://www.michealifeanyi.com',
-    name: 'Micheal Ifeanyi - AI Automation Agency',
+    name: 'Micheal Ifeanyi AI Automation',
     description:
-      'We build AI automation systems that run your business operations.',
+      'AI automation agency helping businesses automate operations using AI agents, workflow automation, and secure cloud infrastructure.',
     publisher: {
       '@id': 'https://www.michealifeanyi.com/#organization',
     },
