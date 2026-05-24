@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Palette - Dark Mode First */
+  --swiss-black: #0a0a0a; /* Deepest Black */
+  --swiss-charcoal: #111111; /* Main Background */
+  --swiss-stone: #1c1c1c; /* Card / Surface */
+  --swiss-platinum: #ededed; /* Primary Text */
+  --swiss-gray: #888888; /* Muted Text */
+  --swiss-border: #333333; /* Subtle Borders */
+
+  /* Fluid Typography (Transit-Scale) */
+  --font-h1: clamp(3.5rem, 6vw + 1rem, 9rem);
+  --font-body: clamp(1rem, 0.25vw + 1rem, 1.25rem);
+
+  /* Semantic Mappings */
+  --background: var(--swiss-charcoal);
+  --foreground: var(--swiss-platinum);
+
+  --card: var(--swiss-stone);
+  --card-foreground: var(--swiss-platinum);
+
+  --popover: var(--swiss-stone);
+  --popover-foreground: var(--swiss-platinum);
+
+  --primary: var(--swiss-platinum);
+  --primary-foreground: var(--swiss-charcoal);
+
+  --secondary: var(--swiss-black);
+  --secondary-foreground: var(--swiss-platinum);
+
+  --muted: var(--swiss-stone);
+  --muted-foreground: var(--swiss-gray);
+
+  --accent: #4ade80;
+  --accent-foreground: var(--swiss-black);
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: var(--swiss-border);
+  --input: var(--swiss-border);
+  --ring: var(--swiss-platinum);
+
+  --radius: 0px; /* Sharp edges for Swiss style */
+}
+
+@theme inline {
+  /* New Swiss Carbon Tokens */
+  --color-swiss-black: var(--swiss-black);
+  --color-swiss-charcoal: var(--swiss-charcoal);
+  --color-swiss-stone: var(--swiss-stone);
+  --color-swiss-platinum: var(--swiss-platinum);
+  --color-swiss-gray: var(--swiss-gray);
+  --color-swiss-border: var(--swiss-border);
+
+  /* Legacy Mappings (for backward compat) */
+  --color-luxury-black: var(--swiss-black);
+  --color-luxury-gold: var(--accent); /* Now maps to Neon Green */
+  --color-luxury-charcoal: var(--swiss-charcoal);
+
+  /* System Mappings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: var(--radius);
+  --radius-sm: var(--radius);
+}
+
+/* Base Reset */
+/* Base Reset */
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Vibe Utilities */
+.bg-noise {
+  display: none; /* Clean Swiss look */
+}
+
+/* Typography Utilities */
+.text-transit-heading {
+  font-size: var(--font-h1);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-fluid-body {
+  font-size: var(--font-body);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Stitch Selection & Layout Grid */
+::selection {
+  background-color: var(--accent);
+  color: var(--swiss-black);
+}
+
+.grid-bg {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}

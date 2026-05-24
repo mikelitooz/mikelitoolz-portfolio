@@ -1,54 +1,30 @@
-# Hi there, I'm Ifeanyi (mikelitooz) 👋
+# Micheal Ifeanyi - AI Automation Portfolio
 
-### 🚀 AI Engineer & Full-Stack Developer
-I build autonomous agents, production RAG pipelines, and specialized AI tools.
+Personal portfolio website showcasing AI automation projects and services.
 
----
+## Tech Stack
 
-## 🌟 Featured Projects
+- **Framework**: Next.js 16 + React 19
+- **Styling**: Tailwind CSS 4
+- **Animations**: GSAP + Framer Motion
+- **Smooth Scroll**: Lenis
 
-### 🧠 [MemoAI](https://github.com/mikelitooz/memo-ai)
-**Production-Ready Video Transcription & Summarization**
-- **Tech:** FastAPI, OpenAI/Groq, Whisper
-- **Features:** Dual-provider transcription, auto-translation, markdown summarization.
-- **Status:** ✅ Production Ready
+## Getting Started
 
-### 🤖 [MCP Tool Agents](https://github.com/mikelitooz/mcp-tool-agents)
-**Extensible AI Agent Framework**
-- **Tech:** Python, MCP, ReAct Pattern
-- **Features:** Tool-calling agents that can interact with file systems, web search, and custom APIs.
-- **Status:** ✅ v1.0 Released
+```bash
+npm install
+npm run dev
+```
 
-### 🏥 [DICOM Toolkit](https://github.com/mikelitooz/dicom-toolkit)
-**Medical Imaging Analysis Library**
-- **Tech:** Python, Pydicom, NumPy
-- **Features:** Standalone DICOM processing, PHI anonymization, and metadata extraction. Refactored from Databricks.
-- **Status:** ✅ Beta
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-### 📱 [Social Content Agent](https://github.com/mikelitooz/social-content-agent)
-**Autonomous Social Media Manager**
-- **Tech:** LangGraph, TypeScript
-- **Features:** Curates and posts content to Twitter/LinkedIn with human-in-the-loop approval.
-- **Status:** ✅ Live
+## Build
 
-### 📚 [RAG from Scratch](https://github.com/mikelitooz/rag-from-scratch)
-**Modular RAG Pipeline Library**
-- **Tech:** Python, ChromaDB, OpenAI/Anthropic
-- **Features:** End-to-end RAG implementation with advanced retrieval strategies and evaluation.
-- **Status:** ✅ Educational/Reference
+```bash
+npm run build
+npm start
+```
 
----
+## Deploy
 
-## 🛠️ Tech Stack
-
-- **Languages:** Python, TypeScript, JavaScript
-- **AI/ML:** PyTorch, LangChain, LangGraph, HuggingFace
-- **Backend:** FastAPI, Node.js, Next.js
-- **Tools:** Docker, Git, VS Code (Antigravity)
-
----
-
-### 📫 Connect with me
-- [LinkedIn](#)
-- [Twitter](#)
-- [Website](#)
+Deploy on [Vercel](https://vercel.com) for the best experience with Next.js.

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"$content = Get-Content ''src\\lib\\generators\\dubai-lead-generator.ts'' -Raw; $content.Substring(0, $content.IndexOf(''return markdown;'') + 50)\")",
+      "Bash(npx tsc:*)",
+      "Bash(more:*)",
+      "Bash(timeout 60 bash:*)",
+      "Bash(timeout 120 bash:*)",
+      "Bash(timeout 180 bash:*)",
+      "Bash(npm run generate:usa:*)",
+      "Bash(npm run generate:dubai:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enabledMcpjsonServers": [
+    "playwright",
+    "brave-search",
+    "context7",
+    "firecrawl-mcp"
+  ]
+}
